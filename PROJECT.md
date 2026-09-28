@@ -618,9 +618,9 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 - [x] Ana sayfa (günün konusu, devam et, günlük kelimeler, konular)
 
 **1E. Kullanıcı ve ilerleme**
-- [ ] Kayıt / giriş / çıkış
-- [ ] `LessonProgress` ve `QuizAttempt` kaydı
-- [ ] İlerleme sayfası (ders, kelime, quiz sayıları)
+- [x] Kayıt / giriş / çıkış
+- [x] `LessonProgress` ve `QuizAttempt` kaydı
+- [x] İlerleme sayfası (ders, kelime, quiz sayıları)
 
 **1F. Yayına alma**
 - [ ] `vercel.json` ve Vercel deploy

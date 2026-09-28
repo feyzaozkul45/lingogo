@@ -9,7 +9,7 @@
   </div>
 
   {% if not attempt %}
-    <div class="flash flash--info">İlerlemeni kaydetmek için <a href="/accounts/signup/">kayıt ol</a>.</div>
+    <div class="flash flash--info">İlerlemeni kaydetmek için <a href="{% url 'accounts:signup' %}">kayıt ol</a>.</div>
   {% elif just_completed %}
     <div class="flash flash--success">🎉 Dersi tamamladın!</div>
   {% endif %}

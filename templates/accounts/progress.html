@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}İlerlemem{% endblock %}
+
+{% block content %}
+  <h1>İlerlemem</h1>
+
+  <div class="stats-grid">
+    <div class="card stat-card">
+      <div class="stat-card__number">{{ stats.lessons_completed }}</div>
+      <div class="stat-card__label">ders tamamlandı</div>
+    </div>
+    <div class="card stat-card">
+      <div class="stat-card__number">{{ stats.words_learned }}</div>
+      <div class="stat-card__label">kelime öğrenildi</div>
+    </div>
+    <div class="card stat-card">
+      <div class="stat-card__number">{{ stats.quizzes_completed }}</div>
+      <div class="stat-card__label">quiz tamamlandı</div>
+    </div>
+  </div>
+
+  {% if stats.completed_lessons %}
+    <div class="section">
+      <h2>Tamamlanan Dersler</h2>
+      <div class="stack">
+        {% for entry in stats.completed_lessons %}
+          <a href="{% url 'lessons:lesson_detail' slug=entry.lesson.slug %}" class="card" style="display: block;">
+            <div class="topic-card__title">{{ entry.lesson.topic.emoji }} {{ entry.lesson.title }}</div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <p>Henüz tamamlanmış ders yok. <a href="{% url 'lessons:topic_list' %}">Konulara göz at</a> ve ilk dersini bitir!</p>
+    </div>
+  {% endif %}
+{% endblock %}

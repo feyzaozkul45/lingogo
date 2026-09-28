@@ -24,4 +24,5 @@ urlpatterns = [
     path('', lesson_views.home, name='home'),
     path('', include('lessons.urls')),
     path('', include('quizzes.urls')),
+    path('', include('accounts.urls')),
 ]

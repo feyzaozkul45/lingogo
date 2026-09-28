@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Kayıt Ol{% endblock %}
+
+{% block content %}
+  <div class="auth-card card">
+    <h1>Kayıt Ol</h1>
+
+    <form method="post">
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="form-field">
+          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {{ field }}
+          {% if field.help_text %}
+            <p class="topic-card__desc" style="margin-top: 4px;">{{ field.help_text }}</p>
+          {% endif %}
+          {% for error in field.errors %}
+            <p class="form-errors">{{ error }}</p>
+          {% endfor %}
+        </div>
+      {% endfor %}
+
+      <button type="submit" class="btn btn-primary btn-block">Kayıt Ol</button>
+    </form>
+
+    <p class="mt-lg text-center">Zaten hesabın var mı? <a href="{% url 'accounts:login' %}">Giriş yap</a></p>
+  </div>
+{% endblock %}

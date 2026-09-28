@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Giriş Yap{% endblock %}
+
+{% block content %}
+  <div class="auth-card card">
+    <h1>Giriş Yap</h1>
+
+    {% if form.errors %}
+      <div class="flash flash--error">Kullanıcı adı veya şifre hatalı.</div>
+    {% endif %}
+
+    <form method="post">
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="form-field">
+          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {{ field }}
+        </div>
+      {% endfor %}
+      <input type="hidden" name="next" value="{{ next }}">
+
+      <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+    </form>
+
+    <p class="mt-lg text-center">Hesabın yok mu? <a href="{% url 'accounts:signup' %}">Kayıt ol</a></p>
+  </div>
+{% endblock %}
