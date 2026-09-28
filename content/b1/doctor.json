@@ -1,0 +1,135 @@
+{
+  "topic": {
+    "slug": "doctor",
+    "title": "Doktorda",
+    "emoji": "🩺",
+    "color": "mint",
+    "level": "B1",
+    "description": "Belirtilerini anlat, randevu al, tavsiye anla.",
+    "order": 12
+  },
+  "lesson": {
+    "slug": "doctor-basics",
+    "title": "Doktorda Konuşmak",
+    "intro": "Bu derste doktordan randevu almayı, şikayetini anlatmayı ve verilen tavsiyeleri anlamayı öğreneceksin."
+  },
+  "words": [
+    { "english": "symptom", "turkish": "belirti", "example_en": "What are your symptoms?", "example_tr": "Belirtilerin neler?" },
+    { "english": "pain", "turkish": "ağrı", "example_en": "It hurts when I breathe.", "example_tr": "Nefes alırken acıyor." },
+    { "english": "appointment", "turkish": "randevu", "example_en": "I'd like to make an appointment.", "example_tr": "Randevu almak istiyorum." },
+    { "english": "prescription", "turkish": "reçete", "example_en": "Take this prescription to the pharmacy.", "example_tr": "Bu reçeteyi eczaneye götür." },
+    { "english": "dizzy", "turkish": "baş dönmesi olan", "example_en": "I've been feeling dizzy since this morning.", "example_tr": "Sabahtan beri baş dönmesi yaşıyorum." },
+    { "english": "fever", "turkish": "ateş", "example_en": "She has a high fever.", "example_tr": "Yüksek ateşi var." },
+    { "english": "allergic", "turkish": "alerjik", "example_en": "I'm allergic to penicillin.", "example_tr": "Penisiline alerjim var." },
+    { "english": "medicine", "turkish": "ilaç", "example_en": "You should take this medicine twice a day.", "example_tr": "Bu ilacı günde iki kez almalısın." },
+    { "english": "examine", "turkish": "muayene etmek", "example_en": "The doctor examined me carefully.", "example_tr": "Doktor beni dikkatlice muayene etti." },
+    { "english": "pharmacy", "turkish": "eczane", "example_en": "Where's the nearest pharmacy?", "example_tr": "En yakın eczane nerede?" }
+  ],
+  "phrases": [
+    { "english": "I'd like to make an appointment.", "turkish": "Randevu almak istiyorum.", "note": "" },
+    { "english": "I have a terrible headache.", "turkish": "Korkunç bir baş ağrım var.", "note": "" },
+    { "english": "How long have you had this pain?", "turkish": "Bu ağrın ne zamandır var?", "note": "Doktorun sorusu." },
+    { "english": "I'm allergic to penicillin.", "turkish": "Penisiline alerjim var.", "note": "" },
+    { "english": "You should take this medicine twice a day.", "turkish": "Bu ilacı günde iki kez almalısın.", "note": "" },
+    { "english": "Where's the nearest pharmacy?", "turkish": "En yakın eczane nerede?", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "should / shouldn't (öğüt vermek)",
+      "explanation": "Tavsiye verirken 'should' ve 'shouldn't' kullanılır: 'You should see a doctor.' (Bir doktora görünmelisin.) 'You shouldn't skip meals.' (Öğün atlamamalısın.)",
+      "examples": ["You should rest for a few days.", "You shouldn't ignore this pain.", "You should drink more water."]
+    }
+  ],
+  "examples": [
+    { "english": "The doctor examined me carefully.", "turkish": "Doktor beni dikkatlice muayene etti." },
+    { "english": "I've been feeling dizzy since this morning.", "turkish": "Sabahtan beri baş dönmesi yaşıyorum." },
+    { "english": "She has a high fever.", "turkish": "Yüksek ateşi var." },
+    { "english": "Take this prescription to the pharmacy.", "turkish": "Bu reçeteyi eczaneye götür." },
+    { "english": "It hurts when I breathe.", "turkish": "Nefes alırken acıyor." }
+  ],
+  "quiz": {
+    "title": "Doktorda Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"symptom\" ne demek?",
+        "explanation": "Symptom = belirti.",
+        "choices": [
+          { "text": "belirti", "correct": true },
+          { "text": "ilaç", "correct": false },
+          { "text": "reçete", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "You ___ see a doctor.",
+        "explanation": "Öğüt vermek için: should.",
+        "choices": [
+          { "text": "should", "correct": true },
+          { "text": "should to", "correct": false },
+          { "text": "must to", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Randevu almak istediğini söylemek için ne dersin?",
+        "explanation": "\"I'd like to make an appointment.\" doğal ve kibar kalıp.",
+        "choices": [
+          { "text": "I'd like to make an appointment.", "correct": true },
+          { "text": "I want doctor appointment.", "correct": false },
+          { "text": "Give me an appointment.", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Bu ağrıyı görmezden gelmemelisin\" cümlesinin doğrusunu seç.",
+        "explanation": "\"You shouldn't ignore this pain.\" doğru kelime sırası.",
+        "choices": [
+          { "text": "You shouldn't ignore this pain.", "correct": true },
+          { "text": "You not should ignore this pain.", "correct": false },
+          { "text": "You shouldn't to ignore this pain.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"allergic\" ne demek?",
+        "explanation": "Allergic = alerjik.",
+        "choices": [
+          { "text": "alerjik", "correct": true },
+          { "text": "hasta", "correct": false },
+          { "text": "ağrılı", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "I'm ___ to penicillin.",
+        "explanation": "\"Allergic to\" = -e alerjik.",
+        "choices": [
+          { "text": "allergic", "correct": true },
+          { "text": "allergy", "correct": false },
+          { "text": "allergical", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"prescription\" ne demek?",
+        "explanation": "Prescription = reçete.",
+        "choices": [
+          { "text": "reçete", "correct": true },
+          { "text": "muayene", "correct": false },
+          { "text": "randevu", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Bu ağrın ne zamandır var?\" sorusunun doğrusunu seç.",
+        "explanation": "\"How long have you had this pain?\" doğru soru yapısı.",
+        "choices": [
+          { "text": "How long have you had this pain?", "correct": true },
+          { "text": "How long you have this pain?", "correct": false },
+          { "text": "Since when this pain you have?", "correct": false }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "topic": {
+    "slug": "job-interview",
+    "title": "İş Görüşmesi",
+    "emoji": "💼",
+    "color": "sky",
+    "level": "B1",
+    "description": "Kendini tanıt, deneyimini anlat, soruları yanıtla.",
+    "order": 11
+  },
+  "lesson": {
+    "slug": "job-interview-basics",
+    "title": "İş Görüşmesine Hazırlanmak",
+    "intro": "Bu derste bir iş görüşmesinde kendini tanıtmayı, deneyimlerini anlatmayı ve sık sorulan sorulara cevap vermeyi öğreneceksin."
+  },
+  "words": [
+    { "english": "experience", "turkish": "deneyim", "example_en": "I have five years of experience in this field.", "example_tr": "Bu alanda beş yıllık deneyimim var." },
+    { "english": "strength", "turkish": "güçlü yön", "example_en": "Teamwork is one of my strengths.", "example_tr": "Takım çalışması güçlü yönlerimden biri." },
+    { "english": "weakness", "turkish": "zayıf yön", "example_en": "My biggest weakness is public speaking.", "example_tr": "En zayıf yönüm topluluk önünde konuşmak." },
+    { "english": "responsible", "turkish": "sorumlu", "example_en": "I was responsible for the whole project.", "example_tr": "Projenin tamamından sorumluydum." },
+    { "english": "deadline", "turkish": "son tarih (teslim tarihi)", "example_en": "She has never missed a deadline.", "example_tr": "Hiç bir son tarihi kaçırmadı." },
+    { "english": "teamwork", "turkish": "takım çalışması", "example_en": "Teamwork is important in this role.", "example_tr": "Bu pozisyonda takım çalışması önemli." },
+    { "english": "skill", "turkish": "beceri", "example_en": "This position matches my skills perfectly.", "example_tr": "Bu pozisyon becerilerime tam uyuyor." },
+    { "english": "achievement", "turkish": "başarı", "example_en": "Leading that project was a big achievement.", "example_tr": "O projeye liderlik etmek büyük bir başarıydı." },
+    { "english": "position", "turkish": "pozisyon", "example_en": "Why do you want this position?", "example_tr": "Bu pozisyonu neden istiyorsun?" },
+    { "english": "salary", "turkish": "maaş", "example_en": "What salary are you expecting?", "example_tr": "Ne kadar maaş bekliyorsun?" }
+  ],
+  "phrases": [
+    { "english": "Tell me about yourself.", "turkish": "Kendinden bahseder misin?", "note": "Görüşmenin klasik açılış sorusu." },
+    { "english": "What are your strengths and weaknesses?", "turkish": "Güçlü ve zayıf yönlerin neler?", "note": "" },
+    { "english": "Why do you want this position?", "turkish": "Bu pozisyonu neden istiyorsun?", "note": "" },
+    { "english": "I'm a fast learner.", "turkish": "Hızlı öğrenen biriyim.", "note": "" },
+    { "english": "I have five years of experience in this field.", "turkish": "Bu alanda beş yıllık deneyimim var.", "note": "" },
+    { "english": "Do you have any questions for us?", "turkish": "Bizim için bir sorun var mı?", "note": "Görüşme genelde bununla biter." }
+  ],
+  "grammar": [
+    {
+      "title": "Present Perfect (have/has + fiil3)",
+      "explanation": "Geçmişte başlayıp şimdiki zamanla bağlantılı deneyimlerden bahsederken 'have/has + fiil3' kullanılır. İş görüşmelerinde deneyim anlatırken çok kullanılır: 'I have worked as a designer for three years.' Soru: 'Have you ever managed a team?'",
+      "examples": ["I have worked as a designer for three years.", "Have you ever managed a team?", "She has never missed a deadline."]
+    }
+  ],
+  "examples": [
+    { "english": "I have led several successful projects.", "turkish": "Birçok başarılı projeye liderlik ettim." },
+    { "english": "I work well under pressure.", "turkish": "Baskı altında iyi çalışırım." },
+    { "english": "This position matches my skills perfectly.", "turkish": "Bu pozisyon becerilerime tam uyuyor." },
+    { "english": "I'm looking for new challenges.", "turkish": "Yeni zorluklar arıyorum." },
+    { "english": "We'll get back to you next week.", "turkish": "Size haftaya dönüş yapacağız." }
+  ],
+  "quiz": {
+    "title": "İş Görüşmesi Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"experience\" ne demek?",
+        "explanation": "Experience = deneyim.",
+        "choices": [
+          { "text": "deneyim", "correct": true },
+          { "text": "beceri", "correct": false },
+          { "text": "başarı", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "I ___ worked in this field for five years.",
+        "explanation": "Present Perfect: I/you/we/they + have.",
+        "choices": [
+          { "text": "have", "correct": true },
+          { "text": "has", "correct": false },
+          { "text": "had", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Kendinden bahseder misin?\" cümlesinin İngilizcesi hangisi?",
+        "explanation": "\"Tell me about yourself.\" görüşmenin klasik açılış sorusu.",
+        "choices": [
+          { "text": "Tell me about yourself.", "correct": true },
+          { "text": "Talk me about you.", "correct": false },
+          { "text": "Say about yourself.", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Hiç bir takıma liderlik ettin mi?\" sorusunun doğrusunu seç.",
+        "explanation": "Present Perfect soru formu: Have + özne + fiil3.",
+        "choices": [
+          { "text": "Have you ever managed a team?", "correct": true },
+          { "text": "Did you ever managed a team?", "correct": false },
+          { "text": "Have you ever manage a team?", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"deadline\" ne demek?",
+        "explanation": "Deadline = son tarih, teslim tarihi.",
+        "choices": [
+          { "text": "son tarih (teslim tarihi)", "correct": true },
+          { "text": "maaş", "correct": false },
+          { "text": "pozisyon", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "___ you ever led a project?",
+        "explanation": "Present Perfect soru: Have you ever...?",
+        "choices": [
+          { "text": "Have", "correct": true },
+          { "text": "Do", "correct": false },
+          { "text": "Did", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"weakness\" ne demek?",
+        "explanation": "Weakness = zayıf yön.",
+        "choices": [
+          { "text": "zayıf yön", "correct": true },
+          { "text": "güçlü yön", "correct": false },
+          { "text": "beceri", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Bu alanda beş yıllık deneyimim var\" cümlesinin doğrusunu seç.",
+        "explanation": "\"I have five years of experience in this field.\" doğru kelime sırası.",
+        "choices": [
+          { "text": "I have five years of experience in this field.", "correct": true },
+          { "text": "I have five years experience in this field for.", "correct": false },
+          { "text": "I has five years of experience.", "correct": false }
+        ]
+      }
+    ]
+  }
+}

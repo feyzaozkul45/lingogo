@@ -1,0 +1,125 @@
+{
+  "topic": {
+    "slug": "directions",
+    "title": "Yol Tarifi",
+    "emoji": "🧭",
+    "color": "mint",
+    "level": "A2",
+    "description": "Yol sor, tarif ver, şehirde kaybolma.",
+    "order": 9
+  },
+  "lesson": {
+    "slug": "directions-basics",
+    "title": "Yol Tarifi Sormak",
+    "intro": "Bu derste bir yere nasıl gidileceğini sormayı ve basit yol tarifi vermeyi öğreneceksin."
+  },
+  "words": [
+    { "english": "street", "turkish": "sokak", "example_en": "The bakery is on this street.", "example_tr": "Fırın bu sokakta." },
+    { "english": "corner", "turkish": "köşe", "example_en": "Turn left at the corner.", "example_tr": "Köşeden sola dönün." },
+    { "english": "straight", "turkish": "düz, dümdüz", "example_en": "Go straight ahead.", "example_tr": "Düz devam edin." },
+    { "english": "turn", "turkish": "dönmek", "example_en": "Turn right at the traffic lights.", "example_tr": "Trafik ışıklarında sağa dönün." },
+    { "english": "left", "turkish": "sol", "example_en": "It's on your left.", "example_tr": "Solunuzda." },
+    { "english": "right", "turkish": "sağ", "example_en": "Take the second right.", "example_tr": "İkinci sağa girin." },
+    { "english": "across from", "turkish": "karşısında", "example_en": "It's across from the bank.", "example_tr": "Bankanın karşısında." },
+    { "english": "near", "turkish": "yakın", "example_en": "The hotel is near the station.", "example_tr": "Otel istasyona yakın." },
+    { "english": "map", "turkish": "harita", "example_en": "Can you show me on the map?", "example_tr": "Haritada gösterebilir misin?" },
+    { "english": "block", "turkish": "sokak arası (blok)", "example_en": "It's two blocks away.", "example_tr": "İki sokak ileride." }
+  ],
+  "phrases": [
+    { "english": "Excuse me, how can I get to the station?", "turkish": "Affedersiniz, istasyona nasıl gidebilirim?", "note": "" },
+    { "english": "Go straight ahead.", "turkish": "Düz devam edin.", "note": "" },
+    { "english": "Turn left at the corner.", "turkish": "Köşeden sola dönün.", "note": "" },
+    { "english": "It's across from the bank.", "turkish": "Bankanın karşısında.", "note": "" },
+    { "english": "It's two blocks away.", "turkish": "İki sokak ileride.", "note": "" },
+    { "english": "Is it within walking distance?", "turkish": "Yürüme mesafesinde mi?", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "Yol tarifinde emir kipi",
+      "explanation": "Yol tarifi verirken fiilin yalın hali (emir kipi) kullanılır, özne söylenmez: 'Turn left.', 'Go straight.', 'Take the second right.'",
+      "examples": ["Turn left at the corner.", "Go straight for two blocks.", "Take the second right."]
+    }
+  ],
+  "examples": [
+    { "english": "The museum is next to the park.", "turkish": "Müze parkın yanında." },
+    { "english": "You can't miss it.", "turkish": "Kolayca bulursun (kaçırman imkânsız)." },
+    { "english": "It's a five-minute walk from here.", "turkish": "Buradan beş dakika yürüme mesafesinde." },
+    { "english": "Cross the bridge and turn right.", "turkish": "Köprüyü geç ve sağa dön." },
+    { "english": "I think we're lost.", "turkish": "Sanırım kayboldun." }
+  ],
+  "quiz": {
+    "title": "Yol Tarifi Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"corner\" ne demek?",
+        "explanation": "Corner = köşe.",
+        "choices": [
+          { "text": "köşe", "correct": true },
+          { "text": "sokak", "correct": false },
+          { "text": "köprü", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "___ left at the corner.",
+        "explanation": "Yol tarifinde emir kipi: Turn left.",
+        "choices": [
+          { "text": "Turn", "correct": true },
+          { "text": "Go", "correct": false },
+          { "text": "Take", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Yol tarifi isterken ne dersin?",
+        "explanation": "\"Excuse me, how can I get to...?\" en doğal kalıp.",
+        "choices": [
+          { "text": "Excuse me, how can I get to the station?", "correct": true },
+          { "text": "Where you go station?", "correct": false },
+          { "text": "Station where is here?", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Düz devam edin\" cümlesinin doğrusunu seç.",
+        "explanation": "\"Go straight ahead.\" doğru kelime sırası.",
+        "choices": [
+          { "text": "Go straight ahead.", "correct": true },
+          { "text": "Go ahead straight you.", "correct": false },
+          { "text": "Straight go ahead.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"across from\" ne demek?",
+        "explanation": "Across from = karşısında.",
+        "choices": [
+          { "text": "karşısında", "correct": true },
+          { "text": "yanında", "correct": false },
+          { "text": "arkasında", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It's two ___ away.",
+        "explanation": "\"Block\" = sokak arası mesafe birimi.",
+        "choices": [
+          { "text": "blocks", "correct": true },
+          { "text": "hours", "correct": false },
+          { "text": "streets", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Kolayca bulursun\" ifadesinin İngilizcesi hangisi?",
+        "explanation": "\"You can't miss it.\" = kaçırman imkânsız, kolayca bulursun.",
+        "choices": [
+          { "text": "You can't miss it.", "correct": true },
+          { "text": "You cannot lost it.", "correct": false },
+          { "text": "You don't miss that.", "correct": false }
+        ]
+      }
+    ]
+  }
+}

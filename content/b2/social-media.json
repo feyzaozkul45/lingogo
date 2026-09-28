@@ -1,0 +1,135 @@
+{
+  "topic": {
+    "slug": "social-media",
+    "title": "Sosyal Medya",
+    "emoji": "📱",
+    "color": "pink",
+    "level": "B2",
+    "description": "Paylaşımları, takipçileri ve gizliliği konuş.",
+    "order": 18
+  },
+  "lesson": {
+    "slug": "social-media-basics",
+    "title": "Sosyal Medya Hakkında Konuşmak",
+    "intro": "Bu derste sosyal medya alışkanlıklarını, gizlilik konularını ve geçmişe dönük pişmanlıkları anlatmayı öğreneceksin."
+  },
+  "words": [
+    { "english": "post", "turkish": "paylaşım (yapmak)", "example_en": "He posts on social media every day.", "example_tr": "Her gün sosyal medyada paylaşım yapıyor." },
+    { "english": "follower", "turkish": "takipçi", "example_en": "She has thousands of followers.", "example_tr": "Binlerce takipçisi var." },
+    { "english": "comment", "turkish": "yorum", "example_en": "I don't read every comment.", "example_tr": "Her yorumu okumuyorum." },
+    { "english": "scroll", "turkish": "kaydırmak (ekranı)", "example_en": "I spend too much time scrolling.", "example_tr": "Ekranı kaydırarak çok fazla zaman harcıyorum." },
+    { "english": "influencer", "turkish": "influencer, etkileyici", "example_en": "That influencer has a huge following.", "example_tr": "O influencer'ın çok büyük bir kitlesi var." },
+    { "english": "privacy", "turkish": "gizlilik", "example_en": "I need to protect my privacy online.", "example_tr": "Çevrimiçi gizliliğimi korumam gerekiyor." },
+    { "english": "viral", "turkish": "viral", "example_en": "This post went viral overnight.", "example_tr": "Bu paylaşım bir gecede viral oldu." },
+    { "english": "notification", "turkish": "bildirim", "example_en": "Too many notifications distract me.", "example_tr": "Çok fazla bildirim dikkatimi dağıtıyor." },
+    { "english": "addicted", "turkish": "bağımlı", "example_en": "I think I'm addicted to my phone.", "example_tr": "Sanırım telefonuma bağımlıyım." },
+    { "english": "block", "turkish": "engellemek", "example_en": "I blocked him after the argument.", "example_tr": "Tartışmadan sonra onu engelledim." }
+  ],
+  "phrases": [
+    { "english": "I spend too much time scrolling.", "turkish": "Ekranı kaydırarak çok fazla zaman harcıyorum.", "note": "" },
+    { "english": "This post went viral overnight.", "turkish": "Bu paylaşım bir gecede viral oldu.", "note": "" },
+    { "english": "I need to protect my privacy online.", "turkish": "Çevrimiçi gizliliğimi korumam gerekiyor.", "note": "" },
+    { "english": "She has thousands of followers.", "turkish": "Binlerce takipçisi var.", "note": "" },
+    { "english": "I should turn off notifications.", "turkish": "Bildirimleri kapatmalıyım.", "note": "" },
+    { "english": "If I hadn't posted that, I wouldn't have gotten so many comments.", "turkish": "Onu paylaşmasaydım, bu kadar yorum almazdım.", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "Third Conditional (If I had..., I would have...)",
+      "explanation": "Geçmişte gerçekleşmemiş bir durumun sonucunu (pişmanlık, varsayım) anlatırken kullanılır: If + past perfect, ... would have + fiil3. 'If I hadn't posted that, I wouldn't have gotten so many comments.' (Onu paylaşmasaydım, bu kadar yorum almazdım.)",
+      "examples": ["If I had known, I wouldn't have shared it.", "She would have blocked him if he had been rude.", "If I hadn't posted that, I wouldn't have gotten so many comments."]
+    }
+  ],
+  "examples": [
+    { "english": "He posts on social media every day.", "turkish": "Her gün sosyal medyada paylaşım yapıyor." },
+    { "english": "I don't trust everything I read online.", "turkish": "Çevrimiçi okuduğum her şeye güvenmiyorum." },
+    { "english": "That influencer has a huge following.", "turkish": "O influencer'ın çok büyük bir kitlesi var." },
+    { "english": "I blocked him after the argument.", "turkish": "Tartışmadan sonra onu engelledim." },
+    { "english": "Too many notifications distract me.", "turkish": "Çok fazla bildirim dikkatimi dağıtıyor." }
+  ],
+  "quiz": {
+    "title": "Sosyal Medya Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"follower\" ne demek?",
+        "explanation": "Follower = takipçi.",
+        "choices": [
+          { "text": "takipçi", "correct": true },
+          { "text": "yorum", "correct": false },
+          { "text": "bildirim", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "If I ___ known, I wouldn't have shared it.",
+        "explanation": "Third Conditional: If + had + fiil3.",
+        "choices": [
+          { "text": "had", "correct": true },
+          { "text": "have", "correct": false },
+          { "text": "has", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Bu paylaşım bir gecede viral oldu\" cümlesi hangisi?",
+        "explanation": "\"This post went viral overnight.\" doğru kullanım.",
+        "choices": [
+          { "text": "This post went viral overnight.", "correct": true },
+          { "text": "This post become viral in one night become.", "correct": false },
+          { "text": "This post go viral overnight.", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Onu paylaşmasaydım, bu kadar yorum almazdım\" cümlesinin doğrusunu seç.",
+        "explanation": "Third Conditional: If + hadn't + fiil3, ... wouldn't have + fiil3.",
+        "choices": [
+          { "text": "If I hadn't posted that, I wouldn't have gotten so many comments.", "correct": true },
+          { "text": "If I didn't post that, I wouldn't have gotten so many comments.", "correct": false },
+          { "text": "If I hadn't posted that, I don't get so many comments.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"addicted\" ne demek?",
+        "explanation": "Addicted = bağımlı.",
+        "choices": [
+          { "text": "bağımlı", "correct": true },
+          { "text": "meraklı", "correct": false },
+          { "text": "yorgun", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "She ___ have blocked him if he had been rude.",
+        "explanation": "Third Conditional: ... would have + fiil3.",
+        "choices": [
+          { "text": "would", "correct": true },
+          { "text": "will", "correct": false },
+          { "text": "did", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"privacy\" ne demek?",
+        "explanation": "Privacy = gizlilik.",
+        "choices": [
+          { "text": "gizlilik", "correct": true },
+          { "text": "güvenlik", "correct": false },
+          { "text": "paylaşım", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Bildirimleri kapatmalıyım\" cümlesinin doğrusunu seç.",
+        "explanation": "\"I should turn off notifications.\" doğru kelime sırası.",
+        "choices": [
+          { "text": "I should turn off notifications.", "correct": true },
+          { "text": "I should turned off notifications.", "correct": false },
+          { "text": "I should turning off notifications.", "correct": false }
+        ]
+      }
+    ]
+  }
+}

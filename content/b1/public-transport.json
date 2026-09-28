@@ -1,0 +1,135 @@
+{
+  "topic": {
+    "slug": "public-transport",
+    "title": "Toplu Taşımada",
+    "emoji": "🚇",
+    "color": "sun",
+    "level": "B1",
+    "description": "Bilet al, peron sor, aktarma yap.",
+    "order": 13
+  },
+  "lesson": {
+    "slug": "public-transport-basics",
+    "title": "Toplu Taşımayı Kullanmak",
+    "intro": "Bu derste otobüs/metro biletini anlamayı, peron/aktarma sormayı ve gecikmelerle ilgili konuşmayı öğreneceksin."
+  },
+  "words": [
+    { "english": "platform", "turkish": "peron", "example_en": "Which platform does the train leave from?", "example_tr": "Tren hangi perondan kalkıyor?" },
+    { "english": "fare", "turkish": "ücret (bilet ücreti)", "example_en": "How much is a single fare?", "example_tr": "Tek bilet ücreti ne kadar?" },
+    { "english": "timetable", "turkish": "tarife", "example_en": "Check the timetable before you leave.", "example_tr": "Çıkmadan önce tarifeye bak." },
+    { "english": "transfer", "turkish": "aktarma", "example_en": "Do I need to transfer?", "example_tr": "Aktarma yapmam gerekiyor mu?" },
+    { "english": "delayed", "turkish": "gecikmeli", "example_en": "The bus is running late.", "example_tr": "Otobüs gecikiyor." },
+    { "english": "crowded", "turkish": "kalabalık", "example_en": "The platform was extremely crowded.", "example_tr": "Peron aşırı kalabalıktı." },
+    { "english": "route", "turkish": "güzergah", "example_en": "This bus goes straight to the city center.", "example_tr": "Bu otobüs direkt şehir merkezine gidiyor." },
+    { "english": "ticket machine", "turkish": "bilet makinesi", "example_en": "You can buy a ticket from the machine.", "example_tr": "Bileti makineden alabilirsin." },
+    { "english": "rush hour", "turkish": "yoğun saat", "example_en": "This train is packed during rush hour.", "example_tr": "Bu tren yoğun saatte tıklım tıklım oluyor." },
+    { "english": "stop", "turkish": "durak", "example_en": "Where do I get off for the museum?", "example_tr": "Müze için nerede inmem gerekiyor?" }
+  ],
+  "phrases": [
+    { "english": "Which platform does the train leave from?", "turkish": "Tren hangi perondan kalkıyor?", "note": "" },
+    { "english": "Do I need to transfer?", "turkish": "Aktarma yapmam gerekiyor mu?", "note": "" },
+    { "english": "The bus is running late.", "turkish": "Otobüs gecikiyor.", "note": "" },
+    { "english": "How much is a single fare?", "turkish": "Tek bilet ücreti ne kadar?", "note": "" },
+    { "english": "This train is packed during rush hour.", "turkish": "Bu tren yoğun saatte tıklım tıklım oluyor.", "note": "" },
+    { "english": "Where do I get off for the museum?", "turkish": "Müze için nerede inmem gerekiyor?", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "First Conditional (If + şimdiki zaman, ... will)",
+      "explanation": "Gerçekleşmesi muhtemel durumlar ve sonuçlarını anlatmak için kullanılır: If + şimdiki zaman, ... will + fiil. 'If you miss the bus, you'll be late.' (Otobüsü kaçırırsan, geç kalırsın.)",
+      "examples": ["If you miss the bus, you'll be late.", "If it rains, the train will be delayed.", "If you don't have a ticket, you'll pay a fine."]
+    }
+  ],
+  "examples": [
+    { "english": "The next train arrives in five minutes.", "turkish": "Bir sonraki tren beş dakikaya geliyor." },
+    { "english": "This bus goes straight to the city center.", "turkish": "Bu otobüs direkt şehir merkezine gidiyor." },
+    { "english": "I always buy a monthly pass.", "turkish": "Her zaman aylık kart alırım." },
+    { "english": "The platform was extremely crowded.", "turkish": "Peron aşırı kalabalıktı." },
+    { "english": "Check the timetable before you leave.", "turkish": "Çıkmadan önce tarifeye bak." }
+  ],
+  "quiz": {
+    "title": "Toplu Taşıma Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"fare\" ne demek?",
+        "explanation": "Fare = ücret (bilet ücreti).",
+        "choices": [
+          { "text": "ücret (bilet ücreti)", "correct": true },
+          { "text": "tarife", "correct": false },
+          { "text": "güzergah", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "If you miss the bus, you ___ be late.",
+        "explanation": "First Conditional: If + şimdiki zaman, ... will.",
+        "choices": [
+          { "text": "will", "correct": true },
+          { "text": "would", "correct": false },
+          { "text": "are", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Aktarma yapmam gerekiyor mu?\" cümlesinin İngilizcesi hangisi?",
+        "explanation": "\"Do I need to transfer?\" doğru soru yapısı.",
+        "choices": [
+          { "text": "Do I need to transfer?", "correct": true },
+          { "text": "I need transfer?", "correct": false },
+          { "text": "Must I to transfer?", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Yağmur yağarsa tren gecikecek\" cümlesinin doğrusunu seç.",
+        "explanation": "If cümlesinde şimdiki zaman, sonuç cümlesinde 'will' kullanılır.",
+        "choices": [
+          { "text": "If it rains, the train will be delayed.", "correct": true },
+          { "text": "If it rains, the train delayed will be.", "correct": false },
+          { "text": "If it will rain, the train will be delayed.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"crowded\" ne demek?",
+        "explanation": "Crowded = kalabalık.",
+        "choices": [
+          { "text": "kalabalık", "correct": true },
+          { "text": "boş", "correct": false },
+          { "text": "hızlı", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Which ___ does the train leave from?",
+        "explanation": "\"Platform\" = peron.",
+        "choices": [
+          { "text": "platform", "correct": true },
+          { "text": "route", "correct": false },
+          { "text": "stop", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"rush hour\" ne demek?",
+        "explanation": "Rush hour = yoğun saat.",
+        "choices": [
+          { "text": "yoğun saat", "correct": true },
+          { "text": "tarife", "correct": false },
+          { "text": "peron", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Biletin yoksa ceza ödersin\" cümlesinin doğrusunu seç.",
+        "explanation": "\"If you don't have a ticket, you'll pay a fine.\" doğru kelime sırası.",
+        "choices": [
+          { "text": "If you don't have a ticket, you'll pay a fine.", "correct": true },
+          { "text": "If you don't have ticket, you pay fine.", "correct": false },
+          { "text": "If you not have a ticket, you'll pay a fine.", "correct": false }
+        ]
+      }
+    ]
+  }
+}

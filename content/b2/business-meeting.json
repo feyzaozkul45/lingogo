@@ -1,0 +1,135 @@
+{
+  "topic": {
+    "slug": "business-meeting",
+    "title": "İş Toplantısı",
+    "emoji": "📊",
+    "color": "sky",
+    "level": "B2",
+    "description": "Gündemi takip et, fikrini sun, geri bildirim ver.",
+    "order": 16
+  },
+  "lesson": {
+    "slug": "business-meeting-basics",
+    "title": "İş Toplantısında Konuşmak",
+    "intro": "Bu derste bir iş toplantısında gündemi takip etmeyi, fikir sunmayı ve başkasının söylediğini aktarmayı öğreneceksin."
+  },
+  "words": [
+    { "english": "agenda", "turkish": "gündem", "example_en": "Let's go through the agenda.", "example_tr": "Gündemi gözden geçirelim." },
+    { "english": "postpone", "turkish": "ertelemek", "example_en": "The meeting has been postponed to Friday.", "example_tr": "Toplantı Cuma'ya ertelendi." },
+    { "english": "proposal", "turkish": "öneri, teklif", "example_en": "Can we get some feedback on this proposal?", "example_tr": "Bu teklif hakkında geri bildirim alabilir miyiz?" },
+    { "english": "budget", "turkish": "bütçe", "example_en": "We're over budget this quarter.", "example_tr": "Bu çeyrekte bütçeyi aştık." },
+    { "english": "stakeholder", "turkish": "paydaş", "example_en": "All stakeholders agreed on the plan.", "example_tr": "Tüm paydaşlar plan konusunda anlaştı." },
+    { "english": "summarize", "turkish": "özetlemek", "example_en": "Let's summarize the main points.", "example_tr": "Ana noktaları özetleyelim." },
+    { "english": "feedback", "turkish": "geri bildirim", "example_en": "Could you elaborate on that point?", "example_tr": "O noktayı biraz açar mısın?" },
+    { "english": "follow up", "turkish": "takip etmek", "example_en": "I'll follow up by email.", "example_tr": "E-posta ile takip edeceğim." },
+    { "english": "minutes", "turkish": "toplantı tutanağı", "example_en": "I'll send the minutes after the meeting.", "example_tr": "Toplantı tutanağını sonra göndereceğim." },
+    { "english": "consensus", "turkish": "fikir birliği, uzlaşı", "example_en": "We need to reach a consensus.", "example_tr": "Bir uzlaşıya varmamız gerekiyor." }
+  ],
+  "phrases": [
+    { "english": "Let's go through the agenda.", "turkish": "Gündemi gözden geçirelim.", "note": "" },
+    { "english": "Could you elaborate on that point?", "turkish": "O noktayı biraz açar mısın?", "note": "" },
+    { "english": "We need to reach a consensus.", "turkish": "Bir uzlaşıya varmamız gerekiyor.", "note": "" },
+    { "english": "I'll follow up by email.", "turkish": "E-posta ile takip edeceğim.", "note": "" },
+    { "english": "Let's postpone this decision until next week.", "turkish": "Bu kararı haftaya erteleyelim.", "note": "" },
+    { "english": "Can we get some feedback on this proposal?", "turkish": "Bu teklif hakkında geri bildirim alabilir miyiz?", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "Reported Speech (said that...)",
+      "explanation": "Birinin söylediğini aktarırken 'said that' kullanılır ve genelde zaman bir adım geriye kayar: 'I am busy' → 'She said that she was busy.' 'We will finish it' → 'He said that they would finish it.'",
+      "examples": ["She said that she was busy.", "He said that they would finish it on time.", "They said that the budget had increased."]
+    }
+  ],
+  "examples": [
+    { "english": "The meeting has been postponed to Friday.", "turkish": "Toplantı Cuma'ya ertelendi." },
+    { "english": "We're over budget this quarter.", "turkish": "Bu çeyrekte bütçeyi aştık." },
+    { "english": "Let's summarize the main points.", "turkish": "Ana noktaları özetleyelim." },
+    { "english": "All stakeholders agreed on the plan.", "turkish": "Tüm paydaşlar plan konusunda anlaştı." },
+    { "english": "I'll send the minutes after the meeting.", "turkish": "Toplantı tutanağını sonra göndereceğim." }
+  ],
+  "quiz": {
+    "title": "İş Toplantısı Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"agenda\" ne demek?",
+        "explanation": "Agenda = gündem.",
+        "choices": [
+          { "text": "gündem", "correct": true },
+          { "text": "bütçe", "correct": false },
+          { "text": "teklif", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "She said that she ___ busy.",
+        "explanation": "Reported speech'te zaman bir adım geri kayar: is → was.",
+        "choices": [
+          { "text": "was", "correct": true },
+          { "text": "is", "correct": false },
+          { "text": "be", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Gündemi gözden geçirelim\" cümlesi hangisi?",
+        "explanation": "\"Let's go through the agenda.\" doğal iş İngilizcesi kalıbı.",
+        "choices": [
+          { "text": "Let's go through the agenda.", "correct": true },
+          { "text": "Let's see agenda.", "correct": false },
+          { "text": "Let's agenda go through.", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Zamanında bitireceklerini söyledi\" cümlesinin doğrusunu seç.",
+        "explanation": "Reported speech'te 'will' → 'would' olur.",
+        "choices": [
+          { "text": "He said that they would finish it on time.", "correct": true },
+          { "text": "He said that they will finish it on time.", "correct": false },
+          { "text": "He said they would finished it on time.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"consensus\" ne demek?",
+        "explanation": "Consensus = fikir birliği, uzlaşı.",
+        "choices": [
+          { "text": "fikir birliği, uzlaşı", "correct": true },
+          { "text": "geri bildirim", "correct": false },
+          { "text": "teklif", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "They said that the budget ___ increased.",
+        "explanation": "Reported speech'te 'has' → 'had' olur.",
+        "choices": [
+          { "text": "had", "correct": true },
+          { "text": "has", "correct": false },
+          { "text": "have", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"postpone\" ne demek?",
+        "explanation": "Postpone = ertelemek.",
+        "choices": [
+          { "text": "ertelemek", "correct": true },
+          { "text": "özetlemek", "correct": false },
+          { "text": "takip etmek", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Bu teklif hakkında geri bildirim alabilir miyiz?\" sorusunun doğrusunu seç.",
+        "explanation": "\"Can we get some feedback on this proposal?\" doğru kelime sırası.",
+        "choices": [
+          { "text": "Can we get some feedback on this proposal?", "correct": true },
+          { "text": "Can we get feedback this proposal on?", "correct": false },
+          { "text": "Can get we some feedback on this proposal?", "correct": false }
+        ]
+      }
+    ]
+  }
+}

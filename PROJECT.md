@@ -410,21 +410,36 @@ Komut **idempotent** olmalıdır: `slug` üzerinden kaydı bulur, günceller; ay
 
 `scenario` alanı Phase 1'de JSON'da bulunabilir ama yükleyici onu **Phase 2'de** işlemeye başlar.
 
-### İlk içerik (Phase 1 — A1/A2)
+### İçerik (Phase 1 — A1/A2/B1/B2, her seviyede 5 konu)
 
 | Konu | Seviye | Grammar ipucu |
 |------|--------|---------------|
 | ☕ Kafede (`cafe`) | A1 | *Can I have...?* |
 | 🍔 Restoranda (`restaurant`) | A1 | *I'd like...* |
 | 👋 Tanışma (`meeting-people`) | A1 | *to be* (I'm / You're / Where are you from?) |
+| 🕐 Sayılar ve Saat (`numbers-time`) | A1 | *What time is it? / It's...* |
+| 👨‍👩‍👧 Ailem (`family`) | A1 | *have / has* |
 | 🛍️ Alışverişte (`shopping`) | A2 | *How much is / are...?* |
 | ✈️ Havaalanında (`airport`) | A2 | *Where is...? / Where can I...?* |
+| 🏨 Otelde (`hotel`) | A2 | *There is / There are* |
+| 🧭 Yol Tarifi (`directions`) | A2 | Yol tarifinde emir kipi (*Turn left.*) |
+| 🌦️ Hava Durumu (`weather`) | A2 | *going to* (yakın gelecek tahmini) |
+| 💼 İş Görüşmesi (`job-interview`) | B1 | Present Perfect |
+| 🩺 Doktorda (`doctor`) | B1 | *should / shouldn't* |
+| 🚇 Toplu Taşımada (`public-transport`) | B1 | First Conditional |
+| 🏠 Ev Kiralama (`renting`) | B1 | *used to* |
+| 🏦 Bankada (`bank`) | B1 | *might / could* (olasılık) |
+| 📊 İş Toplantısı (`business-meeting`) | B2 | Reported Speech |
+| 📰 Haberler (`news`) | B2 | Passive Voice |
+| 📱 Sosyal Medya (`social-media`) | B2 | Third Conditional |
+| 🌱 Çevre (`environment`) | B2 | *unless* |
+| 💬 Fikir Belirtme (`opinions`) | B2 | *although / despite / however* |
 
-Her konu: 8–10 kelime, 5–6 ifade, 1 grammar ipucu, 4–5 örnek cümle, 5–6 quiz sorusu.
+Her konu: 10 kelime, 6 ifade, 1 grammar ipucu, 5 örnek cümle, 7–8 quiz sorusu. B1/B2 içerikleri A1/A2'ye göre daha uzun cümleler ve daha zor çeldiriciler kullanır.
 
-Sonraki konular (Phase 3): 🏨 Otelde, 🧭 Yol tarifi sorma, 💼 İş görüşmesi, 🏠 Günlük hayat.
+Sonraki konular (Phase 3): Günlük hayat, ileri seviye senaryolar, kullanıcıyla konuşarak seçilecek.
 
-**İçerik kuralları:** Cümleler doğal, günlük ve gerçekten kullanılan İngilizce olmalı. A1–A2 için kısa cümleler. Türkçe açıklamalar kısa ve samimi ("sen" diliyle).
+**İçerik kuralları:** Cümleler doğal, günlük ve gerçekten kullanılan İngilizce olmalı. A1–A2 için kısa cümleler, B1–B2 için daha karmaşık yapılar (Present Perfect, Conditional'lar, Passive, Reported Speech). Türkçe açıklamalar kısa ve samimi ("sen" diliyle).
 
 ---
 
@@ -470,14 +485,7 @@ lingogo/
 │   ├── admin.py
 │   └── tests.py
 │
-├── content/                    # Ders içerikleri (JSON)
-│   ├── a1/
-│   │   ├── cafe.json
-│   │   ├── restaurant.json
-│   │   └── meeting-people.json
-│   └── a2/
-│       ├── shopping.json
-│       └── airport.json
+├── content/                    # Ders içerikleri (JSON) — a1/, a2/, b1/, b2/ (her birinde 5 dosya)
 │
 ├── templates/
 │   ├── base.html
@@ -624,15 +632,19 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 
 **1F. Yayına alma**
 - [x] `vercel.json` (minimal — Vercel Django için sıfır-konfigürasyon destekliyor, sadece `maxDuration` ayarlandı)
-- [ ] Vercel deploy (kullanıcı Import ekranını tamamlayacak)
-- [ ] Üretimde `DEBUG=False` ile test
+- [x] Vercel deploy (bölge: `fra1`)
+- [x] Üretimde `DEBUG=False` ile test (canlı sitede kayıt, quiz, ilerleme sayfası test edildi)
 
 **Phase 1 tamamlandı sayılır, eğer:**
-- Kullanıcı hesapsız bir konu seçip dersi okuyabiliyor ve quiz çözebiliyorsa,
-- Kayıt olan kullanıcının tamamladığı dersler ve quiz sonuçları kaydediliyorsa,
-- İlerleme sayfası doğru sayıları gösteriyorsa,
-- Site telefonda düzgün görünüyorsa,
-- Uygulama Vercel üzerinde Supabase'e bağlı olarak çalışıyorsa.
+- [x] Kullanıcı hesapsız bir konu seçip dersi okuyabiliyor ve quiz çözebiliyorsa,
+- [x] Kayıt olan kullanıcının tamamladığı dersler ve quiz sonuçları kaydediliyorsa,
+- [x] İlerleme sayfası doğru sayıları gösteriyorsa,
+- [x] Site telefonda düzgün görünüyorsa,
+- [x] Uygulama Vercel üzerinde Supabase'e bağlı olarak çalışıyorsa.
+
+## ✅ Phase 1 — TAMAMLANDI
+
+20 konu (A1/A2/B1/B2, her seviyede 5), tam kullanıcı akışı (hesapsız/hesaplı ders + quiz + ilerleme), Supabase + Vercel üzerinde canlı.
 
 ### Phase 2 — Gerçek Hayat
 

@@ -6,7 +6,7 @@
     "color": "pink",
     "level": "A2",
     "description": "Fiyat sor, beden dene, ödeme yap.",
-    "order": 4
+    "order": 6
   },
   "lesson": {
     "slug": "shopping-basics",
@@ -21,7 +21,9 @@
     { "english": "cash", "turkish": "nakit", "example_en": "I'll pay in cash.", "example_tr": "Nakit ödeyeceğim." },
     { "english": "receipt", "turkish": "fiş / fatura", "example_en": "Can I have the receipt, please?", "example_tr": "Fişi alabilir miyim, lütfen?" },
     { "english": "expensive", "turkish": "pahalı", "example_en": "This bag is too expensive.", "example_tr": "Bu çanta çok pahalı." },
-    { "english": "cheap", "turkish": "ucuz", "example_en": "These shoes are cheap.", "example_tr": "Bu ayakkabılar ucuz." }
+    { "english": "cheap", "turkish": "ucuz", "example_en": "These shoes are cheap.", "example_tr": "Bu ayakkabılar ucuz." },
+    { "english": "refund", "turkish": "para iadesi", "example_en": "Can I get a refund for this?", "example_tr": "Bunun için para iadesi alabilir miyim?" },
+    { "english": "exchange", "turkish": "değiştirmek", "example_en": "Can I exchange this for a different size?", "example_tr": "Bunu farklı bir bedenle değiştirebilir miyim?" }
   ],
   "phrases": [
     { "english": "How much is this?", "turkish": "Bu ne kadar?", "note": "Tek bir ürün için." },
@@ -109,6 +111,16 @@
           { "text": "cash", "correct": true },
           { "text": "card", "correct": false },
           { "text": "price", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"refund\" ne demek?",
+        "explanation": "Refund = para iadesi.",
+        "choices": [
+          { "text": "para iadesi", "correct": true },
+          { "text": "indirim", "correct": false },
+          { "text": "değişim", "correct": false }
         ]
       }
     ]

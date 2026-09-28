@@ -1,0 +1,135 @@
+{
+  "topic": {
+    "slug": "opinions",
+    "title": "Fikir Belirtme",
+    "emoji": "💬",
+    "color": "sun",
+    "level": "B2",
+    "description": "Görüşünü savun, katıl/katılma, tartış.",
+    "order": 20
+  },
+  "lesson": {
+    "slug": "opinions-basics",
+    "title": "Fikir Belirtmek ve Tartışmak",
+    "intro": "Bu derste görüşünü ifade etmeyi, katılıp katılmadığını söylemeyi ve zıt fikirleri bağlamayı öğreneceksin."
+  },
+  "words": [
+    { "english": "opinion", "turkish": "görüş, fikir", "example_en": "In my opinion, this is the best option.", "example_tr": "Bence bu en iyi seçenek." },
+    { "english": "agree", "turkish": "katılmak, hemfikir olmak", "example_en": "I completely agree with you.", "example_tr": "Sana tamamen katılıyorum." },
+    { "english": "disagree", "turkish": "katılmamak", "example_en": "I see your point, but I disagree.", "example_tr": "Ne demek istediğini anlıyorum ama katılmıyorum." },
+    { "english": "argument", "turkish": "argüman, tartışma", "example_en": "That's a strong argument.", "example_tr": "Bu güçlü bir argüman." },
+    { "english": "point of view", "turkish": "bakış açısı", "example_en": "I understand your point of view.", "example_tr": "Bakış açını anlıyorum." },
+    { "english": "convince", "turkish": "ikna etmek", "example_en": "She managed to convince everyone.", "example_tr": "Herkesi ikna etmeyi başardı." },
+    { "english": "however", "turkish": "ancak, fakat", "example_en": "It's expensive. However, it's worth it.", "example_tr": "Pahalı. Ancak, buna değer." },
+    { "english": "although", "turkish": "-e rağmen, gerçi", "example_en": "Although it's expensive, it's worth it.", "example_tr": "Pahalı olmasına rağmen, değer." },
+    { "english": "evidence", "turkish": "kanıt", "example_en": "Can you give me some evidence?", "example_tr": "Bana biraz kanıt verebilir misin?" },
+    { "english": "debate", "turkish": "tartışma, münazara", "example_en": "We had a long debate about it.", "example_tr": "Bu konuda uzun bir tartışma yaptık." }
+  ],
+  "phrases": [
+    { "english": "In my opinion, this is the best option.", "turkish": "Bence bu en iyi seçenek.", "note": "" },
+    { "english": "I completely agree with you.", "turkish": "Sana tamamen katılıyorum.", "note": "" },
+    { "english": "I see your point, but I disagree.", "turkish": "Ne demek istediğini anlıyorum ama katılmıyorum.", "note": "" },
+    { "english": "That's a fair point.", "turkish": "Bu adil bir nokta (haklısın).", "note": "" },
+    { "english": "On the other hand, there are some downsides.", "turkish": "Öte yandan, bazı dezavantajları da var.", "note": "" },
+    { "english": "Although it's expensive, it's worth it.", "turkish": "Pahalı olmasına rağmen, değer.", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "although / despite / however (karşıtlık bağlaçları)",
+      "explanation": "Zıt fikirleri bağlamak için kullanılır. 'Although' özne+fiil ile gelir: 'Although it's expensive, it's worth it.' 'Despite' bir isim ya da -ing ile gelir: 'Despite the cost, it's worth it.' 'However' iki cümle arasında, genelde virgülle: 'It's expensive. However, it's worth it.'",
+      "examples": ["Although it's expensive, it's worth it.", "Despite the cost, it's worth it.", "It's expensive. However, it's worth it."]
+    }
+  ],
+  "examples": [
+    { "english": "I understand your point of view.", "turkish": "Bakış açını anlıyorum." },
+    { "english": "Can you give me some evidence?", "turkish": "Bana biraz kanıt verebilir misin?" },
+    { "english": "We had a long debate about it.", "turkish": "Bu konuda uzun bir tartışma yaptık." },
+    { "english": "She managed to convince everyone.", "turkish": "Herkesi ikna etmeyi başardı." },
+    { "english": "Let's agree to disagree.", "turkish": "Fikir ayrılığını kabul edelim." }
+  ],
+  "quiz": {
+    "title": "Fikir Belirtme Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"opinion\" ne demek?",
+        "explanation": "Opinion = görüş, fikir.",
+        "choices": [
+          { "text": "görüş, fikir", "correct": true },
+          { "text": "kanıt", "correct": false },
+          { "text": "tartışma", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "___ it's expensive, it's worth it.",
+        "explanation": "\"Although\" özne+fiil ile kullanılır.",
+        "choices": [
+          { "text": "Although", "correct": true },
+          { "text": "Despite", "correct": false },
+          { "text": "However", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Sana tamamen katılıyorum\" cümlesi hangisi?",
+        "explanation": "\"I completely agree with you.\" doğru kelime sırası.",
+        "choices": [
+          { "text": "I completely agree with you.", "correct": true },
+          { "text": "I agree completely you.", "correct": false },
+          { "text": "I am agree with you.", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Maliyete rağmen buna değer\" cümlesinin doğrusunu seç.",
+        "explanation": "\"Despite\" bir isim ile gelir, cümle ile değil.",
+        "choices": [
+          { "text": "Despite the cost, it's worth it.", "correct": true },
+          { "text": "Despite it's expensive, it's worth it.", "correct": false },
+          { "text": "Despite the cost it worth it is.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"evidence\" ne demek?",
+        "explanation": "Evidence = kanıt.",
+        "choices": [
+          { "text": "kanıt", "correct": true },
+          { "text": "görüş", "correct": false },
+          { "text": "tartışma", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It's expensive. ___, it's worth it.",
+        "explanation": "\"However\" iki cümle arasında kullanılır.",
+        "choices": [
+          { "text": "However", "correct": true },
+          { "text": "Although", "correct": false },
+          { "text": "Despite", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"convince\" ne demek?",
+        "explanation": "Convince = ikna etmek.",
+        "choices": [
+          { "text": "ikna etmek", "correct": true },
+          { "text": "katılmak", "correct": false },
+          { "text": "tartışmak", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Bence bu en iyi seçenek\" cümlesinin doğrusunu seç.",
+        "explanation": "\"In my opinion, this is the best option.\" doğru kelime sırası.",
+        "choices": [
+          { "text": "In my opinion, this is the best option.", "correct": true },
+          { "text": "In my opinion this the best option is.", "correct": false },
+          { "text": "My opinion, this is best option.", "correct": false }
+        ]
+      }
+    ]
+  }
+}

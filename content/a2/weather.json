@@ -1,0 +1,125 @@
+{
+  "topic": {
+    "slug": "weather",
+    "title": "Hava Durumu",
+    "emoji": "🌦️",
+    "color": "sun",
+    "level": "A2",
+    "description": "Hava durumunu sor, tahmin hakkında konuş.",
+    "order": 10
+  },
+  "lesson": {
+    "slug": "weather-basics",
+    "title": "Hava Durumu Hakkında Konuşmak",
+    "intro": "Bu derste hava durumunu sormayı, tahminden bahsetmeyi ve mevsimlerle ilgili konuşmayı öğreneceksin."
+  },
+  "words": [
+    { "english": "sunny", "turkish": "güneşli", "example_en": "It's sunny today.", "example_tr": "Bugün hava güneşli." },
+    { "english": "cloudy", "turkish": "bulutlu", "example_en": "The sky is getting cloudy.", "example_tr": "Gökyüzü bulutlanıyor." },
+    { "english": "rain", "turkish": "yağmur", "example_en": "It rained all day yesterday.", "example_tr": "Dün bütün gün yağmur yağdı." },
+    { "english": "snow", "turkish": "kar", "example_en": "It's not going to snow tonight.", "example_tr": "Bu gece kar yağmayacak." },
+    { "english": "windy", "turkish": "rüzgarlı", "example_en": "It's too windy to go outside.", "example_tr": "Dışarı çıkmak için hava çok rüzgarlı." },
+    { "english": "temperature", "turkish": "sıcaklık, ısı", "example_en": "The temperature is dropping.", "example_tr": "Sıcaklık düşüyor." },
+    { "english": "cold", "turkish": "soğuk", "example_en": "It's freezing outside.", "example_tr": "Dışarısı dondurucu soğuk." },
+    { "english": "warm", "turkish": "ılık", "example_en": "I love warm summer evenings.", "example_tr": "Sıcak yaz akşamlarını severim." },
+    { "english": "forecast", "turkish": "hava tahmini", "example_en": "Check the forecast before you leave.", "example_tr": "Çıkmadan önce hava tahminine bak." },
+    { "english": "umbrella", "turkish": "şemsiye", "example_en": "Don't forget your umbrella.", "example_tr": "Şemsiyeni unutma." }
+  ],
+  "phrases": [
+    { "english": "What's the weather like today?", "turkish": "Bugün hava nasıl?", "note": "" },
+    { "english": "It's going to rain later.", "turkish": "Sonra yağmur yağacak.", "note": "" },
+    { "english": "It's freezing outside.", "turkish": "Dışarısı dondurucu soğuk.", "note": "" },
+    { "english": "Don't forget your umbrella.", "turkish": "Şemsiyeni unutma.", "note": "" },
+    { "english": "The forecast says it'll be sunny tomorrow.", "turkish": "Tahmine göre yarın güneşli olacak.", "note": "" },
+    { "english": "It's really hot today.", "turkish": "Bugün hava gerçekten sıcak.", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "going to (yakın gelecek tahmini)",
+      "explanation": "Yakın gelecekle ilgili tahmin yaparken 'be going to' kullanılır: 'It's going to rain.' (Yağmur yağacak.) Bulut, gökyüzü gibi görünür kanıtlara dayanan tahminlerde tercih edilir.",
+      "examples": ["It's going to rain.", "It's going to be sunny tomorrow.", "It's not going to snow tonight."]
+    }
+  ],
+  "examples": [
+    { "english": "It rained all day yesterday.", "turkish": "Dün bütün gün yağmur yağdı." },
+    { "english": "The sky is getting cloudy.", "turkish": "Gökyüzü bulutlanıyor." },
+    { "english": "I love warm summer evenings.", "turkish": "Sıcak yaz akşamlarını severim." },
+    { "english": "It's too windy to go outside.", "turkish": "Dışarı çıkmak için hava çok rüzgarlı." },
+    { "english": "Check the forecast before you leave.", "turkish": "Çıkmadan önce hava tahminine bak." }
+  ],
+  "quiz": {
+    "title": "Hava Durumu Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"cloudy\" ne demek?",
+        "explanation": "Cloudy = bulutlu.",
+        "choices": [
+          { "text": "bulutlu", "correct": true },
+          { "text": "güneşli", "correct": false },
+          { "text": "yağmurlu", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It's ___ to rain.",
+        "explanation": "Kalıp: be going to.",
+        "choices": [
+          { "text": "going", "correct": true },
+          { "text": "go", "correct": false },
+          { "text": "goes", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Hava durumunu sormak için ne dersin?",
+        "explanation": "\"What's the weather like today?\" en doğal soru.",
+        "choices": [
+          { "text": "What's the weather like today?", "correct": true },
+          { "text": "How is weather feel?", "correct": false },
+          { "text": "What weather today?", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Şemsiyeni unutma\" cümlesinin doğrusunu seç.",
+        "explanation": "\"Don't forget your umbrella.\" doğru kelime sırası.",
+        "choices": [
+          { "text": "Don't forget your umbrella.", "correct": true },
+          { "text": "Don't forget you umbrella.", "correct": false },
+          { "text": "Not forget your umbrella.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"forecast\" ne demek?",
+        "explanation": "Forecast = hava tahmini.",
+        "choices": [
+          { "text": "hava tahmini", "correct": true },
+          { "text": "sıcaklık", "correct": false },
+          { "text": "mevsim", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It's ___ outside. (çok soğuk)",
+        "explanation": "\"Freezing\" = dondurucu soğuk.",
+        "choices": [
+          { "text": "freezing", "correct": true },
+          { "text": "warm", "correct": false },
+          { "text": "sunny", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Bugün hava gerçekten sıcak\" cümlesi hangisi?",
+        "explanation": "\"It's really hot today.\" doğru kelime sırası.",
+        "choices": [
+          { "text": "It's really hot today.", "correct": true },
+          { "text": "It really hot is today.", "correct": false },
+          { "text": "Today is really hot it.", "correct": false }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "topic": {
+    "slug": "numbers-time",
+    "title": "Sayılar ve Saat",
+    "emoji": "🕐",
+    "color": "sky",
+    "level": "A1",
+    "description": "Saati sor, randevu ayarla, zamanı anlat.",
+    "order": 4
+  },
+  "lesson": {
+    "slug": "numbers-time-basics",
+    "title": "Sayılar ve Saat",
+    "intro": "Bu derste saat sormayı, randevu için zaman söylemeyi ve günlük zaman ifadelerini öğreneceksin."
+  },
+  "words": [
+    { "english": "hour", "turkish": "saat (zaman birimi)", "example_en": "It's one hour to the meeting.", "example_tr": "Toplantıya bir saat var." },
+    { "english": "minute", "turkish": "dakika", "example_en": "Wait a minute, please.", "example_tr": "Bir dakika bekle, lütfen." },
+    { "english": "today", "turkish": "bugün", "example_en": "What's the date today?", "example_tr": "Bugün ayın kaçı?" },
+    { "english": "tomorrow", "turkish": "yarın", "example_en": "See you tomorrow.", "example_tr": "Yarın görüşürüz." },
+    { "english": "yesterday", "turkish": "dün", "example_en": "I was busy yesterday.", "example_tr": "Dün meşguldüm." },
+    { "english": "early", "turkish": "erken", "example_en": "The train leaves early.", "example_tr": "Tren erken kalkıyor." },
+    { "english": "late", "turkish": "geç", "example_en": "Sorry, I'm late.", "example_tr": "Üzgünüm, geciktim." },
+    { "english": "week", "turkish": "hafta", "example_en": "See you next week.", "example_tr": "Haftaya görüşürüz." },
+    { "english": "number", "turkish": "sayı, numara", "example_en": "What's your phone number?", "example_tr": "Telefon numaran ne?" },
+    { "english": "clock", "turkish": "saat (alet)", "example_en": "Look at the clock.", "example_tr": "Saate bak." }
+  ],
+  "phrases": [
+    { "english": "What time is it?", "turkish": "Saat kaç?", "note": "" },
+    { "english": "It's half past three.", "turkish": "Saat üç buçuk.", "note": "İngilizce'de saatler böyle söylenir." },
+    { "english": "See you at five o'clock.", "turkish": "Saat beşte görüşürüz.", "note": "" },
+    { "english": "I'm free this afternoon.", "turkish": "Bu öğleden sonra müsaitim.", "note": "" },
+    { "english": "Can we meet tomorrow morning?", "turkish": "Yarın sabah buluşabilir miyiz?", "note": "" },
+    { "english": "I'll be there in ten minutes.", "turkish": "On dakikaya orada olurum.", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "What time is it? / It's...",
+      "explanation": "Saat sormak için 'What time is it?' kullanılır. Cevap verirken 'It's' ile başlanır: 'It's three o'clock' (saat üç), 'It's half past three' (üç buçuk), 'It's a quarter to four' (dörde çeyrek var).",
+      "examples": ["What time is it?", "It's three o'clock.", "It's a quarter to four."]
+    }
+  ],
+  "examples": [
+    { "english": "The meeting starts at nine o'clock.", "turkish": "Toplantı saat dokuzda başlıyor." },
+    { "english": "I usually wake up early.", "turkish": "Genelde erken uyanırım." },
+    { "english": "We have an hour before the movie.", "turkish": "Filme bir saatimiz var." },
+    { "english": "What day is it today?", "turkish": "Bugün günlerden ne?" },
+    { "english": "I'll call you in a minute.", "turkish": "Seni bir dakikaya ararım." }
+  ],
+  "quiz": {
+    "title": "Sayılar ve Saat Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"hour\" ne demek?",
+        "explanation": "Hour = saat (zaman birimi).",
+        "choices": [
+          { "text": "saat (zaman birimi)", "correct": true },
+          { "text": "dakika", "correct": false },
+          { "text": "gün", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "What ___ is it?",
+        "explanation": "Kalıp: What time is it?",
+        "choices": [
+          { "text": "time", "correct": true },
+          { "text": "hour", "correct": false },
+          { "text": "day", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Saat üç buçuk nasıl söylenir?",
+        "explanation": "\"Half past\" = buçuk.",
+        "choices": [
+          { "text": "It's half past three.", "correct": true },
+          { "text": "It's three half.", "correct": false },
+          { "text": "It's half three clock.", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Yarın görüşürüz\" cümlesinin doğru İngilizcesini seç.",
+        "explanation": "\"See you tomorrow.\" doğru kullanım.",
+        "choices": [
+          { "text": "See you tomorrow.", "correct": true },
+          { "text": "See you at tomorrow.", "correct": false },
+          { "text": "See tomorrow you.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"late\" ne demek?",
+        "explanation": "Late = geç.",
+        "choices": [
+          { "text": "geç", "correct": true },
+          { "text": "erken", "correct": false },
+          { "text": "hızlı", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "I'll be there in ten ___.",
+        "explanation": "\"Minutes\" = dakikalar.",
+        "choices": [
+          { "text": "minutes", "correct": true },
+          { "text": "hours", "correct": false },
+          { "text": "seconds", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Dün meşguldüm\" cümlesinin İngilizcesi hangisi?",
+        "explanation": "Geçmiş zaman: was + busy + yesterday.",
+        "choices": [
+          { "text": "I was busy yesterday.", "correct": true },
+          { "text": "I am busy yesterday.", "correct": false },
+          { "text": "I busy was yesterday.", "correct": false }
+        ]
+      }
+    ]
+  }
+}

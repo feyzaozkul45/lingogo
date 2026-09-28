@@ -1,0 +1,125 @@
+{
+  "topic": {
+    "slug": "hotel",
+    "title": "Otelde",
+    "emoji": "🏨",
+    "color": "coral",
+    "level": "A2",
+    "description": "Check-in yap, oda iste, resepsiyonla konuş.",
+    "order": 8
+  },
+  "lesson": {
+    "slug": "hotel-basics",
+    "title": "Otelde Check-in Yapmak",
+    "intro": "Bu derste otele giriş yapmayı, oda istemeyi ve resepsiyonla konuşmayı öğreneceksin."
+  },
+  "words": [
+    { "english": "reservation", "turkish": "rezervasyon", "example_en": "I have a reservation under Smith.", "example_tr": "Smith adına rezervasyonum var." },
+    { "english": "reception", "turkish": "resepsiyon", "example_en": "The reception is on the ground floor.", "example_tr": "Resepsiyon zemin katta." },
+    { "english": "key card", "turkish": "kart anahtar", "example_en": "Here is your key card.", "example_tr": "İşte kart anahtarınız." },
+    { "english": "room", "turkish": "oda", "example_en": "Could I have a room with a sea view?", "example_tr": "Deniz manzaralı bir oda alabilir miyim?" },
+    { "english": "view", "turkish": "manzara", "example_en": "The room has a beautiful view.", "example_tr": "Odanın manzarası çok güzel." },
+    { "english": "towel", "turkish": "havlu", "example_en": "Can I get an extra towel?", "example_tr": "Fazladan bir havlu alabilir miyim?" },
+    { "english": "check-in", "turkish": "giriş yapmak", "example_en": "What time is check-in?", "example_tr": "Giriş saati kaç?" },
+    { "english": "check-out", "turkish": "çıkış yapmak", "example_en": "What time is check-out?", "example_tr": "Çıkış saati kaç?" },
+    { "english": "elevator", "turkish": "asansör", "example_en": "The elevator is out of order.", "example_tr": "Asansör arızalı." },
+    { "english": "wake-up call", "turkish": "uyandırma çağrısı", "example_en": "Can you wake me up at seven?", "example_tr": "Beni saat yedide uyandırabilir misiniz?" }
+  ],
+  "phrases": [
+    { "english": "I have a reservation under Smith.", "turkish": "Smith adına rezervasyonum var.", "note": "" },
+    { "english": "Is breakfast included?", "turkish": "Kahvaltı dahil mi?", "note": "" },
+    { "english": "Could I have a room with a sea view?", "turkish": "Deniz manzaralı bir oda alabilir miyim?", "note": "" },
+    { "english": "What time is check-out?", "turkish": "Çıkış saati kaç?", "note": "" },
+    { "english": "Can I get an extra towel?", "turkish": "Fazladan bir havlu alabilir miyim?", "note": "" },
+    { "english": "Is there Wi-Fi in the room?", "turkish": "Odada Wi-Fi var mı?", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "There is / There are",
+      "explanation": "Bir yerde bir şeyin bulunduğunu söylemek için kullanılır. Tekil isimlerde 'There is', çoğul isimlerde 'There are' kullanılır: 'There is a pool.' / 'There are two beds.'",
+      "examples": ["There is a pool on the roof.", "There are two beds in the room.", "Is there a gym in the hotel?"]
+    }
+  ],
+  "examples": [
+    { "english": "The hotel is near the beach.", "turkish": "Otel plaja yakın." },
+    { "english": "There isn't any hot water.", "turkish": "Sıcak su yok." },
+    { "english": "We need two more towels.", "turkish": "İki havluya daha ihtiyacımız var." },
+    { "english": "The elevator is out of order.", "turkish": "Asansör arızalı." },
+    { "english": "Can you wake me up at seven?", "turkish": "Beni saat yedide uyandırabilir misiniz?" }
+  ],
+  "quiz": {
+    "title": "Otel Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"reception\" ne demek?",
+        "explanation": "Reception = resepsiyon.",
+        "choices": [
+          { "text": "resepsiyon", "correct": true },
+          { "text": "oda", "correct": false },
+          { "text": "anahtar", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "___ is a pool on the roof.",
+        "explanation": "Kalıp: There is / There are.",
+        "choices": [
+          { "text": "There", "correct": true },
+          { "text": "It", "correct": false },
+          { "text": "Here", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Çıkış saatini sormak için ne dersin?",
+        "explanation": "\"What time is check-out?\" doğru soru kalıbı.",
+        "choices": [
+          { "text": "What time is check-out?", "correct": true },
+          { "text": "What time is check-in?", "correct": false },
+          { "text": "When is the room?", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Odada iki yatak var\" cümlesinin doğrusunu seç.",
+        "explanation": "Çoğul isimlerde 'There are' kullanılır.",
+        "choices": [
+          { "text": "There are two beds in the room.", "correct": true },
+          { "text": "There is two beds in the room.", "correct": false },
+          { "text": "Two beds there are in room.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"towel\" ne demek?",
+        "explanation": "Towel = havlu.",
+        "choices": [
+          { "text": "havlu", "correct": true },
+          { "text": "battaniye", "correct": false },
+          { "text": "yastık", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Is ___ Wi-Fi in the room?",
+        "explanation": "Soru formu: Is there...?",
+        "choices": [
+          { "text": "there", "correct": true },
+          { "text": "is", "correct": false },
+          { "text": "this", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Rezervasyonunu bildirmek için ne dersin?",
+        "explanation": "\"I have a reservation under [isim].\" standart kalıp.",
+        "choices": [
+          { "text": "I have a reservation under Smith.", "correct": true },
+          { "text": "I am reservation Smith.", "correct": false },
+          { "text": "My name reservation is Smith.", "correct": false }
+        ]
+      }
+    ]
+  }
+}

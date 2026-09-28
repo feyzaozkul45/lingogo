@@ -21,7 +21,9 @@
     { "english": "table", "turkish": "masa", "example_en": "A table for two, please.", "example_tr": "İki kişilik bir masa, lütfen." },
     { "english": "dessert", "turkish": "tatlı", "example_en": "Would you like some dessert?", "example_tr": "Tatlı ister misiniz?" },
     { "english": "tasty", "turkish": "lezzetli", "example_en": "This soup is very tasty.", "example_tr": "Bu çorba çok lezzetli." },
-    { "english": "tip", "turkish": "bahşiş", "example_en": "We left a small tip.", "example_tr": "Küçük bir bahşiş bıraktık." }
+    { "english": "tip", "turkish": "bahşiş", "example_en": "We left a small tip.", "example_tr": "Küçük bir bahşiş bıraktık." },
+    { "english": "starter", "turkish": "başlangıç, meze", "example_en": "We'll start with a starter.", "example_tr": "Bir başlangıçla başlayacağız." },
+    { "english": "reservation", "turkish": "rezervasyon", "example_en": "We have a reservation for eight o'clock.", "example_tr": "Saat sekiz için rezervasyonumuz var." }
   ],
   "phrases": [
     { "english": "Can I have the menu, please?", "turkish": "Menüyü alabilir miyim, lütfen?", "note": "" },
@@ -104,6 +106,16 @@
           { "text": "order", "correct": true },
           { "text": "eat", "correct": false },
           { "text": "pay", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"reservation\" ne demek?",
+        "explanation": "Reservation = rezervasyon.",
+        "choices": [
+          { "text": "rezervasyon", "correct": true },
+          { "text": "bahşiş", "correct": false },
+          { "text": "başlangıç yemeği", "correct": false }
         ]
       }
     ]

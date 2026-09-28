@@ -1,0 +1,125 @@
+{
+  "topic": {
+    "slug": "family",
+    "title": "Ailem",
+    "emoji": "👨‍👩‍👧",
+    "color": "pink",
+    "level": "A1",
+    "description": "Aileni tanıt, kardeşlerinden bahset.",
+    "order": 5
+  },
+  "lesson": {
+    "slug": "family-basics",
+    "title": "Ailemi Tanıtmak",
+    "intro": "Bu derste aile üyelerinin isimlerini ve ailen hakkında konuşmayı öğreneceksin."
+  },
+  "words": [
+    { "english": "family", "turkish": "aile", "example_en": "This is my family.", "example_tr": "Bu benim ailem." },
+    { "english": "mother", "turkish": "anne", "example_en": "My mother is a teacher.", "example_tr": "Annem öğretmen." },
+    { "english": "father", "turkish": "baba", "example_en": "My father works as an engineer.", "example_tr": "Babam mühendis olarak çalışıyor." },
+    { "english": "brother", "turkish": "erkek kardeş", "example_en": "I have two brothers.", "example_tr": "İki erkek kardeşim var." },
+    { "english": "sister", "turkish": "kız kardeş", "example_en": "She looks like her sister.", "example_tr": "Kız kardeşine benziyor." },
+    { "english": "parents", "turkish": "ebeveynler", "example_en": "My parents live in Ankara.", "example_tr": "Ailem Ankara'da yaşıyor." },
+    { "english": "child", "turkish": "çocuk", "example_en": "They have one child.", "example_tr": "Bir çocukları var." },
+    { "english": "husband", "turkish": "koca", "example_en": "Her husband is very kind.", "example_tr": "Kocası çok nazik." },
+    { "english": "wife", "turkish": "eş, karı", "example_en": "His wife is a doctor.", "example_tr": "Eşi doktor." },
+    { "english": "daughter", "turkish": "kız evlat", "example_en": "Their daughter is five years old.", "example_tr": "Kızları beş yaşında." }
+  ],
+  "phrases": [
+    { "english": "This is my family.", "turkish": "Bu benim ailem.", "note": "" },
+    { "english": "I have two brothers.", "turkish": "İki erkek kardeşim var.", "note": "" },
+    { "english": "Do you have any siblings?", "turkish": "Kardeşin var mı?", "note": "" },
+    { "english": "She looks like her mother.", "turkish": "Annesine benziyor.", "note": "" },
+    { "english": "How many people are in your family?", "turkish": "Ailende kaç kişi var?", "note": "" },
+    { "english": "My parents live in Ankara.", "turkish": "Ailem Ankara'da yaşıyor.", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "have / has",
+      "explanation": "'Have' ve 'has' sahiplik bildirir. I/you/we/they ile 'have', he/she/it ile 'has' kullanılır: 'I have a sister.' / 'She has two brothers.'",
+      "examples": ["I have a sister.", "She has two brothers.", "They have three children."]
+    }
+  ],
+  "examples": [
+    { "english": "My father works as an engineer.", "turkish": "Babam mühendis olarak çalışıyor." },
+    { "english": "We have a big family.", "turkish": "Kalabalık bir ailemiz var." },
+    { "english": "Her husband is very kind.", "turkish": "Kocası çok nazik." },
+    { "english": "I don't have any brothers.", "turkish": "Hiç erkek kardeşim yok." },
+    { "english": "Their daughter is five years old.", "turkish": "Kızları beş yaşında." }
+  ],
+  "quiz": {
+    "title": "Ailem Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"sister\" ne demek?",
+        "explanation": "Sister = kız kardeş.",
+        "choices": [
+          { "text": "kız kardeş", "correct": true },
+          { "text": "erkek kardeş", "correct": false },
+          { "text": "anne", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "She ___ two brothers.",
+        "explanation": "He/she/it ile 'has' kullanılır.",
+        "choices": [
+          { "text": "has", "correct": true },
+          { "text": "have", "correct": false },
+          { "text": "having", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Kardeşin var mı?\" nasıl sorulur?",
+        "explanation": "\"Do you have any siblings?\" en doğal soru şekli.",
+        "choices": [
+          { "text": "Do you have any siblings?", "correct": true },
+          { "text": "Are you siblings?", "correct": false },
+          { "text": "Have you siblings do?", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Bir kız kardeşim var\" cümlesinin doğrusunu seç.",
+        "explanation": "I/you/we/they ile 'have' kullanılır.",
+        "choices": [
+          { "text": "I have a sister.", "correct": true },
+          { "text": "I has a sister.", "correct": false },
+          { "text": "I having a sister.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"parents\" ne demek?",
+        "explanation": "Parents = ebeveynler (anne-baba).",
+        "choices": [
+          { "text": "ebeveynler", "correct": true },
+          { "text": "çocuklar", "correct": false },
+          { "text": "akrabalar", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "I ___ two brothers.",
+        "explanation": "I ile 'have' kullanılır.",
+        "choices": [
+          { "text": "have", "correct": true },
+          { "text": "has", "correct": false },
+          { "text": "am", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Bu benim ailem\" cümlesi hangisi?",
+        "explanation": "\"This is my family.\" doğru sözcük sırası.",
+        "choices": [
+          { "text": "This is my family.", "correct": true },
+          { "text": "This my family is.", "correct": false },
+          { "text": "This is family my.", "correct": false }
+        ]
+      }
+    ]
+  }
+}

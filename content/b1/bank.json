@@ -1,0 +1,135 @@
+{
+  "topic": {
+    "slug": "bank",
+    "title": "Bankada",
+    "emoji": "🏦",
+    "color": "pink",
+    "level": "B1",
+    "description": "Hesap aç, para çek/yatır, transfer sor.",
+    "order": 15
+  },
+  "lesson": {
+    "slug": "bank-basics",
+    "title": "Bankada İşlem Yapmak",
+    "intro": "Bu derste bankada hesap açmayı, para çekmeyi/yatırmayı ve transfer sormayı öğreneceksin."
+  },
+  "words": [
+    { "english": "account", "turkish": "hesap", "example_en": "I'd like to open an account.", "example_tr": "Bir hesap açmak istiyorum." },
+    { "english": "balance", "turkish": "bakiye", "example_en": "My balance is lower than I expected.", "example_tr": "Bakiyem beklediğimden düşük." },
+    { "english": "withdraw", "turkish": "para çekmek", "example_en": "I need to withdraw some cash.", "example_tr": "Biraz nakit çekmem gerekiyor." },
+    { "english": "deposit", "turkish": "para yatırmak", "example_en": "I'd like to deposit some money.", "example_tr": "Biraz para yatırmak istiyorum." },
+    { "english": "transfer", "turkish": "havale, transfer", "example_en": "How long does a transfer take?", "example_tr": "Bir transfer ne kadar sürer?" },
+    { "english": "ATM", "turkish": "ATM", "example_en": "The ATM is next to the entrance.", "example_tr": "ATM girişin yanında." },
+    { "english": "identification", "turkish": "kimlik", "example_en": "You might need your ID for this.", "example_tr": "Bunun için kimliğine ihtiyacın olabilir." },
+    { "english": "interest rate", "turkish": "faiz oranı", "example_en": "Interest rates went up this year.", "example_tr": "Faiz oranları bu yıl arttı." },
+    { "english": "loan", "turkish": "kredi", "example_en": "Can I apply for a loan?", "example_tr": "Kredi başvurusu yapabilir miyim?" },
+    { "english": "statement", "turkish": "hesap özeti", "example_en": "This statement shows all your transactions.", "example_tr": "Bu hesap özeti tüm işlemlerini gösteriyor." }
+  ],
+  "phrases": [
+    { "english": "I'd like to open an account.", "turkish": "Bir hesap açmak istiyorum.", "note": "" },
+    { "english": "Could you check my balance, please?", "turkish": "Bakiyemi kontrol edebilir misiniz, lütfen?", "note": "" },
+    { "english": "I need to withdraw some cash.", "turkish": "Biraz nakit çekmem gerekiyor.", "note": "" },
+    { "english": "How long does a transfer take?", "turkish": "Bir transfer ne kadar sürer?", "note": "" },
+    { "english": "Can I apply for a loan?", "turkish": "Kredi başvurusu yapabilir miyim?", "note": "" },
+    { "english": "You might need your ID for this.", "turkish": "Bunun için kimliğine ihtiyacın olabilir.", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "might / could (olasılık)",
+      "explanation": "Kesin olmayan olasılıklardan bahsederken 'might' ve 'could' kullanılır: 'It might take a few days.' (Birkaç gün sürebilir.) 'You could ask at the counter.' (Gişede sorabilirsin.)",
+      "examples": ["It might take a few days.", "You could ask at the counter.", "The transfer might not arrive today."]
+    }
+  ],
+  "examples": [
+    { "english": "My balance is lower than I expected.", "turkish": "Bakiyem beklediğimden düşük." },
+    { "english": "The bank is closed on Sundays.", "turkish": "Banka pazar günleri kapalı." },
+    { "english": "I forgot my PIN code.", "turkish": "PIN kodumu unuttum." },
+    { "english": "This statement shows all your transactions.", "turkish": "Bu hesap özeti tüm işlemlerini gösteriyor." },
+    { "english": "Interest rates went up this year.", "turkish": "Faiz oranları bu yıl arttı." }
+  ],
+  "quiz": {
+    "title": "Bankada Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"balance\" ne demek?",
+        "explanation": "Balance = bakiye.",
+        "choices": [
+          { "text": "bakiye", "correct": true },
+          { "text": "kredi", "correct": false },
+          { "text": "faiz", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It ___ take a few days.",
+        "explanation": "Olasılık: might.",
+        "choices": [
+          { "text": "might", "correct": true },
+          { "text": "must", "correct": false },
+          { "text": "can't", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Bir hesap açmak istiyorum\" cümlesi hangisi?",
+        "explanation": "\"I'd like to open an account.\" doğal ve kibar kalıp.",
+        "choices": [
+          { "text": "I'd like to open an account.", "correct": true },
+          { "text": "I want account open.", "correct": false },
+          { "text": "Open me an account.", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Gişede sorabilirsin\" cümlesinin doğrusunu seç.",
+        "explanation": "\"You could ask at the counter.\" doğru kelime sırası.",
+        "choices": [
+          { "text": "You could ask at the counter.", "correct": true },
+          { "text": "You could to ask at the counter.", "correct": false },
+          { "text": "You could asking at the counter.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"withdraw\" ne demek?",
+        "explanation": "Withdraw = para çekmek.",
+        "choices": [
+          { "text": "para çekmek", "correct": true },
+          { "text": "para yatırmak", "correct": false },
+          { "text": "transfer etmek", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "You ___ need your ID for this.",
+        "explanation": "Olasılık: might.",
+        "choices": [
+          { "text": "might", "correct": true },
+          { "text": "does", "correct": false },
+          { "text": "are", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"loan\" ne demek?",
+        "explanation": "Loan = kredi.",
+        "choices": [
+          { "text": "kredi", "correct": true },
+          { "text": "hesap", "correct": false },
+          { "text": "bakiye", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Bir transfer ne kadar sürer?\" sorusunun doğrusunu seç.",
+        "explanation": "\"How long does a transfer take?\" doğru soru yapısı.",
+        "choices": [
+          { "text": "How long does a transfer take?", "correct": true },
+          { "text": "How long a transfer takes?", "correct": false },
+          { "text": "How long take a transfer?", "correct": false }
+        ]
+      }
+    ]
+  }
+}

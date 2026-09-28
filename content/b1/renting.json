@@ -1,0 +1,135 @@
+{
+  "topic": {
+    "slug": "renting",
+    "title": "Ev Kiralama",
+    "emoji": "🏠",
+    "color": "coral",
+    "level": "B1",
+    "description": "Ev sahibiyle konuş, kira ve depozito sor.",
+    "order": 14
+  },
+  "lesson": {
+    "slug": "renting-basics",
+    "title": "Ev Kiralarken Konuşmak",
+    "intro": "Bu derste bir ev sahibiyle kira, depozito ve faturalar hakkında konuşmayı öğreneceksin."
+  },
+  "words": [
+    { "english": "landlord", "turkish": "ev sahibi", "example_en": "The landlord fixed the heater yesterday.", "example_tr": "Ev sahibi kombiyi dün tamir etti." },
+    { "english": "tenant", "turkish": "kiracı", "example_en": "The tenant called about the noise.", "example_tr": "Kiracı gürültü hakkında aradı." },
+    { "english": "rent", "turkish": "kira", "example_en": "How much is the rent per month?", "example_tr": "Aylık kira ne kadar?" },
+    { "english": "deposit", "turkish": "depozito", "example_en": "I paid a two-month deposit.", "example_tr": "İki aylık depozito ödedim." },
+    { "english": "lease", "turkish": "kira sözleşmesi", "example_en": "We signed the lease last week.", "example_tr": "Geçen hafta kira sözleşmesini imzaladık." },
+    { "english": "furnished", "turkish": "eşyalı", "example_en": "Is the apartment furnished?", "example_tr": "Daire eşyalı mı?" },
+    { "english": "utilities", "turkish": "faturalar (elektrik, su vb.)", "example_en": "Are utilities included in the rent?", "example_tr": "Faturalar kiraya dahil mi?" },
+    { "english": "neighborhood", "turkish": "mahalle", "example_en": "This neighborhood is very quiet.", "example_tr": "Bu mahalle çok sakin." },
+    { "english": "move in", "turkish": "taşınmak (içine)", "example_en": "When can I move in?", "example_tr": "Ne zaman taşınabilirim?" },
+    { "english": "broken", "turkish": "bozuk, kırık", "example_en": "The heater is broken.", "example_tr": "Kombi bozuk." }
+  ],
+  "phrases": [
+    { "english": "How much is the rent per month?", "turkish": "Aylık kira ne kadar?", "note": "" },
+    { "english": "Is the apartment furnished?", "turkish": "Daire eşyalı mı?", "note": "" },
+    { "english": "Are utilities included in the rent?", "turkish": "Faturalar kiraya dahil mi?", "note": "" },
+    { "english": "When can I move in?", "turkish": "Ne zaman taşınabilirim?", "note": "" },
+    { "english": "The heater is broken.", "turkish": "Kombi bozuk.", "note": "" },
+    { "english": "I'd like to see the apartment first.", "turkish": "Önce daireyi görmek istiyorum.", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "used to",
+      "explanation": "Geçmişte düzenli yapılan ama artık yapılmayan alışkanlıklardan bahsederken 'used to' kullanılır: 'I used to live in a small flat.' (Eskiden küçük bir dairede yaşardım.) Olumsuzu: 'didn't use to'.",
+      "examples": ["I used to live in a small flat.", "We didn't use to have a garden.", "Did you use to live downtown?"]
+    }
+  ],
+  "examples": [
+    { "english": "The landlord fixed the heater yesterday.", "turkish": "Ev sahibi kombiyi dün tamir etti." },
+    { "english": "We signed the lease last week.", "turkish": "Geçen hafta kira sözleşmesini imzaladık." },
+    { "english": "This neighborhood is very quiet.", "turkish": "Bu mahalle çok sakin." },
+    { "english": "I paid a two-month deposit.", "turkish": "İki aylık depozito ödedim." },
+    { "english": "The tenant called about the noise.", "turkish": "Kiracı gürültü hakkında aradı." }
+  ],
+  "quiz": {
+    "title": "Ev Kiralama Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"landlord\" ne demek?",
+        "explanation": "Landlord = ev sahibi.",
+        "choices": [
+          { "text": "ev sahibi", "correct": true },
+          { "text": "kiracı", "correct": false },
+          { "text": "komşu", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "I ___ to live in a small flat.",
+        "explanation": "Kalıp: used to.",
+        "choices": [
+          { "text": "used", "correct": true },
+          { "text": "use", "correct": false },
+          { "text": "using", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Daire eşyalı mı?\" cümlesinin İngilizcesi hangisi?",
+        "explanation": "\"Is the apartment furnished?\" doğru soru yapısı.",
+        "choices": [
+          { "text": "Is the apartment furnished?", "correct": true },
+          { "text": "Apartment has furniture?", "correct": false },
+          { "text": "Is furniture in apartment?", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Bahçemiz yoktu (eskiden)\" cümlesinin doğrusunu seç.",
+        "explanation": "Olumsuz form: didn't use to (used degil, use).",
+        "choices": [
+          { "text": "We didn't use to have a garden.", "correct": true },
+          { "text": "We usedn't to have a garden.", "correct": false },
+          { "text": "We didn't used to have a garden.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"deposit\" ne demek?",
+        "explanation": "Deposit = depozito.",
+        "choices": [
+          { "text": "depozito", "correct": true },
+          { "text": "kira", "correct": false },
+          { "text": "fatura", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Are ___ included in the rent?",
+        "explanation": "\"Utilities\" = elektrik, su gibi faturalar.",
+        "choices": [
+          { "text": "utilities", "correct": true },
+          { "text": "furniture", "correct": false },
+          { "text": "deposit", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"tenant\" ne demek?",
+        "explanation": "Tenant = kiracı.",
+        "choices": [
+          { "text": "kiracı", "correct": true },
+          { "text": "ev sahibi", "correct": false },
+          { "text": "komşu", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Ne zaman taşınabilirim?\" sorusunun doğrusunu seç.",
+        "explanation": "\"When can I move in?\" doğru kelime sırası.",
+        "choices": [
+          { "text": "When can I move in?", "correct": true },
+          { "text": "When I can move in?", "correct": false },
+          { "text": "When can move in I?", "correct": false }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "topic": {
+    "slug": "news",
+    "title": "Haberler",
+    "emoji": "📰",
+    "color": "coral",
+    "level": "B2",
+    "description": "Haber konuş, kaynak değerlendir, fikir belirt.",
+    "order": 17
+  },
+  "lesson": {
+    "slug": "news-basics",
+    "title": "Haberler Hakkında Konuşmak",
+    "intro": "Bu derste güncel haberler hakkında konuşmayı, kaynak güvenilirliğini değerlendirmeyi öğreneceksin."
+  },
+  "words": [
+    { "english": "headline", "turkish": "manşet", "example_en": "Have you seen the headlines today?", "example_tr": "Bugünkü manşetleri gördün mü?" },
+    { "english": "source", "turkish": "kaynak", "example_en": "This story was reported by several sources.", "example_tr": "Bu haber birçok kaynak tarafından bildirildi." },
+    { "english": "coverage", "turkish": "haber kapsamı", "example_en": "Not all news coverage is accurate.", "example_tr": "Tüm haber kapsamı doğru değildir." },
+    { "english": "reporter", "turkish": "muhabir", "example_en": "The reporter asked a difficult question.", "example_tr": "Muhabir zor bir soru sordu." },
+    { "english": "breaking news", "turkish": "son dakika haberi", "example_en": "Breaking news: the flight has been cancelled.", "example_tr": "Son dakika: uçuş iptal edildi." },
+    { "english": "issue", "turkish": "mesele, konu", "example_en": "This issue has been discussed for years.", "example_tr": "Bu konu yıllardır tartışılıyor." },
+    { "english": "announce", "turkish": "duyurmak, açıklamak", "example_en": "The decision was announced yesterday.", "example_tr": "Karar dün açıklandı." },
+    { "english": "impact", "turkish": "etki", "example_en": "The new policy will have a big impact.", "example_tr": "Yeni politika büyük bir etki yaratacak." },
+    { "english": "controversial", "turkish": "tartışmalı", "example_en": "It's a controversial issue.", "example_tr": "Bu tartışmalı bir konu." },
+    { "english": "reliable", "turkish": "güvenilir", "example_en": "I only trust reliable news sources.", "example_tr": "Sadece güvenilir haber kaynaklarına güvenirim." }
+  ],
+  "phrases": [
+    { "english": "Have you seen the headlines today?", "turkish": "Bugünkü manşetleri gördün mü?", "note": "" },
+    { "english": "This story was reported by several sources.", "turkish": "Bu haber birçok kaynak tarafından bildirildi.", "note": "" },
+    { "english": "The decision was announced yesterday.", "turkish": "Karar dün açıklandı.", "note": "" },
+    { "english": "It's a controversial issue.", "turkish": "Bu tartışmalı bir konu.", "note": "" },
+    { "english": "I only trust reliable news sources.", "turkish": "Sadece güvenilir haber kaynaklarına güvenirim.", "note": "" },
+    { "english": "The new policy will have a big impact.", "turkish": "Yeni politika büyük bir etki yaratacak.", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "Passive Voice (be + fiil3)",
+      "explanation": "Eylemi yapan kişi önemli değilse veya bilinmiyorsa edilgen çatı (passive voice) kullanılır: be + fiil3. 'The decision was announced yesterday.' (Karar dün açıklandı — kim açıkladığı önemli değil.)",
+      "examples": ["The decision was announced yesterday.", "This story was reported by several sources.", "The new law will be passed next month."]
+    }
+  ],
+  "examples": [
+    { "english": "The article was written by a well-known journalist.", "turkish": "Makale tanınmış bir gazeteci tarafından yazıldı." },
+    { "english": "Breaking news: the flight has been cancelled.", "turkish": "Son dakika: uçuş iptal edildi." },
+    { "english": "This issue has been discussed for years.", "turkish": "Bu konu yıllardır tartışılıyor." },
+    { "english": "The reporter asked a difficult question.", "turkish": "Muhabir zor bir soru sordu." },
+    { "english": "Not all news coverage is accurate.", "turkish": "Tüm haber kapsamı doğru değildir." }
+  ],
+  "quiz": {
+    "title": "Haberler Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"headline\" ne demek?",
+        "explanation": "Headline = manşet.",
+        "choices": [
+          { "text": "manşet", "correct": true },
+          { "text": "kaynak", "correct": false },
+          { "text": "muhabir", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "The decision ___ announced yesterday.",
+        "explanation": "Passive voice: was + fiil3.",
+        "choices": [
+          { "text": "was", "correct": true },
+          { "text": "is", "correct": false },
+          { "text": "has", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Bugünkü manşetleri gördün mü?\" cümlesi hangisi?",
+        "explanation": "\"Have you seen the headlines today?\" doğru present perfect soru yapısı.",
+        "choices": [
+          { "text": "Have you seen the headlines today?", "correct": true },
+          { "text": "You have seen headlines today?", "correct": false },
+          { "text": "Did you seen the headlines today?", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Bu haber birçok kaynak tarafından bildirildi\" cümlesinin doğrusunu seç.",
+        "explanation": "Passive voice: was reported by...",
+        "choices": [
+          { "text": "This story was reported by several sources.", "correct": true },
+          { "text": "This story reported by several sources was.", "correct": false },
+          { "text": "This story was report by several sources.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"reliable\" ne demek?",
+        "explanation": "Reliable = güvenilir.",
+        "choices": [
+          { "text": "güvenilir", "correct": true },
+          { "text": "tartışmalı", "correct": false },
+          { "text": "önemli", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "The new law will ___ passed next month.",
+        "explanation": "Gelecek zamanda passive: will be + fiil3.",
+        "choices": [
+          { "text": "be", "correct": true },
+          { "text": "was", "correct": false },
+          { "text": "is", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"controversial\" ne demek?",
+        "explanation": "Controversial = tartışmalı.",
+        "choices": [
+          { "text": "tartışmalı", "correct": true },
+          { "text": "güvenilir", "correct": false },
+          { "text": "önemli", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Yeni politika büyük bir etki yaratacak\" cümlesinin doğrusunu seç.",
+        "explanation": "\"The new policy will have a big impact.\" doğru kelime sırası.",
+        "choices": [
+          { "text": "The new policy will have a big impact.", "correct": true },
+          { "text": "The new policy will has a big impact.", "correct": false },
+          { "text": "The new policy have a big impact will.", "correct": false }
+        ]
+      }
+    ]
+  }
+}

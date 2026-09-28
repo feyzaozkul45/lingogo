@@ -1,0 +1,135 @@
+{
+  "topic": {
+    "slug": "environment",
+    "title": "Çevre",
+    "emoji": "🌱",
+    "color": "mint",
+    "level": "B2",
+    "description": "İklim, geri dönüşüm ve sürdürülebilirlik konuş.",
+    "order": 19
+  },
+  "lesson": {
+    "slug": "environment-basics",
+    "title": "Çevre Hakkında Konuşmak",
+    "intro": "Bu derste iklim değişikliği, geri dönüşüm ve sürdürülebilirlik hakkında görüş bildirmeyi öğreneceksin."
+  },
+  "words": [
+    { "english": "climate change", "turkish": "iklim değişikliği", "example_en": "Climate change affects everyone.", "example_tr": "İklim değişikliği herkesi etkiliyor." },
+    { "english": "pollution", "turkish": "kirlilik", "example_en": "Pollution levels are rising in big cities.", "example_tr": "Büyük şehirlerde kirlilik seviyeleri artıyor." },
+    { "english": "recycle", "turkish": "geri dönüştürmek", "example_en": "This packaging isn't recyclable.", "example_tr": "Bu ambalaj geri dönüştürülebilir değil." },
+    { "english": "renewable", "turkish": "yenilenebilir", "example_en": "Renewable energy is getting cheaper.", "example_tr": "Yenilenebilir enerji giderek ucuzluyor." },
+    { "english": "emissions", "turkish": "emisyonlar (salınımlar)", "example_en": "The factory reduced its emissions.", "example_tr": "Fabrika emisyonlarını azalttı." },
+    { "english": "sustainable", "turkish": "sürdürülebilir", "example_en": "We try to live a more sustainable lifestyle.", "example_tr": "Daha sürdürülebilir bir yaşam tarzı sürmeye çalışıyoruz." },
+    { "english": "reduce", "turkish": "azaltmak", "example_en": "We need to reduce our carbon footprint.", "example_tr": "Karbon ayak izimizi azaltmamız gerekiyor." },
+    { "english": "waste", "turkish": "atık, israf", "example_en": "Reducing plastic waste is everyone's responsibility.", "example_tr": "Plastik atığı azaltmak herkesin sorumluluğu." },
+    { "english": "resource", "turkish": "kaynak", "example_en": "Natural resources are limited.", "example_tr": "Doğal kaynaklar sınırlıdır." },
+    { "english": "awareness", "turkish": "farkındalık", "example_en": "Raising awareness is the first step.", "example_tr": "Farkındalığı artırmak ilk adım." }
+  ],
+  "phrases": [
+    { "english": "We need to reduce our carbon footprint.", "turkish": "Karbon ayak izimizi azaltmamız gerekiyor.", "note": "" },
+    { "english": "This packaging isn't recyclable.", "turkish": "Bu ambalaj geri dönüştürülebilir değil.", "note": "" },
+    { "english": "Renewable energy is getting cheaper.", "turkish": "Yenilenebilir enerji giderek ucuzluyor.", "note": "" },
+    { "english": "Unless we act now, the situation will get worse.", "turkish": "Şimdi harekete geçmezsek, durum kötüleşecek.", "note": "" },
+    { "english": "Raising awareness is the first step.", "turkish": "Farkındalığı artırmak ilk adım.", "note": "" },
+    { "english": "We should use resources more wisely.", "turkish": "Kaynakları daha akıllıca kullanmalıyız.", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "unless (eğer ... değilse)",
+      "explanation": "'Unless' 'if not' anlamına gelir, bir koşulun gerçekleşmemesi durumunda ne olacağını anlatır: 'Unless we act now, the situation will get worse.' = 'If we don't act now, the situation will get worse.'",
+      "examples": ["Unless we act now, the situation will get worse.", "Unless we recycle more, waste will keep increasing.", "I won't come unless you invite me."]
+    }
+  ],
+  "examples": [
+    { "english": "Pollution levels are rising in big cities.", "turkish": "Büyük şehirlerde kirlilik seviyeleri artıyor." },
+    { "english": "Many countries are investing in solar energy.", "turkish": "Birçok ülke güneş enerjisine yatırım yapıyor." },
+    { "english": "We try to live a more sustainable lifestyle.", "turkish": "Daha sürdürülebilir bir yaşam tarzı sürmeye çalışıyoruz." },
+    { "english": "Reducing plastic waste is everyone's responsibility.", "turkish": "Plastik atığı azaltmak herkesin sorumluluğu." },
+    { "english": "Natural resources are limited.", "turkish": "Doğal kaynaklar sınırlıdır." }
+  ],
+  "quiz": {
+    "title": "Çevre Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"pollution\" ne demek?",
+        "explanation": "Pollution = kirlilik.",
+        "choices": [
+          { "text": "kirlilik", "correct": true },
+          { "text": "atık", "correct": false },
+          { "text": "kaynak", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "___ we act now, the situation will get worse.",
+        "explanation": "Unless = if not.",
+        "choices": [
+          { "text": "Unless", "correct": true },
+          { "text": "If", "correct": false },
+          { "text": "Because", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "\"Karbon ayak izimizi azaltmamız gerekiyor\" cümlesi hangisi?",
+        "explanation": "\"We need to reduce our carbon footprint.\" doğru kullanım.",
+        "choices": [
+          { "text": "We need to reduce our carbon footprint.", "correct": true },
+          { "text": "We need reduce carbon footprint our.", "correct": false },
+          { "text": "We need to reducing our carbon footprint.", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Daha fazla geri dönüşüm yapmazsak, atık artmaya devam edecek\" cümlesinin doğrusunu seç.",
+        "explanation": "Unless zaten olumsuzluk içerir, 'don't' ile tekrar olumsuz yapılmaz.",
+        "choices": [
+          { "text": "Unless we recycle more, waste will keep increasing.", "correct": true },
+          { "text": "Unless we don't recycle more, waste will keep increasing.", "correct": false },
+          { "text": "Unless we recycle more, waste keep increasing will.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"sustainable\" ne demek?",
+        "explanation": "Sustainable = sürdürülebilir.",
+        "choices": [
+          { "text": "sürdürülebilir", "correct": true },
+          { "text": "yenilenebilir", "correct": false },
+          { "text": "tartışmalı", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "I won't come ___ you invite me.",
+        "explanation": "Unless = eğer davet etmezsen.",
+        "choices": [
+          { "text": "unless", "correct": true },
+          { "text": "if", "correct": false },
+          { "text": "without", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"awareness\" ne demek?",
+        "explanation": "Awareness = farkındalık.",
+        "choices": [
+          { "text": "farkındalık", "correct": true },
+          { "text": "sorumluluk", "correct": false },
+          { "text": "kirlilik", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "\"Kaynakları daha akıllıca kullanmalıyız\" cümlesinin doğrusunu seç.",
+        "explanation": "\"We should use resources more wisely.\" doğru kelime sırası.",
+        "choices": [
+          { "text": "We should use resources more wisely.", "correct": true },
+          { "text": "We should used resources more wisely.", "correct": false },
+          { "text": "We should use more wisely resources.", "correct": false }
+        ]
+      }
+    ]
+  }
+}

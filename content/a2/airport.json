@@ -6,7 +6,7 @@
     "color": "sky",
     "level": "A2",
     "description": "Check-in yap, kapıyı bul, bagajını takip et.",
-    "order": 5
+    "order": 7
   },
   "lesson": {
     "slug": "airport-basics",
@@ -21,7 +21,9 @@
     { "english": "boarding pass", "turkish": "biniş kartı", "example_en": "Here is my boarding pass.", "example_tr": "İşte biniş kartım." },
     { "english": "flight", "turkish": "uçuş", "example_en": "My flight is at 9 AM.", "example_tr": "Uçuşum sabah 9'da." },
     { "english": "delay", "turkish": "gecikme", "example_en": "The flight has a two-hour delay.", "example_tr": "Uçuşta iki saatlik gecikme var." },
-    { "english": "security", "turkish": "güvenlik kontrolü", "example_en": "Security is very busy today.", "example_tr": "Bugün güvenlik kontrolü çok kalabalık." }
+    { "english": "security", "turkish": "güvenlik kontrolü", "example_en": "Security is very busy today.", "example_tr": "Bugün güvenlik kontrolü çok kalabalık." },
+    { "english": "customs", "turkish": "gümrük", "example_en": "You need to go through customs first.", "example_tr": "Önce gümrükten geçmen gerekiyor." },
+    { "english": "connecting flight", "turkish": "aktarmalı uçuş", "example_en": "I have a connecting flight in Istanbul.", "example_tr": "İstanbul'da aktarmalı uçuşum var." }
   ],
   "phrases": [
     { "english": "Where is gate 12?", "turkish": "12 numaralı kapı nerede?", "note": "" },
@@ -109,6 +111,16 @@
           { "text": "check", "correct": true },
           { "text": "look", "correct": false },
           { "text": "sit", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"customs\" ne demek?",
+        "explanation": "Customs = gümrük.",
+        "choices": [
+          { "text": "gümrük", "correct": true },
+          { "text": "güvenlik", "correct": false },
+          { "text": "biniş kapısı", "correct": false }
         ]
       }
     ]

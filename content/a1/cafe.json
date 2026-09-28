@@ -21,7 +21,9 @@
     { "english": "cup", "turkish": "fincan", "example_en": "A large cup, please.", "example_tr": "Büyük boy bir fincan, lütfen." },
     { "english": "menu", "turkish": "menü", "example_en": "Can I see the menu?", "example_tr": "Menüyü görebilir miyim?" },
     { "english": "water", "turkish": "su", "example_en": "Can I have a glass of water too?", "example_tr": "Bir bardak su da alabilir miyim?" },
-    { "english": "seat", "turkish": "koltuk / yer", "example_en": "Is this seat taken?", "example_tr": "Bu yer dolu mu?" }
+    { "english": "seat", "turkish": "koltuk / yer", "example_en": "Is this seat taken?", "example_tr": "Bu yer dolu mu?" },
+    { "english": "bill", "turkish": "hesap", "example_en": "Can I have the bill, please?", "example_tr": "Hesabı alabilir miyim, lütfen?" },
+    { "english": "cake", "turkish": "kek, pasta", "example_en": "Can I also get a piece of cake?", "example_tr": "Bir dilim pasta da alabilir miyim?" }
   ],
   "phrases": [
     { "english": "Can I have a coffee, please?", "turkish": "Bir kahve alabilir miyim, lütfen?", "note": "Kafede sipariş verirken en yaygın kalıp." },
@@ -109,6 +111,16 @@
           { "text": "sugar", "correct": true },
           { "text": "milk", "correct": false },
           { "text": "water", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "Hesabı istediğini söylemek için doğru cümleyi seç.",
+        "explanation": "\"Can I have the bill, please?\" hesap isterken kullanılan kibar kalıp.",
+        "choices": [
+          { "text": "Can I have the bill, please?", "correct": true },
+          { "text": "Give me bill.", "correct": false },
+          { "text": "Where bill is?", "correct": false }
         ]
       }
     ]

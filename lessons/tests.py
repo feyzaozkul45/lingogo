@@ -10,8 +10,8 @@ class LoadContentCommandTests(TestCase):
     def test_load_content_creates_expected_objects(self):
         call_command('load_content')
 
-        self.assertEqual(Topic.objects.count(), 5)
-        self.assertEqual(Lesson.objects.count(), 5)
+        self.assertEqual(Topic.objects.count(), 20)
+        self.assertEqual(Lesson.objects.count(), 20)
         self.assertTrue(Word.objects.filter(lesson__topic__slug='cafe').exists())
         self.assertTrue(Quiz.objects.filter(lesson__topic__slug='restaurant').exists())
 

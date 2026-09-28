@@ -21,7 +21,9 @@
     { "english": "live", "turkish": "yaşamak", "example_en": "I live in Istanbul.", "example_tr": "İstanbul'da yaşıyorum." },
     { "english": "work", "turkish": "çalışmak", "example_en": "I work as a teacher.", "example_tr": "Öğretmen olarak çalışıyorum." },
     { "english": "student", "turkish": "öğrenci", "example_en": "I'm a student.", "example_tr": "Ben bir öğrenciyim." },
-    { "english": "age", "turkish": "yaş", "example_en": "What's your age?", "example_tr": "Yaşın kaç?" }
+    { "english": "age", "turkish": "yaş", "example_en": "What's your age?", "example_tr": "Yaşın kaç?" },
+    { "english": "married", "turkish": "evli", "example_en": "Are you married?", "example_tr": "Evli misin?" },
+    { "english": "single", "turkish": "bekar", "example_en": "I'm still single.", "example_tr": "Hâlâ bekarım." }
   ],
   "phrases": [
     { "english": "What's your name?", "turkish": "Adın ne?", "note": "" },
@@ -110,6 +112,16 @@
           { "text": "am", "correct": true },
           { "text": "is", "correct": false },
           { "text": "are", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"single\" ne demek?",
+        "explanation": "Single = bekar.",
+        "choices": [
+          { "text": "bekar", "correct": true },
+          { "text": "evli", "correct": false },
+          { "text": "nişanlı", "correct": false }
         ]
       }
     ]
