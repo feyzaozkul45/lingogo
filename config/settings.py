@@ -80,10 +80,18 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #
 # DATABASE_URL tanimli degilse (lokal gelistirme) SQLite'a dusulur.
 # Uretimde Supabase transaction pooler (port 6543) kullanilir.
+#
+# 'manage.py test' her zaman SQLite kullanir: Supabase'in pooler'i test
+# veritabanini yaratip silme dongusunu yavaslatiyor ve DROP DATABASE'i
+# tikayabiliyor. Diger tum komutlar (runserver, migrate, load_content, ...)
+# .env'deki DATABASE_URL'i kullanmaya devam eder.
+import sys
+
+RUNNING_TESTS = 'test' in sys.argv
 
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
-if DATABASE_URL:
+if DATABASE_URL and not RUNNING_TESTS:
     DATABASES = {
         'default': dj_database_url.parse(
             DATABASE_URL,
