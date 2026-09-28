@@ -28,6 +28,14 @@ CSRF_TRUSTED_ORIGINS = [
     if origin.strip()
 ]
 
+# Vercel her deployment'a (production ve her preview'a) kendi domainini
+# VERCEL_URL olarak otomatik veriyor; bu deploy'dan once bilinmedigi icin
+# ALLOWED_HOSTS/CSRF_TRUSTED_ORIGINS'e elle eklenemez, burada otomatik eklenir.
+VERCEL_URL = os.environ.get('VERCEL_URL')
+if VERCEL_URL:
+    ALLOWED_HOSTS.append(VERCEL_URL)
+    CSRF_TRUSTED_ORIGINS.append(f'https://{VERCEL_URL}')
+
 
 # Application definition
 

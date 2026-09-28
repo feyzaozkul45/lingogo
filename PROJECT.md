@@ -600,7 +600,7 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 - [x] Django projesi (`config/`) ve 3 app oluşturma
 - [x] `settings.py`: ortam değişkenleri, `DATABASE_URL`, WhiteNoise, Türkçe dil/saat dilimi (`tr`, `Europe/Istanbul`)
 - [x] `.env.example`, `.gitignore`, `requirements.txt`
-- [ ] Supabase bağlantısı ve ilk migration (lokalde şimdilik SQLite kullanılıyor; kullanıcı hazır olunca eklenecek)
+- [x] Supabase bağlantısı ve ilk migration (`.env`'de `DATABASE_URL`, session pooler port 5432; lokal `manage.py test` her zaman SQLite kullanır)
 
 **1B. Temel arayüz**
 - [ ] `base.html`, header, footer, `main.css` (renkler, kartlar, butonlar)
@@ -623,7 +623,8 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 - [x] İlerleme sayfası (ders, kelime, quiz sayıları)
 
 **1F. Yayına alma**
-- [ ] `vercel.json` ve Vercel deploy
+- [x] `vercel.json` (minimal — Vercel Django için sıfır-konfigürasyon destekliyor, sadece `maxDuration` ayarlandı)
+- [ ] Vercel deploy (kullanıcı Import ekranını tamamlayacak)
 - [ ] Üretimde `DEBUG=False` ile test
 
 **Phase 1 tamamlandı sayılır, eğer:**
