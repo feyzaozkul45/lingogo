@@ -16,11 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from django.views.generic.base import RedirectView
+
+from lessons import views as lesson_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # TODO(1D-b): gercek ana sayfa view'i gelince bu redirect kaldirilacak.
-    path('', RedirectView.as_view(pattern_name='lessons:topic_list', permanent=False), name='home'),
+    path('', lesson_views.home, name='home'),
     path('', include('lessons.urls')),
+    path('', include('quizzes.urls')),
 ]

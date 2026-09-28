@@ -1,3 +1,74 @@
+from django.contrib.auth.models import User
+from django.core.management import call_command
 from django.test import TestCase
+from django.urls import reverse
 
-# Create your tests here.
+from lessons.models import Lesson, LessonProgress
+
+from .models import Quiz, QuizAttempt
+
+
+class QuizScoringTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        call_command('load_content')
+        cls.lesson = Lesson.objects.get(slug='cafe-basics')
+        cls.quiz = Quiz.objects.get(lesson=cls.lesson)
+
+    def _correct_answers(self):
+        answers = {}
+        for question in self.quiz.questions.all():
+            correct = question.choices.get(is_correct=True)
+            answers[f'question_{question.id}'] = correct.id
+        return answers
+
+    def test_anonymous_submission_scores_but_does_not_save(self):
+        url = reverse('quizzes:quiz', kwargs={'slug': self.lesson.slug})
+        total = self.quiz.questions.count()
+
+        response = self.client.post(url, self._correct_answers())
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, f'{total}/{total}')
+        self.assertEqual(QuizAttempt.objects.count(), 0)
+        self.assertEqual(LessonProgress.objects.count(), 0)
+
+    def test_authenticated_submission_saves_attempt_and_completes_lesson(self):
+        user = User.objects.create_user('quiz_tester', password='pass12345')
+        self.client.force_login(user)
+        url = reverse('quizzes:quiz', kwargs={'slug': self.lesson.slug})
+        total = self.quiz.questions.count()
+
+        response = self.client.post(url, self._correct_answers())
+
+        attempt = QuizAttempt.objects.get(user=user, quiz=self.quiz)
+        self.assertEqual(attempt.score, total)
+        self.assertEqual(attempt.total, total)
+        self.assertRedirects(response, reverse('quizzes:result', kwargs={'attempt_id': attempt.id}))
+        self.assertTrue(LessonProgress.objects.filter(user=user, lesson=self.lesson).exists())
+
+    def test_wrong_answer_is_scored_as_incorrect(self):
+        user = User.objects.create_user('quiz_tester2', password='pass12345')
+        self.client.force_login(user)
+        url = reverse('quizzes:quiz', kwargs={'slug': self.lesson.slug})
+
+        answers = self._correct_answers()
+        first_key = next(iter(answers))
+        question = self.quiz.questions.get(id=int(first_key.split('_')[1]))
+        wrong_choice = question.choices.exclude(is_correct=True).first()
+        answers[first_key] = wrong_choice.id
+
+        self.client.post(url, answers)
+
+        attempt = QuizAttempt.objects.get(user=user, quiz=self.quiz)
+        self.assertEqual(attempt.score, self.quiz.questions.count() - 1)
+
+    def test_other_users_cannot_view_someone_elses_result(self):
+        owner = User.objects.create_user('owner', password='pass12345')
+        intruder = User.objects.create_user('intruder', password='pass12345')
+        attempt = QuizAttempt.objects.create(user=owner, quiz=self.quiz, score=1, total=6)
+
+        self.client.force_login(intruder)
+        response = self.client.get(reverse('quizzes:result', kwargs={'attempt_id': attempt.id}))
+
+        self.assertEqual(response.status_code, 404)

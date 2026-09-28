@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}Ana Sayfa{% endblock %}
+
+{% block content %}
+  {% if daily_topic %}
+    <div class="hero">
+      <p style="font-weight:700; opacity:0.85; margin-bottom:4px;">Günün Konusu</p>
+      <h1>{{ daily_topic.emoji }} {{ daily_topic.title }}</h1>
+      <p>{{ daily_topic.description }}</p>
+      {% with lesson=daily_topic.lessons.first %}
+        {% if lesson %}
+          <a href="{% url 'lessons:lesson_detail' slug=lesson.slug %}" class="btn btn-primary">Derse Git →</a>
+        {% endif %}
+      {% endwith %}
+    </div>
+  {% endif %}
+
+  {% if continue_lesson %}
+    <div class="section">
+      <div class="section__head"><h2>Öğrenmeye Devam Et</h2></div>
+      <a href="{% url 'lessons:lesson_detail' slug=continue_lesson.slug %}" class="card" style="display: block;">
+        <div class="topic-card__title">{{ continue_lesson.topic.emoji }} {{ continue_lesson.title }}</div>
+        <p class="topic-card__desc" style="margin-top: 6px;">{{ continue_lesson.intro }}</p>
+      </a>
+    </div>
+  {% endif %}
+
+  {% if daily_words %}
+    <div class="section">
+      <div class="section__head"><h2>Günün Kelimeleri</h2></div>
+      <div class="word-of-day-grid">
+        {% for word in daily_words %}
+          <div class="word-chip">
+            <div class="word-chip__en en">{{ word.english }}</div>
+            <div class="word-chip__tr">{{ word.turkish }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="section">
+    <div class="section__head">
+      <h2>Konular</h2>
+      <a href="{% url 'lessons:topic_list' %}">Tümünü gör →</a>
+    </div>
+    <div class="topic-grid">
+      {% for topic in topics %}
+        {% with lesson=topic.lessons.first %}
+          <a href="{% if lesson %}{% url 'lessons:lesson_detail' slug=lesson.slug %}{% else %}#{% endif %}" class="topic-card">
+            <div class="topic-card__emoji">{{ topic.emoji }}</div>
+            <span class="badge badge--{{ topic.level }}">{{ topic.level }}</span>
+            <div class="topic-card__title">{{ topic.title }}</div>
+            <p class="topic-card__desc">{{ topic.description }}</p>
+          </a>
+        {% endwith %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section__head"><h2>Gerçek Hayat Senaryoları</h2></div>
+    <div class="card text-center">
+      <span class="soon-badge">Yakında</span>
+      <p class="topic-card__desc" style="margin-top: 10px;">Gerçek hayat diyalogları çok yakında burada olacak.</p>
+    </div>
+  </div>
+{% endblock %}

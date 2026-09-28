@@ -614,8 +614,8 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 **1D. Sayfalar**
 - [x] Konu listesi + seviye filtresi
 - [x] Ders sayfası (kelimeler, ifadeler, grammar, örnek cümleler) + `lesson.js` stepper
-- [ ] Quiz sayfası + sunucu tarafı değerlendirme + sonuç sayfası
-- [ ] Ana sayfa (günün konusu, devam et, günlük kelimeler, konular)
+- [x] Quiz sayfası + sunucu tarafı değerlendirme + sonuç sayfası
+- [x] Ana sayfa (günün konusu, devam et, günlük kelimeler, konular)
 
 **1E. Kullanıcı ve ilerleme**
 - [ ] Kayıt / giriş / çıkış

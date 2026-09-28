@@ -138,9 +138,16 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+# Manifest'li (hash'li dosya adi) storage collectstatic gerektirir; lokalde ve
+# testlerde (Django test runner settings.DEBUG'i gecici olarak False yapar,
+# ManifestStaticFilesStorage bu yuzden .env'deki DEBUG yerine buradaki DEBUG
+# degiskenine gore seciliyor) collectstatic calismadigi icin manifestsiz storage kullanilir.
 STORAGES = {
     'staticfiles': {
-        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+        'BACKEND': (
+            'whitenoise.storage.CompressedStaticFilesStorage' if DEBUG
+            else 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+        ),
     },
 }
 

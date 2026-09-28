@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Quiz Sonucu{% endblock %}
+
+{% block content %}
+  <div class="card result-score">
+    <div class="result-score__big">{{ score }}/{{ total }}</div>
+    <p>{{ quiz.title }} sonucun</p>
+  </div>
+
+  {% if not attempt %}
+    <div class="flash flash--info">İlerlemeni kaydetmek için <a href="/accounts/signup/">kayıt ol</a>.</div>
+  {% elif just_completed %}
+    <div class="flash flash--success">🎉 Dersi tamamladın!</div>
+  {% endif %}
+
+  {% if results %}
+    <div class="stack mt-lg">
+      {% for item in results %}
+        <div class="result-item {% if item.is_correct %}result-item--correct{% else %}result-item--wrong{% endif %}">
+          <div>{{ item.prompt }}</div>
+          <div>
+            {% if item.is_correct %}
+              ✓ Doğru
+            {% else %}
+              ✗ Yanlış — Doğru cevap: <strong>{{ item.correct_text }}</strong>
+            {% endif %}
+          </div>
+          {% if item.explanation %}
+            <div class="result-item__explanation">{{ item.explanation }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="mt-lg stack">
+    <a href="{% url 'lessons:lesson_detail' slug=lesson.slug %}" class="btn btn-secondary btn-block">Derse Dön</a>
+    <a href="{% url 'lessons:topic_list' %}" class="btn btn-primary btn-block">Diğer Konular</a>
+  </div>
+{% endblock %}

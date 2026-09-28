@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  document.querySelectorAll('.flash').forEach(function (flash) {
+  // Sadece ust menudeki gecici sistem mesajlari (Django messages) otomatik kaybolur;
+  // sayfa icerigi olan bildirimler (ör. quiz sonucundaki "kayit ol" cagrisi) kalir.
+  document.querySelectorAll('.flash-messages .flash').forEach(function (flash) {
     setTimeout(function () {
       flash.style.opacity = '0';
       setTimeout(function () { flash.remove(); }, 300);

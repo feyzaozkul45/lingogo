@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ quiz.title }}{% endblock %}
+
+{% block content %}
+  <a href="{% url 'lessons:lesson_detail' slug=lesson.slug %}" class="btn btn-secondary" style="margin-bottom: 20px;">← Derse dön</a>
+
+  <h1>{{ quiz.title }}</h1>
+  <p>Tüm sorular çoktan seçmeli. Bitince "Quiz'i Bitir" butonuna bas.</p>
+
+  <form method="post" class="mt-lg">
+    {% csrf_token %}
+    {% for item in questions %}
+      <div class="quiz-question">
+        <div class="quiz-question__prompt">{{ forloop.counter }}. {{ item.question.prompt }}</div>
+        <div class="quiz-options">
+          {% for choice in item.choices %}
+            <label class="quiz-option">
+              <input type="radio" name="question_{{ item.question.id }}" value="{{ choice.id }}" required>
+              {{ choice.text }}
+            </label>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+
+    <button type="submit" class="btn btn-primary btn-block">Quiz'i Bitir</button>
+  </form>
+{% endblock %}
