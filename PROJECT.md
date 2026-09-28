@@ -612,8 +612,8 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 - [x] 5 konunun JSON içeriği (Kafede, Restoranda, Tanışma, Alışverişte, Havaalanında)
 
 **1D. Sayfalar**
-- [ ] Konu listesi + seviye filtresi
-- [ ] Ders sayfası (kelimeler, ifadeler, grammar, örnek cümleler) + `lesson.js` stepper
+- [x] Konu listesi + seviye filtresi
+- [x] Ders sayfası (kelimeler, ifadeler, grammar, örnek cümleler) + `lesson.js` stepper
 - [ ] Quiz sayfası + sunucu tarafı değerlendirme + sonuç sayfası
 - [ ] Ana sayfa (günün konusu, devam et, günlük kelimeler, konular)
 

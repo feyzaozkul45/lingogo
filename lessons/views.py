@@ -18,7 +18,7 @@ def home(request):
 
 def topic_list(request):
     level = request.GET.get('level')
-    topics = Topic.objects.filter(is_active=True)
+    topics = Topic.objects.filter(is_active=True).prefetch_related('lessons')
     if level in VALID_LEVELS:
         topics = topics.filter(level=level)
 
@@ -42,9 +42,14 @@ def lesson_detail(request, slug):
     if request.user.is_authenticated:
         is_completed = LessonProgress.objects.filter(user=request.user, lesson=lesson).exists()
 
+    has_grammar = bool(lesson.grammar_tips.all())
+    total_steps = 3 + (1 if has_grammar else 0)  # kelimeler, ifadeler, [grammar], ornek cumleler
+
     context = {
         'lesson': lesson,
         'is_completed': is_completed,
         'has_quiz': hasattr(lesson, 'quiz'),
+        'has_grammar': has_grammar,
+        'total_steps': total_steps,
     }
     return render(request, 'lessons/lesson_detail.html', context)

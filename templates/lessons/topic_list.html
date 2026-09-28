@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Konular{% endblock %}
+
+{% block content %}
+  <h1>Konular</h1>
+
+  <div class="level-filter">
+    <a href="{% url 'lessons:topic_list' %}" class="{% if not selected_level %}active{% endif %}">Tümü</a>
+    {% for lvl in levels %}
+      <a href="?level={{ lvl }}" class="{% if selected_level == lvl %}active{% endif %}">{{ lvl }}</a>
+    {% endfor %}
+  </div>
+
+  {% if topics %}
+    <div class="topic-grid">
+      {% for topic in topics %}
+        {% with lesson=topic.lessons.all|first %}
+          <a href="{% if lesson %}{% url 'lessons:lesson_detail' slug=lesson.slug %}{% else %}#{% endif %}" class="topic-card">
+            <div class="topic-card__emoji">{{ topic.emoji }}</div>
+            <span class="badge badge--{{ topic.level }}">{{ topic.level }}</span>
+            <div class="topic-card__title">{{ topic.title }}</div>
+            <p class="topic-card__desc">{{ topic.description }}</p>
+            {% if topic.id in completed_topic_ids %}
+              <span class="topic-card__done">✓ Tamamlandı</span>
+            {% endif %}
+          </a>
+        {% endwith %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <p>Bu seviyede henüz konu yok.</p>
+    </div>
+  {% endif %}
+{% endblock %}

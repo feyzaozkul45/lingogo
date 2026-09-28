@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ lesson.title }}{% endblock %}
+
+{% block content %}
+  <a href="{% url 'lessons:topic_list' %}" class="btn-secondary btn" style="margin-bottom: 20px;">← Konular</a>
+
+  <span class="badge badge--{{ lesson.topic.level }}">{{ lesson.topic.level }}</span>
+  <h1>{{ lesson.topic.emoji }} {{ lesson.title }}</h1>
+  {% if lesson.intro %}<p>{{ lesson.intro }}</p>{% endif %}
+  {% if is_completed %}<p class="topic-card__done">✓ Bu dersi tamamladın</p>{% endif %}
+
+  <div class="lesson-progressbar">
+    <div class="lesson-progressbar__fill" style="width: {% widthratio 1 total_steps 100 %}%"></div>
+  </div>
+
+  <div class="lesson-tabs" role="tablist">
+    <button type="button" class="active">Kelimeler</button>
+    <button type="button">İfadeler</button>
+    {% if has_grammar %}<button type="button">Grammar</button>{% endif %}
+    <button type="button">Örnek Cümleler</button>
+  </div>
+
+  <div class="lesson-step active">
+    <h2>Kelimeler</h2>
+    <div class="stack">
+      {% for word in lesson.words.all %}
+        <div class="word-card">
+          <div class="word-card__en en">{{ word.english }}</div>
+          <div class="word-card__tr">{{ word.turkish }}</div>
+          {% if word.example_en %}
+            <div class="word-card__example">
+              <span class="en">{{ word.example_en }}</span>
+              <span class="tr">{{ word.example_tr }}</span>
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="lesson-step">
+    <h2>Günlük İfadeler</h2>
+    <div class="stack">
+      {% for phrase in lesson.phrases.all %}
+        <div class="phrase-card">
+          <div class="en">{{ phrase.english }}</div>
+          <div class="word-card__tr">{{ phrase.turkish }}</div>
+          {% if phrase.note %}<div class="phrase-card__note">💡 {{ phrase.note }}</div>{% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if has_grammar %}
+    <div class="lesson-step">
+      <h2>Grammar İpucu</h2>
+      {% for tip in lesson.grammar_tips.all %}
+        <div class="grammar-box">
+          <h3>{{ tip.title }}</h3>
+          <p>{{ tip.explanation }}</p>
+          <ul class="stack">
+            {% for example in tip.example_list %}<li class="en">{{ example }}</li>{% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="lesson-step">
+    <h2>Örnek Cümleler</h2>
+    <div class="stack">
+      {% for example in lesson.example_sentences.all %}
+        <div class="example-card">
+          <div class="en">{{ example.english }}</div>
+          <div class="word-card__tr">{{ example.turkish }}</div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="mt-lg">
+      <a href="/lessons/{{ lesson.slug }}/quiz/" class="btn btn-primary btn-block">Quiz'e Başla →</a>
+    </div>
+  </div>
+
+  <div class="lesson-nav">
+    <button type="button" id="lessonPrev" class="btn btn-secondary" disabled>← Geri</button>
+    <button type="button" id="lessonNext" class="btn btn-primary">İleri →</button>
+  </div>
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static 'js/lesson.js' %}"></script>
+{% endblock %}
