@@ -1,0 +1,116 @@
+{
+  "topic": {
+    "slug": "cafe",
+    "title": "Kafede",
+    "emoji": "☕",
+    "color": "sun",
+    "level": "A1",
+    "description": "Kahveni sipariş et, otur, keyfini çıkar.",
+    "order": 1
+  },
+  "lesson": {
+    "slug": "cafe-basics",
+    "title": "Kafede Sipariş Vermek",
+    "intro": "Bu derste bir kafede kahve/çay sipariş etmeyi ve küçük isteklerini nazikçe ifade etmeyi öğreneceksin."
+  },
+  "words": [
+    { "english": "coffee", "turkish": "kahve", "example_en": "I'd like a coffee, please.", "example_tr": "Bir kahve istiyorum, lütfen." },
+    { "english": "tea", "turkish": "çay", "example_en": "Can I have a cup of tea?", "example_tr": "Bir fincan çay alabilir miyim?" },
+    { "english": "milk", "turkish": "süt", "example_en": "Can I have some milk in my coffee?", "example_tr": "Kahveme biraz süt alabilir miyim?" },
+    { "english": "sugar", "turkish": "şeker", "example_en": "No sugar for me, thanks.", "example_tr": "Bana şeker olmasın, teşekkürler." },
+    { "english": "cup", "turkish": "fincan", "example_en": "A large cup, please.", "example_tr": "Büyük boy bir fincan, lütfen." },
+    { "english": "menu", "turkish": "menü", "example_en": "Can I see the menu?", "example_tr": "Menüyü görebilir miyim?" },
+    { "english": "water", "turkish": "su", "example_en": "Can I have a glass of water too?", "example_tr": "Bir bardak su da alabilir miyim?" },
+    { "english": "seat", "turkish": "koltuk / yer", "example_en": "Is this seat taken?", "example_tr": "Bu yer dolu mu?" }
+  ],
+  "phrases": [
+    { "english": "Can I have a coffee, please?", "turkish": "Bir kahve alabilir miyim, lütfen?", "note": "Kafede sipariş verirken en yaygın kalıp." },
+    { "english": "Is this seat taken?", "turkish": "Bu yer dolu mu?", "note": "Otururken sormak için kullanılır." },
+    { "english": "To go, please.", "turkish": "Paket olsun, lütfen.", "note": "İçeride değil, dışarıda içmek istediğinde." },
+    { "english": "Anything else?", "turkish": "Başka bir şey?", "note": "Garson genelde bunu sorar." },
+    { "english": "Here you are.", "turkish": "Buyurun, alın.", "note": "Bir şey verirken söylenir." },
+    { "english": "Can I get the Wi-Fi password?", "turkish": "Wi-Fi şifresini alabilir miyim?", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "Can I have...?",
+      "explanation": "Bir şey istemenin en yaygın ve kibar yollarından biri. Kafede, restoranda, dükkanda her yerde kullanılır. 'Can I get...?' de aynı anlamda, biraz daha gündelik.",
+      "examples": [
+        "Can I have a coffee, please?",
+        "Can I have the menu?",
+        "Can I get a glass of water?"
+      ]
+    }
+  ],
+  "examples": [
+    { "english": "I'd like a large coffee with milk.", "turkish": "Sütlü büyük boy bir kahve istiyorum." },
+    { "english": "Can I have the Wi-Fi password, please?", "turkish": "Wi-Fi şifresini alabilir miyim, lütfen?" },
+    { "english": "This seat is free.", "turkish": "Bu yer boş." },
+    { "english": "Thank you, have a nice day!", "turkish": "Teşekkürler, iyi günler!" }
+  ],
+  "quiz": {
+    "title": "Kafede Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"cup\" ne demek?",
+        "explanation": "Cup = fincan.",
+        "choices": [
+          { "text": "fincan", "correct": true },
+          { "text": "tabak", "correct": false },
+          { "text": "kaşık", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "___ I have a coffee, please?",
+        "explanation": "Kalıp: Can I have...?",
+        "choices": [
+          { "text": "Can", "correct": true },
+          { "text": "Do", "correct": false },
+          { "text": "Am", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Garson \"Anything else?\" dediğinde ne demek istiyor?",
+        "explanation": "\"Anything else?\" = Başka bir şey (ister misiniz)?",
+        "choices": [
+          { "text": "Başka bir şey ister misiniz?", "correct": true },
+          { "text": "Hesap ister misiniz?", "correct": false },
+          { "text": "Oturacak yer var mı?", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "Kahveni paket almak istiyorsun, doğru cümleyi seç.",
+        "explanation": "\"To go\" = paket, dışarıya.",
+        "choices": [
+          { "text": "To go, please.", "correct": true },
+          { "text": "To sit, please.", "correct": false },
+          { "text": "To eat, please.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"seat\" ne demek?",
+        "explanation": "Seat = koltuk, oturacak yer.",
+        "choices": [
+          { "text": "koltuk / yer", "correct": true },
+          { "text": "masa", "correct": false },
+          { "text": "kapı", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "No ___ for me, thanks.",
+        "explanation": "\"No sugar for me\" = bana şeker olmasın.",
+        "choices": [
+          { "text": "sugar", "correct": true },
+          { "text": "milk", "correct": false },
+          { "text": "water", "correct": false }
+        ]
+      }
+    ]
+  }
+}

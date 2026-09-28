@@ -741,3 +741,11 @@ python manage.py runserver
 python manage.py check
 python manage.py test
 ```
+# LingoGo
+
+@PROJECT.md
+
+## En önemli kurallar
+- Aynı anda tek adım. Bir adımı bitir, check + test çalıştır, commit et, dur ve onay bekle.
+- Adımları birleştirme veya atlama.
+- Yeni bağımlılık veya yeni Django app eklemeden önce sor.

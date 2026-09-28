@@ -1,0 +1,116 @@
+{
+  "topic": {
+    "slug": "airport",
+    "title": "Havaalanında",
+    "emoji": "✈️",
+    "color": "sky",
+    "level": "A2",
+    "description": "Check-in yap, kapıyı bul, bagajını takip et.",
+    "order": 5
+  },
+  "lesson": {
+    "slug": "airport-basics",
+    "title": "Havaalanında Yön Bulmak",
+    "intro": "Bu derste havaalanında check-in yapmayı, kapı/bagaj sormayı ve uçuş bilgilerini anlamayı öğreneceksin."
+  },
+  "words": [
+    { "english": "passport", "turkish": "pasaport", "example_en": "Can I see your passport, please?", "example_tr": "Pasaportunuzu görebilir miyim, lütfen?" },
+    { "english": "ticket", "turkish": "bilet", "example_en": "I have my ticket on my phone.", "example_tr": "Biletim telefonumda." },
+    { "english": "gate", "turkish": "kapı (uçuş kapısı)", "example_en": "The gate number is 12.", "example_tr": "Kapı numarası 12." },
+    { "english": "luggage", "turkish": "bagaj", "example_en": "Where can I collect my luggage?", "example_tr": "Bagajımı nereden alabilirim?" },
+    { "english": "boarding pass", "turkish": "biniş kartı", "example_en": "Here is my boarding pass.", "example_tr": "İşte biniş kartım." },
+    { "english": "flight", "turkish": "uçuş", "example_en": "My flight is at 9 AM.", "example_tr": "Uçuşum sabah 9'da." },
+    { "english": "delay", "turkish": "gecikme", "example_en": "The flight has a two-hour delay.", "example_tr": "Uçuşta iki saatlik gecikme var." },
+    { "english": "security", "turkish": "güvenlik kontrolü", "example_en": "Security is very busy today.", "example_tr": "Bugün güvenlik kontrolü çok kalabalık." }
+  ],
+  "phrases": [
+    { "english": "Where is gate 12?", "turkish": "12 numaralı kapı nerede?", "note": "" },
+    { "english": "Where can I check in?", "turkish": "Check-in'i nereden yapabilirim?", "note": "" },
+    { "english": "My flight is delayed.", "turkish": "Uçuşum rötarlı / gecikti.", "note": "" },
+    { "english": "Where is the baggage claim?", "turkish": "Bagaj alım yeri nerede?", "note": "" },
+    { "english": "Can I see your passport, please?", "turkish": "Pasaportunuzu görebilir miyim, lütfen?", "note": "Görevlinin sorusu." },
+    { "english": "I need to change my seat.", "turkish": "Koltuğumu değiştirmem gerekiyor.", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "Where is...? / Where can I...?",
+      "explanation": "Bir yeri sormak için 'Where is...?' kullanılır. Bir şeyi nerede yapabileceğini sormak için 'Where can I...?' kullanılır.",
+      "examples": [
+        "Where is the gate?",
+        "Where can I check in?",
+        "Where can I find a taxi?"
+      ]
+    }
+  ],
+  "examples": [
+    { "english": "Excuse me, where is the boarding gate?", "turkish": "Affedersiniz, biniş kapısı nerede?" },
+    { "english": "Our flight has been delayed by an hour.", "turkish": "Uçuşumuz bir saat gecikti." },
+    { "english": "I need to check in my luggage.", "turkish": "Bagajımı check-in yaptırmam gerekiyor." },
+    { "english": "Where can I find a luggage cart?", "turkish": "Bagaj arabası nerede bulabilirim?" }
+  ],
+  "quiz": {
+    "title": "Havaalanı Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"boarding pass\" ne demek?",
+        "explanation": "Boarding pass = biniş kartı.",
+        "choices": [
+          { "text": "biniş kartı", "correct": true },
+          { "text": "pasaport", "correct": false },
+          { "text": "bilet", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "___ is gate 12?",
+        "explanation": "Kalıp: Where is...?",
+        "choices": [
+          { "text": "Where", "correct": true },
+          { "text": "What", "correct": false },
+          { "text": "When", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Bagajını nereden alacağını sormak için ne dersin?",
+        "explanation": "\"Where is the baggage claim?\" = Bagaj alım yeri nerede?",
+        "choices": [
+          { "text": "Where is the baggage claim?", "correct": true },
+          { "text": "Where is my flight?", "correct": false },
+          { "text": "Where is the gate?", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "Uçuşunun geciktiğini söylemek için doğru cümleyi seç.",
+        "explanation": "\"My flight is delayed.\" doğru kullanım.",
+        "choices": [
+          { "text": "My flight is delayed.", "correct": true },
+          { "text": "My flight is delay.", "correct": false },
+          { "text": "My flight delays me.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"luggage\" ne demek?",
+        "explanation": "Luggage = bagaj.",
+        "choices": [
+          { "text": "bagaj", "correct": true },
+          { "text": "bilet", "correct": false },
+          { "text": "kapı", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Where can I ___ in?",
+        "explanation": "\"Check in\" = check-in yapmak.",
+        "choices": [
+          { "text": "check", "correct": true },
+          { "text": "look", "correct": false },
+          { "text": "sit", "correct": false }
+        ]
+      }
+    ]
+  }
+}

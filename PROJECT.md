@@ -607,9 +607,9 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 - [ ] Mobil uyumlu temel düzen
 
 **1C. İçerik**
-- [ ] `lessons` ve `quizzes` modelleri + admin kayıtları
-- [ ] `load_content` management command
-- [ ] 5 konunun JSON içeriği (Kafede, Restoranda, Tanışma, Alışverişte, Havaalanında)
+- [x] `lessons` ve `quizzes` modelleri + admin kayıtları
+- [x] `load_content` management command
+- [x] 5 konunun JSON içeriği (Kafede, Restoranda, Tanışma, Alışverişte, Havaalanında)
 
 **1D. Sayfalar**
 - [ ] Konu listesi + seviye filtresi

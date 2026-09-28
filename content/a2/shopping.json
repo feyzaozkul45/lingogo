@@ -1,0 +1,116 @@
+{
+  "topic": {
+    "slug": "shopping",
+    "title": "Alışverişte",
+    "emoji": "🛍️",
+    "color": "pink",
+    "level": "A2",
+    "description": "Fiyat sor, beden dene, ödeme yap.",
+    "order": 4
+  },
+  "lesson": {
+    "slug": "shopping-basics",
+    "title": "Mağazada Alışveriş Yapmak",
+    "intro": "Bu derste bir mağazada fiyat sormayı, beden/ürün denemeyi ve ödeme yapmayı öğreneceksin."
+  },
+  "words": [
+    { "english": "price", "turkish": "fiyat", "example_en": "What's the price of this jacket?", "example_tr": "Bu ceketin fiyatı ne kadar?" },
+    { "english": "size", "turkish": "beden", "example_en": "Do you have this in a smaller size?", "example_tr": "Bunun daha küçük bedeni var mı?" },
+    { "english": "discount", "turkish": "indirim", "example_en": "Is there a discount on this?", "example_tr": "Bunda indirim var mı?" },
+    { "english": "fitting room", "turkish": "kabin (deneme odası)", "example_en": "Where is the fitting room?", "example_tr": "Deneme kabini nerede?" },
+    { "english": "cash", "turkish": "nakit", "example_en": "I'll pay in cash.", "example_tr": "Nakit ödeyeceğim." },
+    { "english": "receipt", "turkish": "fiş / fatura", "example_en": "Can I have the receipt, please?", "example_tr": "Fişi alabilir miyim, lütfen?" },
+    { "english": "expensive", "turkish": "pahalı", "example_en": "This bag is too expensive.", "example_tr": "Bu çanta çok pahalı." },
+    { "english": "cheap", "turkish": "ucuz", "example_en": "These shoes are cheap.", "example_tr": "Bu ayakkabılar ucuz." }
+  ],
+  "phrases": [
+    { "english": "How much is this?", "turkish": "Bu ne kadar?", "note": "Tek bir ürün için." },
+    { "english": "How much are these?", "turkish": "Bunlar ne kadar?", "note": "Birden fazla ürün için." },
+    { "english": "Can I try this on?", "turkish": "Bunu deneyebilir miyim?", "note": "" },
+    { "english": "Do you have this in a different color?", "turkish": "Bunun farklı bir rengi var mı?", "note": "" },
+    { "english": "I'll take it.", "turkish": "Bunu alıyorum.", "note": "Karar verdiğinde söylenir." },
+    { "english": "Do you accept cards?", "turkish": "Kart geçiyor mu?", "note": "" }
+  ],
+  "grammar": [
+    {
+      "title": "How much is / are...?",
+      "explanation": "Fiyat sormak için kullanılır. Tekil isimlerde 'is', çoğul isimlerde 'are' kullanılır: 'How much is this shirt?' ama 'How much are these shoes?'",
+      "examples": [
+        "How much is this jacket?",
+        "How much are these jeans?",
+        "How much is the discount?"
+      ]
+    }
+  ],
+  "examples": [
+    { "english": "This dress is on sale today.", "turkish": "Bu elbise bugün indirimde." },
+    { "english": "Can I pay by card?", "turkish": "Kartla ödeyebilir miyim?" },
+    { "english": "These trousers don't fit me.", "turkish": "Bu pantolon bana olmadı." },
+    { "english": "I'm just looking, thanks.", "turkish": "Sadece bakıyorum, teşekkürler." }
+  ],
+  "quiz": {
+    "title": "Alışveriş Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"discount\" ne demek?",
+        "explanation": "Discount = indirim.",
+        "choices": [
+          { "text": "indirim", "correct": true },
+          { "text": "fiyat", "correct": false },
+          { "text": "beden", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "How much ___ these shoes?",
+        "explanation": "Çoğul isim -> 'are' kullanılır.",
+        "choices": [
+          { "text": "are", "correct": true },
+          { "text": "is", "correct": false },
+          { "text": "do", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Bir ürünü almaya karar verdiğinde ne dersin?",
+        "explanation": "\"I'll take it.\" = Bunu alıyorum.",
+        "choices": [
+          { "text": "I'll take it.", "correct": true },
+          { "text": "I take that.", "correct": false },
+          { "text": "Give me it.", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "Ürünü denemek istediğini söylemek için doğru cümleyi seç.",
+        "explanation": "\"Can I try this on?\" doğru kullanım.",
+        "choices": [
+          { "text": "Can I try this on?", "correct": true },
+          { "text": "Can I try this in?", "correct": false },
+          { "text": "Can I wear this now?", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"expensive\" ne demek?",
+        "explanation": "Expensive = pahalı.",
+        "choices": [
+          { "text": "pahalı", "correct": true },
+          { "text": "ucuz", "correct": false },
+          { "text": "güzel", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "I'll pay in ___.",
+        "explanation": "\"Pay in cash\" = nakit ödemek.",
+        "choices": [
+          { "text": "cash", "correct": true },
+          { "text": "card", "correct": false },
+          { "text": "price", "correct": false }
+        ]
+      }
+    ]
+  }
+}

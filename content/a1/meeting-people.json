@@ -1,0 +1,117 @@
+{
+  "topic": {
+    "slug": "meeting-people",
+    "title": "Tanışma",
+    "emoji": "👋",
+    "color": "mint",
+    "level": "A1",
+    "description": "Kendini tanıt, birileriyle tanış, sohbete başla.",
+    "order": 3
+  },
+  "lesson": {
+    "slug": "meeting-people-basics",
+    "title": "Biriyle Tanışmak",
+    "intro": "Bu derste kendini tanıtmayı, birinin adını ve nereli olduğunu sormayı öğreneceksin."
+  },
+  "words": [
+    { "english": "name", "turkish": "isim", "example_en": "What's your name?", "example_tr": "Adın ne?" },
+    { "english": "from", "turkish": "-den/-dan", "example_en": "I'm from Turkey.", "example_tr": "Türkiye'denim." },
+    { "english": "nice", "turkish": "güzel, hoş", "example_en": "Nice to meet you.", "example_tr": "Tanıştığımıza memnun oldum." },
+    { "english": "friend", "turkish": "arkadaş", "example_en": "This is my friend, Ali.", "example_tr": "Bu benim arkadaşım, Ali." },
+    { "english": "live", "turkish": "yaşamak", "example_en": "I live in Istanbul.", "example_tr": "İstanbul'da yaşıyorum." },
+    { "english": "work", "turkish": "çalışmak", "example_en": "I work as a teacher.", "example_tr": "Öğretmen olarak çalışıyorum." },
+    { "english": "student", "turkish": "öğrenci", "example_en": "I'm a student.", "example_tr": "Ben bir öğrenciyim." },
+    { "english": "age", "turkish": "yaş", "example_en": "What's your age?", "example_tr": "Yaşın kaç?" }
+  ],
+  "phrases": [
+    { "english": "What's your name?", "turkish": "Adın ne?", "note": "" },
+    { "english": "Where are you from?", "turkish": "Nerelisin?", "note": "" },
+    { "english": "Nice to meet you.", "turkish": "Tanıştığımıza memnun oldum.", "note": "Tanışırken söylenir." },
+    { "english": "How old are you?", "turkish": "Kaç yaşındasın?", "note": "" },
+    { "english": "What do you do?", "turkish": "Ne iş yapıyorsun?", "note": "Meslek sormak için." },
+    { "english": "This is my friend.", "turkish": "Bu benim arkadaşım.", "note": "Birini tanıştırırken." }
+  ],
+  "grammar": [
+    {
+      "title": "to be (I'm / You're / Where are you from?)",
+      "explanation": "İngilizcede kim olduğunu, nereli olduğunu ve durumunu anlatmak için 'to be' fiili kullanılır: I am (I'm), you are (you're), he/she is. Soru sorarken fiil öne gelir: 'Where are you from?'",
+      "examples": [
+        "I'm Ayşe.",
+        "You're very kind.",
+        "Where are you from?",
+        "I'm from Turkey."
+      ]
+    }
+  ],
+  "examples": [
+    { "english": "Hi, I'm Mehmet. Nice to meet you.", "turkish": "Merhaba, ben Mehmet. Tanıştığımıza memnun oldum." },
+    { "english": "I'm from Izmir, and I live in Istanbul now.", "turkish": "İzmirliyim ama şimdi İstanbul'da yaşıyorum." },
+    { "english": "She's a student at university.", "turkish": "O üniversitede öğrenci." },
+    { "english": "What do you do for a living?", "turkish": "Geçimini nasıl sağlıyorsun / ne iş yapıyorsun?" }
+  ],
+  "quiz": {
+    "title": "Tanışma Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"nice to meet you\" ne demek?",
+        "explanation": "Nice to meet you = tanıştığımıza memnun oldum.",
+        "choices": [
+          { "text": "tanıştığımıza memnun oldum", "correct": true },
+          { "text": "görüşürüz", "correct": false },
+          { "text": "hoş geldin", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "___ are you from?",
+        "explanation": "Kalıp: Where are you from?",
+        "choices": [
+          { "text": "Where", "correct": true },
+          { "text": "What", "correct": false },
+          { "text": "Who", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Birine adını sormak için ne dersin?",
+        "explanation": "\"What's your name?\" = Adın ne?",
+        "choices": [
+          { "text": "What's your name?", "correct": true },
+          { "text": "How are you?", "correct": false },
+          { "text": "Where do you live?", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "Türkiye'den olduğunu söylemek için doğru cümleyi seç.",
+        "explanation": "\"I'm from Turkey.\" doğru kullanım.",
+        "choices": [
+          { "text": "I'm from Turkey.", "correct": true },
+          { "text": "I from Turkey.", "correct": false },
+          { "text": "I am Turkey.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"student\" ne demek?",
+        "explanation": "Student = öğrenci.",
+        "choices": [
+          { "text": "öğrenci", "correct": true },
+          { "text": "öğretmen", "correct": false },
+          { "text": "doktor", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "I ___ a teacher.",
+        "explanation": "\"I'm a teacher\" = I + am (I'm).",
+        "choices": [
+          { "text": "am", "correct": true },
+          { "text": "is", "correct": false },
+          { "text": "are", "correct": false }
+        ]
+      }
+    ]
+  }
+}

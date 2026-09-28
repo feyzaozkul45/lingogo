@@ -1,0 +1,127 @@
+{
+  "topic": {
+    "slug": "restaurant",
+    "title": "Restoranda",
+    "emoji": "🍔",
+    "color": "coral",
+    "level": "A1",
+    "description": "Sipariş ver, hesap iste, garsonla konuş.",
+    "order": 2
+  },
+  "lesson": {
+    "slug": "restaurant-basics",
+    "title": "Restoranda Sipariş Vermek",
+    "intro": "Bu derste restoranda sipariş vermeyi ve hesap istemeyi öğreneceksin."
+  },
+  "words": [
+    { "english": "menu", "turkish": "menü", "example_en": "Can I see the menu?", "example_tr": "Menüyü görebilir miyim?" },
+    { "english": "waiter", "turkish": "garson", "example_en": "The waiter is very friendly.", "example_tr": "Garson çok cana yakın." },
+    { "english": "order", "turkish": "sipariş vermek", "example_en": "Are you ready to order?", "example_tr": "Sipariş vermeye hazır mısınız?" },
+    { "english": "bill", "turkish": "hesap", "example_en": "Can I have the bill, please?", "example_tr": "Hesabı alabilir miyim, lütfen?" },
+    { "english": "table", "turkish": "masa", "example_en": "A table for two, please.", "example_tr": "İki kişilik bir masa, lütfen." },
+    { "english": "dessert", "turkish": "tatlı", "example_en": "Would you like some dessert?", "example_tr": "Tatlı ister misiniz?" },
+    { "english": "tasty", "turkish": "lezzetli", "example_en": "This soup is very tasty.", "example_tr": "Bu çorba çok lezzetli." },
+    { "english": "tip", "turkish": "bahşiş", "example_en": "We left a small tip.", "example_tr": "Küçük bir bahşiş bıraktık." }
+  ],
+  "phrases": [
+    { "english": "Can I have the menu, please?", "turkish": "Menüyü alabilir miyim, lütfen?", "note": "" },
+    { "english": "I'd like a coffee.", "turkish": "Bir kahve istiyorum.", "note": "'I want' yerine daha kibar." },
+    { "english": "Can I have the bill, please?", "turkish": "Hesabı alabilir miyim, lütfen?", "note": "Yemek bittikten sonra kullanılır." },
+    { "english": "Is this dish spicy?", "turkish": "Bu yemek acılı mı?", "note": "" },
+    { "english": "Could we have a table for two?", "turkish": "İki kişilik bir masa alabilir miyiz?", "note": "Girişte söylenir." }
+  ],
+  "grammar": [
+    {
+      "title": "I'd like...",
+      "explanation": "Bir şey istemenin daha doğal ve kibar yollarından biri. 'I would like' kalıbının kısaltmasıdır.",
+      "examples": ["I'd like a coffee, please.", "I'd like the chicken sandwich."]
+    }
+  ],
+  "examples": [
+    { "english": "We'd like a table for two.", "turkish": "İki kişilik bir masa istiyoruz." },
+    { "english": "Could you bring some water, please?", "turkish": "Biraz su getirebilir misiniz, lütfen?" },
+    { "english": "This soup is delicious.", "turkish": "Bu çorba çok lezzetli." },
+    { "english": "We're ready to order.", "turkish": "Sipariş vermeye hazırız." }
+  ],
+  "quiz": {
+    "title": "Restoran Quiz",
+    "questions": [
+      {
+        "type": "meaning",
+        "prompt": "\"bill\" ne demek?",
+        "explanation": "Bill = hesap. Restoranda ödeme yapacağın kâğıt.",
+        "choices": [
+          { "text": "hesap", "correct": true },
+          { "text": "menü", "correct": false },
+          { "text": "garson", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "I'd ___ a coffee, please.",
+        "explanation": "Kalıp: I'd like + istediğin şey.",
+        "choices": [
+          { "text": "like", "correct": true },
+          { "text": "want", "correct": false },
+          { "text": "have", "correct": false }
+        ]
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Garsondan hesabı nasıl istersin?",
+        "explanation": "\"Can I have the bill, please?\" en kibar ve yaygın kalıptır.",
+        "choices": [
+          { "text": "Can I have the bill, please?", "correct": true },
+          { "text": "Give me money.", "correct": false },
+          { "text": "Where is the bill?", "correct": false }
+        ]
+      },
+      {
+        "type": "correct_sentence",
+        "prompt": "İki kişilik masa istediğini söylemek için doğru cümleyi seç.",
+        "explanation": "\"A table for two, please.\" doğal ve doğru kullanım.",
+        "choices": [
+          { "text": "A table for two, please.", "correct": true },
+          { "text": "Two table, please.", "correct": false },
+          { "text": "I am two people table.", "correct": false }
+        ]
+      },
+      {
+        "type": "meaning",
+        "prompt": "\"tasty\" ne demek?",
+        "explanation": "Tasty = lezzetli.",
+        "choices": [
+          { "text": "lezzetli", "correct": true },
+          { "text": "acı", "correct": false },
+          { "text": "soğuk", "correct": false }
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Are you ready to ___?",
+        "explanation": "\"Ready to order\" = sipariş vermeye hazır.",
+        "choices": [
+          { "text": "order", "correct": true },
+          { "text": "eat", "correct": false },
+          { "text": "pay", "correct": false }
+        ]
+      }
+    ]
+  },
+  "scenario": {
+    "title": "Restoranda sipariş",
+    "setting": "Bir restorandasın, garson masana geliyor.",
+    "task": "Bir sonraki kafe/restoran ziyaretinde siparişini aklından 'I'd like...' ile ver.",
+    "steps": [
+      {
+        "speaker": "Waiter",
+        "line": "Hello! Are you ready to order?",
+        "line_tr": "Merhaba! Sipariş vermeye hazır mısınız?",
+        "options": [
+          { "text": "Yes, I'd like a chicken sandwich.", "correct": true, "feedback": "Harika, doğal ve kibar!" },
+          { "text": "Yes, the bill.", "correct": false, "feedback": "Hesabı yemekten sonra istersin." }
+        ]
+      }
+    ]
+  }
+}
