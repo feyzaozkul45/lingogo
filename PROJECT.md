@@ -611,8 +611,8 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 - [x] Supabase bağlantısı ve ilk migration (`.env`'de `DATABASE_URL`, session pooler port 5432; lokal `manage.py test` her zaman SQLite kullanır)
 
 **1B. Temel arayüz**
-- [ ] `base.html`, header, footer, `main.css` (renkler, kartlar, butonlar)
-- [ ] Mobil uyumlu temel düzen
+- [x] `base.html`, header, footer, `main.css` (renkler, kartlar, butonlar)
+- [x] Mobil uyumlu temel düzen
 
 **1C. İçerik**
 - [x] `lessons` ve `quizzes` modelleri + admin kayıtları
@@ -661,8 +661,7 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 ### Phase 3 — Geliştirme (ilk iki faz çalıştıktan sonra, kullanıcıyla konuşarak seçilir)
 
 Olası küçük geliştirmeler:
-- Yeni konular: Otelde, Yol tarifi, İş görüşmesi, Günlük hayat; ardından B1–B2 içerikleri
-- Konu başına daha fazla kelime ve quiz sorusu
+- Yeni konular: Günlük hayat, ileri seviye konular (B1/B2'de zaten 5'er konu var)
 - "Kelimelerimi tekrar et" sayfası (tamamlanan derslerin kelimeleriyle mini quiz)
 - İngilizce cümleler için tarayıcının **Web Speech API**'si ile sesli okuma (ek kütüphane yok)
 - Günlük seri (streak) gibi küçük bir oyunlaştırma
@@ -754,3 +753,47 @@ python manage.py runserver
 python manage.py check
 python manage.py test
 ```
+
+---
+
+## 17. İlerleme Günlüğü
+
+> Yeni bir Claude Code oturumuna geçerken hızlıca bağlam kazanmak için. En son burada bırakıldı.
+
+### Tamamlanan fazlar
+
+- **Phase 1 (1A–1F) tamamlandı** — hesapsız/hesaplı ders okuma, quiz çözme, ilerleme takibi, kayıt/giriş/çıkış, Supabase + Vercel üzerinde canlı.
+- İçerik sonradan genişletildi: başlangıçta 5 konu (A1/A2) vardı, şimdi **20 konu** (A1/A2/B1/B2, her seviyede 5).
+
+### Önemli kararlar
+
+- **Veritabanı sırası:** Önce SQLite ile geliştirildi (1A–1E), Supabase bağlantısı bilinçli olarak 1F'ye ertelendi.
+- **Pooler ayrımı:** Lokalde `.env`'deki `DATABASE_URL` **session pooler** (port `5432`) kullanıyor; Vercel'in ortam değişkenlerindeki `DATABASE_URL` **transaction pooler** (port `6543`) kullanıyor.
+- **Testler her zaman SQLite kullanır:** `settings.py`'da `'test' in sys.argv` kontrolüyle `manage.py test` çalıştığında `DATABASE_URL` ayarlı olsa bile SQLite'a düşülüyor. Sebep: Supabase'in pooler'ı test veritabanı oluşturma/silme döngüsünü ~660 saniyeye çıkarıyordu ve `DROP DATABASE` bazen "being accessed by other users" hatasıyla tıkanıyordu. Bu yüzden oluşan yarım kalmış bir `test_postgres` veritabanı Supabase MCP (`execute_sql`) ile elle temizlendi — sadece o veritabanı silindi, `postgres`'e dokunulmadı.
+- **Vercel yapılandırması minimal tutuldu:** Güncel Vercel dokümantasyonuna göre Django için sıfır-konfigürasyon desteği var (manage.py/`WSGI_APPLICATION` otomatik algılanıyor, `STATIC_ROOT` sayesinde `collectstatic` build sırasında otomatik çalışıyor). `vercel.json` sadece `config/wsgi.py` için `maxDuration: 30` içeriyor.
+- **Statik dosya storage'ı `DEBUG`'a göre seçiliyor:** `DEBUG=True` (lokal/test) → manifest gerektirmeyen WhiteNoise storage; `DEBUG=False` (üretim) → `CompressedManifestStaticFilesStorage`. Sebep: Django'nun test runner'ı `settings.DEBUG`'ı çalışırken geçici `False` yapıyor, bu da `collectstatic` çalışmadan manifest'li storage'ın `{% static %}` etiketinde hata vermesine yol açıyordu.
+- **`ALLOWED_HOSTS` / `CSRF_TRUSTED_ORIGINS`:** Vercel'in her deployment'a (production + her preview) otomatik verdiği `VERCEL_URL` ortam değişkeni `settings.py`'da bu iki listeye otomatik ekleniyor (deploy öncesi domain bilinmediği için). Kullanıcı ayrıca Vercel ortam değişkenlerine `ALLOWED_HOSTS=.vercel.app` ve `CSRF_TRUSTED_ORIGINS=https://*.vercel.app` (Django'nun desteklediği joker karakter sözdizimi) elle girdi.
+- **Vercel bölgesi:** `fra1`.
+- **Git:** GitHub'da private repo (`feyzaozkul45/lingogo`); `.env` hiçbir zaman commit edilmedi.
+
+### Eklenen içerikler (20 konu)
+
+| Seviye | Konular |
+|--------|---------|
+| A1 | Kafede, Restoranda, Tanışma, Sayılar ve Saat, Ailem |
+| A2 | Alışverişte, Havaalanında, Otelde, Yol Tarifi, Hava Durumu |
+| B1 | İş Görüşmesi, Doktorda, Toplu Taşımada, Ev Kiralama, Bankada |
+| B2 | İş Toplantısı, Haberler, Sosyal Medya, Çevre, Fikir Belirtme |
+
+Her ders: 10 kelime, 6 ifade, 1 grammar ipucu, 5 örnek cümle, 7–8 quiz sorusu (toplam 200 kelime, 150 soru). B1/B2 gerçek CEFR gramer noktaları kullanıyor (Present Perfect, First/Third Conditional, Passive Voice, Reported Speech, *unless*, *although/despite/however* vb.).
+
+### Yarım kalan / bilinen sorunlar
+
+- **Vercel Deployment Protection (SSO) açık** — proje ayarlarında görüldü ama kapatılıp kapatılmadığı doğrulanmadı. Herkese açık erişim isteniyorsa Vercel → Project Settings → Deployment Protection'dan kapatılmalı.
+- **Phase 2 (Gerçek Hayat Senaryoları) hiç başlamadı** — `Scenario`/`ScenarioStep`/`ScenarioOption`/`ScenarioCompletion` modelleri, `scenario.js`, senaryo sayfası yok. `restaurant.json` içinde örnek bir `scenario` bloğu var ama `load_content` henüz işlemiyor.
+- Özel domain bağlanmadı, site şu an `*.vercel.app` adreslerinde.
+- Şifre sıfırlama ve e-posta doğrulama Phase 1'de bilinçli olarak yok (Bölüm 4.6, 13'te zaten belirtilmiş).
+
+### Sıradaki adım
+
+Kullanıcı karar verecek: **Phase 2**'ye (Gerçek Hayat Senaryoları) mi geçilecek, yoksa önce Deployment Protection / custom domain gibi küçük Phase 1 iyileştirmeleri mi yapılacak.
