@@ -121,5 +121,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Aileni tanıtma",
+    "setting": "Bir arkadaşına aile fotoğraflarını gösteriyorsun.",
+    "task": "Ailenden birine 'Do you have any siblings?' diye sor.",
+    "steps": [
+      {
+        "speaker": "Friend",
+        "line": "Is this your family?",
+        "line_tr": "Bu senin ailen mi?",
+        "options": [
+          { "text": "Yes, this is my family.", "correct": true, "feedback": "Doğru ve doğal bir cevap!" },
+          { "text": "Yes, this my family.", "correct": false, "feedback": "'is' eksik; doğrusu 'This is my family.'" },
+          { "text": "Yes, this family is my.", "correct": false, "feedback": "Kelime sırası yanlış; doğrusu 'This is my family.'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "How many people are in your family?",
+        "line_tr": "Ailende kaç kişi var?",
+        "options": [
+          { "text": "There are five people. I have two brothers.", "correct": true, "feedback": "Doğru kalıp, 'have' doğru kullanıldı!" },
+          { "text": "I has two brothers.", "correct": false, "feedback": "'I' ile 'have' kullanılır, 'has' değil." },
+          { "text": "My family have five people.", "correct": false, "feedback": "Doğal değil; doğrusu 'There are five people in my family.'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Do you have a sister too?",
+        "line_tr": "Kız kardeşin de var mı?",
+        "options": [
+          { "text": "No, I don't have a sister.", "correct": true, "feedback": "Doğru olumsuz cümle!" },
+          { "text": "No, I no have sister.", "correct": false, "feedback": "Yanlış olumsuzluk; doğrusu 'I don't have a sister.'" },
+          { "text": "No, I not have sister.", "correct": false, "feedback": "'don't' eksik; doğrusu 'I don't have a sister.'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Who is this woman? She looks like your sister!",
+        "line_tr": "Bu kadın kim? Kız kardeşine benziyor!",
+        "options": [
+          { "text": "That's my mother.", "correct": true, "feedback": "Doğru ve net bir cevap." },
+          { "text": "This is my mother is.", "correct": false, "feedback": "Fazladan 'is' var; doğrusu 'That's my mother.'" },
+          { "text": "She my mother.", "correct": false, "feedback": "'is' eksik; doğrusu 'That's my mother.'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Where do your parents live?",
+        "line_tr": "Ailen nerede yaşıyor?",
+        "options": [
+          { "text": "My parents live in Ankara.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "My parents lives in Ankara.", "correct": false, "feedback": "Çoğul özne ile 'live' kullanılır, 'lives' değil." },
+          { "text": "In Ankara live my parents.", "correct": false, "feedback": "Kelime sırası yanlış; doğrusu 'My parents live in Ankara.'" }
+        ]
+      }
+    ]
   }
 }

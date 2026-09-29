@@ -121,5 +121,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Buluşma saati ayarlama",
+    "setting": "Bir arkadaşınla bugün buluşmak için mesajlaşıyorsun.",
+    "task": "Bir arkadaşınla buluşma ayarlarken saat söylemek için 'It's...' kalıbını kullan.",
+    "steps": [
+      {
+        "speaker": "Friend",
+        "line": "Hey! Are you free this afternoon?",
+        "line_tr": "Selam! Bu öğleden sonra müsait misin?",
+        "options": [
+          { "text": "Yes, I'm free this afternoon.", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "Yes, I free this afternoon.", "correct": false, "feedback": "'to be' fiili eksik; doğrusu 'I'm free this afternoon.'" },
+          { "text": "Yes, I have time this afternoon.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğal kalıp 'I'm free this afternoon.'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Great, what time is it now?",
+        "line_tr": "Harika, şu an saat kaç?",
+        "options": [
+          { "text": "It's half past three.", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "It's three and half.", "correct": false, "feedback": "Yanlış sıralama; doğrusu 'half past three.'" },
+          { "text": "Now is three thirty.", "correct": false, "feedback": "Doğal değil; İngilizce'de 'It's half past three.' denir." }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Can we meet at five o'clock?",
+        "line_tr": "Saat beşte buluşabilir miyiz?",
+        "options": [
+          { "text": "Sure, see you at five o'clock.", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "Sure, see you five o'clock.", "correct": false, "feedback": "'at' eksik; doğrusu 'at five o'clock.'" },
+          { "text": "Yes, at five we meet.", "correct": false, "feedback": "Kelime sırası yanlış; doğrusu 'See you at five o'clock.'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Where are you? It's five o'clock!",
+        "line_tr": "Neredesin? Saat beş oldu!",
+        "options": [
+          { "text": "Sorry, I'll be there in ten minutes.", "correct": true, "feedback": "Doğru ve kibar bir özür!" },
+          { "text": "Sorry, I come ten minutes.", "correct": false, "feedback": "'to be' ve 'in' eksik; doğrusu 'I'll be there in ten minutes.'" },
+          { "text": "Wait me ten minutes.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğal kalıp 'I'll be there in ten minutes.'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "OK, see you soon!",
+        "line_tr": "Tamam, birazdan görüşürüz!",
+        "options": [
+          { "text": "See you soon!", "correct": true, "feedback": "Mükemmel kapanış!" },
+          { "text": "See soon!", "correct": false, "feedback": "'you' eksik; doğrusu 'See you soon!'" },
+          { "text": "Until soon!", "correct": false, "feedback": "Doğal değil; İngilizce'de 'See you soon!' denir." }
+        ]
+      }
+    ]
   }
 }

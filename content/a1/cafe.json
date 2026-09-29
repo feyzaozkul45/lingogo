@@ -124,5 +124,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Kafede sipariş",
+    "setting": "Bir kafedesin, barista sıradaki müşteri olarak seni çağırıyor.",
+    "task": "Bir sonraki kafe ziyaretinde 'Can I have...?' kalıbıyla sipariş ver.",
+    "steps": [
+      {
+        "speaker": "Barista",
+        "line": "Hi! What can I get for you?",
+        "line_tr": "Merhaba! Ne alırdınız?",
+        "options": [
+          { "text": "Can I have a coffee, please?", "correct": true, "feedback": "Tam kalıbı kullandın, harika!" },
+          { "text": "Give me a coffee.", "correct": false, "feedback": "Emir gibi duruyor, kaba; 'Can I have...?' kullan." },
+          { "text": "I want coffee.", "correct": false, "feedback": "Anlaşılır ama kaba kaçar; ayrıca 'a' eksik." }
+        ]
+      },
+      {
+        "speaker": "Barista",
+        "line": "Sure! Anything else?",
+        "line_tr": "Tabii! Başka bir şey?",
+        "options": [
+          { "text": "Can I also get a piece of cake?", "correct": true, "feedback": "Doğru kalıp, çok doğal!" },
+          { "text": "Give me a cake too.", "correct": false, "feedback": "Emir kipi kaba duruyor; 'Can I get...?' kullan." },
+          { "text": "Cake.", "correct": false, "feedback": "Tek kelime kaba kaçar; tam cümle kur." }
+        ]
+      },
+      {
+        "speaker": "Barista",
+        "line": "Is that for here or to go?",
+        "line_tr": "Burada mı içeceksiniz yoksa paket mi olsun?",
+        "options": [
+          { "text": "To go, please.", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "Yes, to go.", "correct": false, "feedback": "'Yes' burada gereksiz; sadece 'To go, please.' yeterli." },
+          { "text": "I go.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğrusu 'To go, please.'" }
+        ]
+      },
+      {
+        "speaker": "Barista",
+        "line": "Here you are. That's 5 dollars.",
+        "line_tr": "Buyurun. 5 dolar.",
+        "options": [
+          { "text": "Thanks! Can I get the Wi-Fi password?", "correct": true, "feedback": "Doğal bir ek istek, kalıbı doğru kullandın." },
+          { "text": "Give me Wi-Fi password.", "correct": false, "feedback": "Emir gibi duruyor; 'Can I get...?' kullan." },
+          { "text": "What is Wi-Fi?", "correct": false, "feedback": "Yanlış bağlam; şifreyi soruyorsun, Wi-Fi'nin ne olduğunu değil." }
+        ]
+      },
+      {
+        "speaker": "Barista",
+        "line": "Sure, it's on the receipt.",
+        "line_tr": "Tabii, fişin üzerinde.",
+        "options": [
+          { "text": "Thank you, have a nice day!", "correct": true, "feedback": "Kibar bir kapanış!" },
+          { "text": "You too, thanks.", "correct": false, "feedback": "Sıra karışık; önce teşekkür et, 'you too' bir cevaba karşılık kullanılır." },
+          { "text": "Bye.", "correct": false, "feedback": "Çok kısa; dersteki kalıbı kullan: 'Thank you, have a nice day!'" }
+        ]
+      }
+    ]
   }
 }

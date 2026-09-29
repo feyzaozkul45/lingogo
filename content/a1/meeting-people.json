@@ -125,5 +125,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Yeni biriyle tanışma",
+    "setting": "Bir arkadaş toplantısında yeni biriyle tanışıyorsun.",
+    "task": "Yeni tanıştığın birine 'Where are you from?' ve 'What do you do?' sorularını sor.",
+    "steps": [
+      {
+        "speaker": "New person",
+        "line": "Hi! What's your name?",
+        "line_tr": "Merhaba! Adın ne?",
+        "options": [
+          { "text": "I'm Ayşe. What's your name?", "correct": true, "feedback": "Doğal bir tanışma cümlesi!" },
+          { "text": "My name Ayşe.", "correct": false, "feedback": "'to be' fiili eksik; doğrusu 'My name is Ayşe.'" },
+          { "text": "Name is Ayşe.", "correct": false, "feedback": "Özne eksik; doğrusu 'My name is Ayşe.'" }
+        ]
+      },
+      {
+        "speaker": "New person",
+        "line": "Nice to meet you! Where are you from?",
+        "line_tr": "Tanıştığımıza memnun oldum! Nerelisin?",
+        "options": [
+          { "text": "Nice to meet you too. I'm from Turkey.", "correct": true, "feedback": "Doğru kalıp ve nazik bir cevap!" },
+          { "text": "I from Turkey.", "correct": false, "feedback": "'to be' fiili eksik; doğrusu 'I'm from Turkey.'" },
+          { "text": "Turkey is my country.", "correct": false, "feedback": "Doğru ama doğal değil; 'I'm from Turkey.' daha yaygın." }
+        ]
+      },
+      {
+        "speaker": "New person",
+        "line": "How old are you?",
+        "line_tr": "Kaç yaşındasın?",
+        "options": [
+          { "text": "I'm twenty-five. What do you do?", "correct": true, "feedback": "Harika, konuşmayı devam ettirdin!" },
+          { "text": "I have twenty-five years.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğrusu 'I'm twenty-five.'" },
+          { "text": "My age twenty-five.", "correct": false, "feedback": "'to be' fiili eksik; doğrusu 'I'm twenty-five.'" }
+        ]
+      },
+      {
+        "speaker": "New person",
+        "line": "I'm a doctor. What do you do?",
+        "line_tr": "Ben doktorum. Sen ne iş yapıyorsun?",
+        "options": [
+          { "text": "I'm a student.", "correct": true, "feedback": "Kısa ve doğru bir cevap!" },
+          { "text": "I work student.", "correct": false, "feedback": "'work' burada gereksiz; 'I'm a student.' yeterli." },
+          { "text": "I am work as student.", "correct": false, "feedback": "Kalıp karışmış; doğrusu 'I'm a student.'" }
+        ]
+      },
+      {
+        "speaker": "New person",
+        "line": "This is my friend, Ali.",
+        "line_tr": "Bu benim arkadaşım, Ali.",
+        "options": [
+          { "text": "Nice to meet you, Ali!", "correct": true, "feedback": "Mükemmel bir kapanış!" },
+          { "text": "Nice to meet, Ali!", "correct": false, "feedback": "'you' eksik; doğrusu 'Nice to meet you, Ali!'" },
+          { "text": "I am nice too.", "correct": false, "feedback": "Yanlış bağlam; burada 'Nice to meet you.' demelisin." }
+        ]
+      }
+    ]
   }
 }

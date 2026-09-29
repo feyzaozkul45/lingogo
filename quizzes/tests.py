@@ -1,19 +1,29 @@
 from django.contrib.auth.models import User
-from django.core.management import call_command
 from django.test import TestCase
 from django.urls import reverse
 
-from lessons.models import Lesson, LessonProgress
+from lessons.models import Lesson, LessonProgress, Topic
 
-from .models import Quiz, QuizAttempt
+from .models import Choice, Question, Quiz, QuizAttempt
 
 
 class QuizScoringTests(TestCase):
     @classmethod
     def setUpTestData(cls):
-        call_command('load_content')
-        cls.lesson = Lesson.objects.get(slug='cafe-basics')
-        cls.quiz = Quiz.objects.get(lesson=cls.lesson)
+        # Icerik dosyalarindan bagimsiz, sentetik bir ders + quiz: bu sinif
+        # sadece puanlama/tamamlama mekanigini test eder, hangi konularin
+        # senaryosu oldugundan bagimsiz olmalidir.
+        topic = Topic.objects.create(
+            slug='quiz-test-topic', title='Test Topic', emoji='🧪', color='sun', level='A1', order=999,
+        )
+        cls.lesson = Lesson.objects.create(topic=topic, slug='quiz-test-lesson', title='Test Lesson', order=1)
+        cls.quiz = Quiz.objects.create(lesson=cls.lesson, title='Test Quiz')
+        for i in range(3):
+            question = Question.objects.create(
+                quiz=cls.quiz, question_type=Question.QuestionType.MULTIPLE_CHOICE, prompt=f'Question {i}', order=i,
+            )
+            Choice.objects.create(question=question, text='Correct answer', is_correct=True)
+            Choice.objects.create(question=question, text='Wrong answer', is_correct=False)
 
     def _correct_answers(self):
         answers = {}

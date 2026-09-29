@@ -9,6 +9,22 @@ from . import services
 from .models import Lesson, LessonProgress, ScenarioCompletion, ScenarioOption, ScenarioStep, Topic, Word
 
 
+def create_lesson_without_scenario(slug='test-lesson-no-scenario', with_quiz=True):
+    """Icerik dosyalarindan bagimsiz, senaryosu olmayan bir ders olusturur.
+
+    Gercek konularin hepsi zamanla senaryo kazanabildigi icin, 'senaryosu
+    olmayan ders' davranisini test etmek gercek bir slug'a (ör. cafe-basics)
+    degil, bu sentetik derse dayanir.
+    """
+    topic = Topic.objects.create(
+        slug=f'{slug}-topic', title='Test Topic', emoji='🧪', color='sun', level='A1', order=999,
+    )
+    lesson = Lesson.objects.create(topic=topic, slug=slug, title='Test Lesson', order=1)
+    if with_quiz:
+        Quiz.objects.create(lesson=lesson, title='Test Quiz')
+    return lesson
+
+
 class LoadContentCommandTests(TestCase):
     def test_load_content_creates_expected_objects(self):
         call_command('load_content')
@@ -56,19 +72,19 @@ class LessonCompletionRuleTests(TestCase):
     def setUpTestData(cls):
         call_command('load_content')
         cls.restaurant_lesson = Lesson.objects.get(slug='restaurant-basics')  # senaryolu
-        cls.cafe_lesson = Lesson.objects.get(slug='cafe-basics')  # senaryosuz
+        cls.no_scenario_lesson = create_lesson_without_scenario()
 
     def setUp(self):
         self.user = User.objects.create_user('learner', password='pass12345')
 
     def test_quiz_alone_completes_lesson_without_scenario(self):
-        quiz = Quiz.objects.get(lesson=self.cafe_lesson)
+        quiz = Quiz.objects.get(lesson=self.no_scenario_lesson)
         QuizAttempt.objects.create(user=self.user, quiz=quiz, score=5, total=5)
 
-        created = services.sync_lesson_completion(self.user, self.cafe_lesson)
+        created = services.sync_lesson_completion(self.user, self.no_scenario_lesson)
 
         self.assertTrue(created)
-        self.assertTrue(LessonProgress.objects.filter(user=self.user, lesson=self.cafe_lesson).exists())
+        self.assertTrue(LessonProgress.objects.filter(user=self.user, lesson=self.no_scenario_lesson).exists())
 
     def test_quiz_alone_does_not_complete_lesson_with_scenario(self):
         quiz = Quiz.objects.get(lesson=self.restaurant_lesson)
@@ -114,7 +130,7 @@ class ScenarioViewTests(TestCase):
     def setUpTestData(cls):
         call_command('load_content')
         cls.lesson = Lesson.objects.get(slug='restaurant-basics')
-        cls.cafe_lesson = Lesson.objects.get(slug='cafe-basics')
+        cls.no_scenario_lesson = create_lesson_without_scenario(slug='test-lesson-no-scenario-2', with_quiz=False)
 
     def test_scenario_page_renders_steps(self):
         url = reverse('lessons:scenario', kwargs={'slug': self.lesson.slug})
@@ -125,7 +141,7 @@ class ScenarioViewTests(TestCase):
         self.assertContains(response, 'Are you ready to order?')
 
     def test_lesson_without_scenario_returns_404(self):
-        url = reverse('lessons:scenario', kwargs={'slug': self.cafe_lesson.slug})
+        url = reverse('lessons:scenario', kwargs={'slug': self.no_scenario_lesson.slug})
 
         response = self.client.get(url)
 

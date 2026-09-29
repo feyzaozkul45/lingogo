@@ -124,5 +124,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Mağazada alışveriş",
+    "setting": "Bir mağazada ceket bakıyorsun.",
+    "task": "Bir sonraki alışverişte 'How much is/are...?' kalıbıyla fiyat sor.",
+    "steps": [
+      {
+        "speaker": "Clerk",
+        "line": "Hi! Can I help you?",
+        "line_tr": "Merhaba! Yardımcı olabilir miyim?",
+        "options": [
+          { "text": "Yes, how much is this jacket?", "correct": true, "feedback": "Doğru kalıp, tekil isimde 'is' kullandın!" },
+          { "text": "Yes, how much are this jacket?", "correct": false, "feedback": "Tekil isimde 'is' kullanılır, 'are' değil." },
+          { "text": "Yes, how much this jacket?", "correct": false, "feedback": "'is' eksik; doğrusu 'How much is this jacket?'" }
+        ]
+      },
+      {
+        "speaker": "Clerk",
+        "line": "It's 50 dollars. Do you want to try it on?",
+        "line_tr": "50 dolar. Denemek ister misiniz?",
+        "options": [
+          { "text": "Yes, can I try this on?", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "Yes, can I try this in?", "correct": false, "feedback": "'on' kullanılır, 'in' değil; doğrusu 'try this on.'" },
+          { "text": "Yes, can I wear this now?", "correct": false, "feedback": "Yanlış bağlam; deneme kabini için 'try this on' denir." }
+        ]
+      },
+      {
+        "speaker": "Clerk",
+        "line": "The fitting room is over there. How is it?",
+        "line_tr": "Deneme kabini şurada. Nasıl oldu?",
+        "options": [
+          { "text": "It's nice, but do you have this in a different color?", "correct": true, "feedback": "Doğal ve tam kalıp!" },
+          { "text": "You have this different color?", "correct": false, "feedback": "Yardımcı fiil eksik; doğrusu 'Do you have this in a different color?'" },
+          { "text": "Is exist different color?", "correct": false, "feedback": "Türkçeden birebir çeviri; doğal kalıp 'Do you have this in a different color?'" }
+        ]
+      },
+      {
+        "speaker": "Clerk",
+        "line": "Here's the blue one. Do you like it?",
+        "line_tr": "İşte mavisi. Beğendiniz mi?",
+        "options": [
+          { "text": "Yes, I'll take it.", "correct": true, "feedback": "Karar verdiğini doğru şekilde belirttin!" },
+          { "text": "Yes, I take this.", "correct": false, "feedback": "Doğal değil; karar verirken 'I'll take it.' denir." },
+          { "text": "Yes, give me this.", "correct": false, "feedback": "Emir gibi duruyor, kaba; 'I'll take it.' daha kibar." }
+        ]
+      },
+      {
+        "speaker": "Clerk",
+        "line": "Great! How would you like to pay?",
+        "line_tr": "Harika! Nasıl ödemek istersiniz?",
+        "options": [
+          { "text": "Do you accept cards?", "correct": true, "feedback": "Doğru ve doğal bir soru!" },
+          { "text": "You accept card?", "correct": false, "feedback": "Yardımcı fiil eksik; doğrusu 'Do you accept cards?'" },
+          { "text": "Card is possible?", "correct": false, "feedback": "Türkçeden birebir çeviri; doğal soru 'Do you accept cards?'" }
+        ]
+      }
+    ]
   }
 }
