@@ -836,6 +836,20 @@ Her ders: 10 kelime, 6 ifade, 1 grammar ipucu, 5 örnek cümle, 7–8 quiz sorus
 - **Vercel Deployment Protection (SSO) açık** — proje ayarlarında görüldü ama kapatılıp kapatılmadığı doğrulanmadı. Herkese açık erişim isteniyorsa Vercel → Project Settings → Deployment Protection'dan kapatılmalı.
 - Özel domain bağlanmadı, site şu an `*.vercel.app` adreslerinde.
 - Şifre sıfırlama ve e-posta doğrulama Phase 1'de bilinçli olarak yok (Bölüm 4.6, 13'te zaten belirtilmiş).
+- **Senaryolar sitede kolayca bulunamıyor** — şu an sadece ana sayfada ilk 3 senaryo kartı ve ders/quiz sayfalarından link olarak erişilebiliyor; tüm senaryoları listeleyen bir `/scenarios/` sayfası ve header'da bir "Senaryolar" linki yok. Yapılacak.
+- **Vercel canlı sitesi eski hali gösteriyor** — kullanıcı en son push'lardan sonra sitenin güncellenmediğini fark etti (2026-09-29). Sebep henüz araştırılmadı; olası nedenler: build/deploy hatası, cache, ya da Deployment Protection'ın yanlış deployment'ı göstermesi. Bir sonraki oturumda Vercel deployment loglarına bakılmalı.
+
+### Okuma (Phase 2.5) — nerede kaldı
+
+Kod tamamen yazıldı ve test edildi (commit `7418f96`): `ReadingText`/`ReadingAttempt` modelleri, `Question`'ın quiz/okuma için genelleştirilmesi (CheckConstraint ile), `/reading/` sayfaları, `load_content` desteği, ilerleme sayfası istatistiği, header linki, ana sayfa kartı. 35/35 test yeşil. 2 örnek metin yazıldı (A1 "My Morning Routine", B2 "The Rise of Remote Work") ve kullanıcının onayı bekleniyor.
+
+**Henüz yapılmadı:**
+- Kullanıcı 2 örnek metni henüz onaylamadı.
+- Kalan metinler yazılmadı (plan: her seviyede 3–5 metin, toplam A1/A2/B1/B2 için ~10–18 metin daha).
+- **Supabase'e migrate + load_content yapılmadı.**
+- **Commit yapıldı ama push edilmedi** — bu yüzden canlı sitede yeni tablolar yok; push edilmeden önce mutlaka önce Supabase'e migrate edilmeli (aksi halde site hata verir, bkz. Bölüm/kural: migration olmadan push).
+
+Sıradaki oturumda: kullanıcı 2 örneği onaylarsa kalan metinleri tek seferde yaz → lokalde test → Supabase'e migrate + load_content (onay ile) → commit + push.
 
 ### Phase 2 nasıl ilerledi (senaryolar)
 
@@ -849,6 +863,6 @@ Test mimarisiyle ilgili bir not: `LessonCompletionRuleTests` ve `ScenarioViewTes
 
 ### Sıradaki adım
 
-Karar verildi (2026-09-29), sıra şöyle: ~~1) Tasarım düzeltmesi~~ (tamamlandı) → ~~2) Dinleme butonları~~ (tamamlandı) → ~~3) Phase 2 senaryolar~~ (tamamlandı, 20/20 konu) → **4) Phase 2.5 Okuma**. Konuşma tanıma/telaffuz puanlama kapsam dışı kalmaya devam ediyor (Bölüm 14). Vercel Deployment Protection ve custom domain konuları henüz ele alınmadı.
+Karar verildi (2026-09-29), sıra şöyle: ~~1) Tasarım düzeltmesi~~ (tamamlandı) → ~~2) Dinleme butonları~~ (tamamlandı) → ~~3) Phase 2 senaryolar~~ (tamamlandı, 20/20 konu) → **4) Phase 2.5 Okuma (devam ediyor — bkz. yukarısı "Okuma (Phase 2.5) — nerede kaldı")**. Konuşma tanıma/telaffuz puanlama kapsam dışı kalmaya devam ediyor (Bölüm 14). Ayrıca bekleyenler: senaryoları listeleyen `/scenarios/` sayfası + header linki, Vercel'in eski hali gösterme sorunu, Deployment Protection ve custom domain.
 
 **Tasarım düzeltmesi sırasında bulunan ve düzeltilen bir bug:** Header'daki hamburger menü hem mobil hem masaüstü için tek bir `<details>` elementi içindeydi; masaüstünde CSS ile `display:flex !important` verilerek her zaman açık gösterilmeye çalışılıyordu. Ancak tarayıcı, kapalı bir `<details>` içindeki (summary dışı) içeriği kendi `display:none !important` UA kuralıyla gizliyor ve bu, yazarın `!important` kuralı tarafından bile ezilemiyor — sonuç olarak masaüstünde nav tamamen görünmüyordu (muhtemelen kullanıcının "sağ taraf boş" olarak fark ettiği şey buydu). Çözüm: masaüstü nav'ı `<details>`'ten tamamen ayrı, her zaman DOM'da olan bir `<nav class="site-nav--desktop">` haline getirildi; `<details>` artık sadece dar ekranlarda (≤760px) gösterilen mobil menü için kullanılıyor. Nav linkleri tekrarı önlemek için `templates/partials/nav_links.html` adında ortak bir partial'a taşındı.
