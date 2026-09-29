@@ -680,15 +680,17 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 ### Phase 2 — Gerçek Hayat
 
 - [x] Kelime, ifade, örnek cümle ve grammar örneklerinin yanına Web Speech API ile 🔊 / 🐢 (yavaş) dinleme butonu (bkz. 4.8, ek kütüphane yok)
-- [ ] `Scenario`, `ScenarioStep`, `ScenarioOption`, `ScenarioCompletion` modelleri
-- [ ] `load_content` komutunun senaryoları da yüklemesi
-- [ ] 5 konu için 4–6 adımlık senaryolar
-- [ ] Senaryo sayfası: sohbet görünümü, cevap seçme, geri bildirim (`scenario.js`)
-- [ ] Senaryo sonunda küçük görev kartı
-- [ ] Ders tamamlama kuralı: quiz + senaryo
-- [ ] Ana sayfada "Gerçek hayat senaryoları" bölümünün aktif hale gelmesi
+- [x] `Scenario`, `ScenarioStep`, `ScenarioOption`, `ScenarioCompletion` modelleri
+- [x] `load_content` komutunun senaryoları da yüklemesi
+- [x] **20 konunun tamamı** için 5 adımlık senaryolar (başlangıç hedefi 5 konuyken, kullanıcı onayıyla tüm konulara genişletildi)
+- [x] Senaryo sayfası: sohbet görünümü, cevap seçme, geri bildirim (`scenario.js`)
+- [x] Senaryo sonunda küçük görev kartı
+- [x] Ders tamamlama kuralı: quiz + (varsa) senaryo
+- [x] Ana sayfada "Gerçek hayat senaryoları" bölümünün aktif hale gelmesi
 
-**Phase 2 tamamlandı sayılır, eğer:** Kelime/cümlelerde dinleme butonu çalışıyor, her konunun senaryosu baştan sona oynanabiliyor, yanlış cevaplarda açıklama görünüyor ve tamamlanma kaydediliyorsa.
+## ✅ Phase 2 — TAMAMLANDI
+
+20 konunun tamamı için gerçek hayat senaryosu: sohbet arayüzü, seçenekler her oynanışta karışıyor, yanlış cevapta kısa Türkçe geri bildirimle tekrar deneme, doğru cevapta ilerleme, senaryo sonunda küçük görev + (varsa) "Türkçesini göster" ve 🔊/🐢 dinleme. Ders tamamlama kuralı artık "quiz + (varsa) senaryo" — senaryosu olmayan bir ders olursa yine sadece quiz ile tamamlanır (geriye dönük uyumluluk `sync_lesson_completion`'da garanti altına alınmış, mevcut bir `LessonProgress` kaydı asla silinmez).
 
 ### Phase 2.5 — Okuma
 
@@ -832,12 +834,21 @@ Her ders: 10 kelime, 6 ifade, 1 grammar ipucu, 5 örnek cümle, 7–8 quiz sorus
 ### Yarım kalan / bilinen sorunlar
 
 - **Vercel Deployment Protection (SSO) açık** — proje ayarlarında görüldü ama kapatılıp kapatılmadığı doğrulanmadı. Herkese açık erişim isteniyorsa Vercel → Project Settings → Deployment Protection'dan kapatılmalı.
-- **Phase 2 (Gerçek Hayat Senaryoları) hiç başlamadı** — `Scenario`/`ScenarioStep`/`ScenarioOption`/`ScenarioCompletion` modelleri, `scenario.js`, senaryo sayfası yok. `restaurant.json` içinde örnek bir `scenario` bloğu var ama `load_content` henüz işlemiyor.
 - Özel domain bağlanmadı, site şu an `*.vercel.app` adreslerinde.
 - Şifre sıfırlama ve e-posta doğrulama Phase 1'de bilinçli olarak yok (Bölüm 4.6, 13'te zaten belirtilmiş).
 
+### Phase 2 nasıl ilerledi (senaryolar)
+
+Başlangıçta sadece Restoran konusuyla pilot yapıldı, kullanıcı beğenince kalan 19 konuya da genişletildi (her 5 konuda bir durup örnek diyalog onayı alınarak). Süreçte içerik kurallarına iki önemli ekleme yapıldı (Bölüm 9'a işlendi):
+1. Doğal/gerçek İngilizce asla yanlış olarak işaretlenmez (sadece yerli bir konuşmacının garip/kaba bulacağı cümleler yanlış olur).
+2. Bir diyalogda aynı hata türü tekrar edilmez, farklı türler (kaba, eksik cümle, Türkçeden birebir çeviri, yanlış bağlam, yanlış zaman) kullanılır; diyalog mantıklı sırayla ilerler (ör. önce ödeme, sonra başka istek).
+
+Her `load_content` çalıştırması **önce local SQLite'ta** (`DATABASE_URL=` ile boşaltılarak) test edildi, sonra kullanıcı onayıyla gerçek Supabase'e uygulandı — production'a migration/içerik hiç onaysız gönderilmedi.
+
+Test mimarisiyle ilgili bir not: `LessonCompletionRuleTests` ve `ScenarioViewTests`'teki "senaryosu olmayan ders" davranışı artık gerçek bir konuya (ör. `cafe-basics`) değil, testin kendi oluşturduğu sentetik bir derse dayanıyor — çünkü zamanla tüm 20 konu senaryo kazandı. Aynı sebeple `quizzes/tests.py` de kendi sentetik ders+quiz'ini kullanıyor.
+
 ### Sıradaki adım
 
-Karar verildi (2026-09-29), sıra şöyle: ~~1) Tasarım düzeltmesi~~ (tamamlandı) → ~~2) Dinleme butonları~~ (tamamlandı) → **3) Phase 2 senaryolar** → **4) Phase 2.5 Okuma**. Konuşma tanıma/telaffuz puanlama kapsam dışı kalmaya devam ediyor (Bölüm 14). Vercel Deployment Protection ve custom domain konuları henüz ele alınmadı.
+Karar verildi (2026-09-29), sıra şöyle: ~~1) Tasarım düzeltmesi~~ (tamamlandı) → ~~2) Dinleme butonları~~ (tamamlandı) → ~~3) Phase 2 senaryolar~~ (tamamlandı, 20/20 konu) → **4) Phase 2.5 Okuma**. Konuşma tanıma/telaffuz puanlama kapsam dışı kalmaya devam ediyor (Bölüm 14). Vercel Deployment Protection ve custom domain konuları henüz ele alınmadı.
 
 **Tasarım düzeltmesi sırasında bulunan ve düzeltilen bir bug:** Header'daki hamburger menü hem mobil hem masaüstü için tek bir `<details>` elementi içindeydi; masaüstünde CSS ile `display:flex !important` verilerek her zaman açık gösterilmeye çalışılıyordu. Ancak tarayıcı, kapalı bir `<details>` içindeki (summary dışı) içeriği kendi `display:none !important` UA kuralıyla gizliyor ve bu, yazarın `!important` kuralı tarafından bile ezilemiyor — sonuç olarak masaüstünde nav tamamen görünmüyordu (muhtemelen kullanıcının "sağ taraf boş" olarak fark ettiği şey buydu). Çözüm: masaüstü nav'ı `<details>`'ten tamamen ayrı, her zaman DOM'da olan bir `<nav class="site-nav--desktop">` haline getirildi; `<details>` artık sadece dar ekranlarda (≤760px) gösterilen mobil menü için kullanılıyor. Nav linkleri tekrarı önlemek için `templates/partials/nav_links.html` adında ortak bir partial'a taşındı.
