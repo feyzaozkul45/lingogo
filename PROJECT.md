@@ -124,6 +124,20 @@ Profil/ilerleme sayfasında basit istatistikler:
 
 XP, rozet, seri (streak), leaderboard **Phase 1 ve 2'de yoktur**.
 
+### 4.8 Sesli Dinleme (Phase 2)
+- Kelime kartları ve örnek cümlelerin yanında 🔊 simgesi bulunur.
+- Tıklanınca tarayıcının yerleşik **Web Speech API**'si (`SpeechSynthesisUtterance`, `lang="en-US"`) ile İngilizce metin sesli okunur.
+- Ek kütüphane veya ses dosyası **yok**; tarayıcı desteklemiyorsa buton sessizce gizlenir/devre dışı kalır.
+
+### 4.9 Okuma (Phase 2.5)
+- Derslerden bağımsız, ayrı bir **"📖 Okuma"** bölümü/menüsü.
+- Her seviyede (A1, A2, B1, B2) 3–5 kısa metin.
+- Uzunluk: A1 60–80, A2 100–120, B1 150–180, B2 200–250 kelime.
+- Her metinde: İngilizce metin, **"Türkçesini göster"** butonu (çeviriyi açar/kapatır), 🔊 dinleme butonu, 3 anlama sorusu (çoktan seçmeli).
+- Konular günlük hayattan seçilir, içerik JSON dosyalarında tutulur ve `load_content` benzeri bir yöntemle yüklenir.
+- Veritabanı tasarımı: mümkünse mevcut `Question`/`Choice` modelleri yeniden kullanılacak; karmaşık olursa en basit ayrı model seçeneği Phase 2.5 başlarken kullanıcıya sorulup karar verilecek.
+- Kapsam dışı: konuşma tanıma / telaffuz puanlama (bkz. Bölüm 14).
+
 ---
 
 ## 5. Kullanıcı Akışı
@@ -523,6 +537,8 @@ Sadece **3 Django app** vardır: `accounts`, `lessons`, `quizzes`. Yeni app ekle
 | `/accounts/logout/` | Çıkış (POST) | 1 |
 | `/progress/` | İlerleme sayfası (giriş gerekli) | 1 |
 | `/lessons/<slug>/scenario/` | Gerçek hayat senaryosu | 2 |
+| `/reading/` | Okuma listesi (seviye filtresi) | 2.5 |
+| `/reading/<slug>/` | Okuma metni + anlama soruları | 2.5 |
 | `/admin/` | Django admin | 1 |
 
 Giriş yapmamış kullanıcının quiz sonucu, kayıt oluşturmadan doğrudan aynı istekte gösterilir.
@@ -646,8 +662,14 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 
 20 konu (A1/A2/B1/B2, her seviyede 5), tam kullanıcı akışı (hesapsız/hesaplı ders + quiz + ilerleme), Supabase + Vercel üzerinde canlı.
 
+### Phase 1.5 — Tasarım Düzeltmesi (şimdi)
+
+- [ ] Header tasarımı güncellenecek (detaylar bir sonraki mesajda)
+- [ ] Ana sayfa kartı tasarımı güncellenecek (detaylar bir sonraki mesajda)
+
 ### Phase 2 — Gerçek Hayat
 
+- [ ] Kelime ve örnek cümlelerin yanına Web Speech API ile 🔊 dinleme butonu (bkz. 4.8, ek kütüphane yok)
 - [ ] `Scenario`, `ScenarioStep`, `ScenarioOption`, `ScenarioCompletion` modelleri
 - [ ] `load_content` komutunun senaryoları da yüklemesi
 - [ ] 5 konu için 4–6 adımlık senaryolar
@@ -656,9 +678,19 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 - [ ] Ders tamamlama kuralı: quiz + senaryo
 - [ ] Ana sayfada "Gerçek hayat senaryoları" bölümünün aktif hale gelmesi
 
-**Phase 2 tamamlandı sayılır, eğer:** Her konunun senaryosu baştan sona oynanabiliyor, yanlış cevaplarda açıklama görünüyor ve tamamlanma kaydediliyorsa.
+**Phase 2 tamamlandı sayılır, eğer:** Kelime/cümlelerde dinleme butonu çalışıyor, her konunun senaryosu baştan sona oynanabiliyor, yanlış cevaplarda açıklama görünüyor ve tamamlanma kaydediliyorsa.
 
-### Phase 3 — Geliştirme (ilk iki faz çalıştıktan sonra, kullanıcıyla konuşarak seçilir)
+### Phase 2.5 — Okuma
+
+- [ ] Okuma içerik modeli (mevcut `Question`/`Choice` modelleri yeniden kullanılabilir mi, karar Phase 2.5 başlarken verilecek — bkz. 4.9)
+- [ ] Her seviye için 3–5 kısa metin JSON içeriği (A1 60–80, A2 100–120, B1 150–180, B2 200–250 kelime)
+- [ ] Okuma listesi sayfası + seviye filtresi (`/reading/`)
+- [ ] Okuma detay sayfası: metin, "Türkçesini göster" butonu, 🔊 dinleme, 3 anlama sorusu (`/reading/<slug>/`)
+- [ ] İçerik yükleme mekanizması (`load_content` benzeri, idempotent)
+
+**Phase 2.5 tamamlandı sayılır, eğer:** Her seviyede en az 3 okuma metni yayında, çeviri gösterme/gizleme ve dinleme butonu çalışıyor, anlama soruları doğru değerlendiriliyorsa.
+
+### Phase 3 — Geliştirme (ilk fazlar çalıştıktan sonra, kullanıcıyla konuşarak seçilir)
 
 Olası küçük geliştirmeler:
 - Yeni konular: Günlük hayat, ileri seviye konular (B1/B2'de zaten 5'er konu var)
@@ -796,4 +828,4 @@ Her ders: 10 kelime, 6 ifade, 1 grammar ipucu, 5 örnek cümle, 7–8 quiz sorus
 
 ### Sıradaki adım
 
-Kullanıcı karar verecek: **Phase 2**'ye (Gerçek Hayat Senaryoları) mi geçilecek, yoksa önce Deployment Protection / custom domain gibi küçük Phase 1 iyileştirmeleri mi yapılacak.
+Karar verildi (2026-09-29), sıra şöyle: **1) Tasarım düzeltmesi** (header + ana sayfa kartı, detaylar sonraki mesajda gelecek) → **2) Dinleme butonları** (Web Speech API, 🔊) → **3) Phase 2 senaryolar** → **4) Phase 2.5 Okuma**. Konuşma tanıma/telaffuz puanlama kapsam dışı kalmaya devam ediyor (Bölüm 14). Vercel Deployment Protection ve custom domain konuları henüz ele alınmadı.
