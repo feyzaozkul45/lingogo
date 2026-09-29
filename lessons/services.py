@@ -22,6 +22,24 @@ def get_daily_words(count=5):
     return rotated[:count]
 
 
+def get_daily_lesson_preview(topic):
+    """Günün konusu kartı için önizleme verisi: ders, örnek ifadeler, kelime sayısı, tahmini süre."""
+    if not topic:
+        return None
+    lesson = topic.lessons.prefetch_related('phrases', 'words').first()
+    if not lesson:
+        return None
+    words = lesson.words.all()
+    phrases = lesson.phrases.all()
+    minutes = max(3, round((len(words) + len(phrases)) * 0.5))
+    return {
+        'lesson': lesson,
+        'phrases': list(phrases)[:3],
+        'word_count': len(words),
+        'minutes': minutes,
+    }
+
+
 def get_continue_lesson(user):
     """Giriş yapmış kullanıcı için tamamlanmamış ilk ders; yapılmamışsa ilk ders."""
     lessons = Lesson.objects.select_related('topic').order_by('topic__order', 'order')

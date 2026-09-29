@@ -7,8 +7,10 @@ VALID_LEVELS = {'A1', 'A2', 'B1', 'B2'}
 
 
 def home(request):
+    daily_topic = services.get_daily_topic()
     context = {
-        'daily_topic': services.get_daily_topic(),
+        'daily_topic': daily_topic,
+        'daily_preview': services.get_daily_lesson_preview(daily_topic),
         'daily_words': services.get_daily_words(),
         'continue_lesson': services.get_continue_lesson(request.user),
         'topics': Topic.objects.filter(is_active=True).prefetch_related('lessons')[:4],

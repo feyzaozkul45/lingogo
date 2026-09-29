@@ -5,14 +5,32 @@
 {% block content %}
   {% if daily_topic %}
     <div class="hero">
-      <p style="font-weight:700; opacity:0.85; margin-bottom:4px;">Günün Konusu</p>
-      <h1>{{ daily_topic.emoji }} {{ daily_topic.title }}</h1>
-      <p>{{ daily_topic.description }}</p>
-      {% with lesson=daily_topic.lessons.first %}
-        {% if lesson %}
-          <a href="{% url 'lessons:lesson_detail' slug=lesson.slug %}" class="btn btn-primary">Derse Git →</a>
+      <div class="hero__content">
+        <div class="hero__text">
+          <p style="font-weight:700; opacity:0.85; margin-bottom:4px;">Günün Konusu</p>
+          <h1>{{ daily_topic.emoji }} {{ daily_topic.title }}</h1>
+          {% if daily_preview %}
+            <div class="hero__meta">
+              <span class="badge badge--{{ daily_topic.level }}">{{ daily_topic.level }}</span>
+              <span>·</span>
+              <span>{{ daily_preview.word_count }} kelime</span>
+              <span>·</span>
+              <span>~{{ daily_preview.minutes }} dk</span>
+            </div>
+          {% endif %}
+          <p>{{ daily_topic.description }}</p>
+          {% if daily_preview %}
+            <a href="{% url 'lessons:lesson_detail' slug=daily_preview.lesson.slug %}" class="btn btn-primary">Derse Git →</a>
+          {% endif %}
+        </div>
+        {% if daily_preview.phrases %}
+          <div class="hero__bubbles">
+            {% for phrase in daily_preview.phrases %}
+              <div class="hero-bubble {% cycle 'hero-bubble--a' 'hero-bubble--b' 'hero-bubble--c' %}">{{ phrase.english }}</div>
+            {% endfor %}
+          </div>
         {% endif %}
-      {% endwith %}
+      </div>
     </div>
   {% endif %}
 

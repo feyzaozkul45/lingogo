@@ -5,23 +5,17 @@
       <span class="brand__emoji">🌍</span> LingoGo
     </a>
 
+    {# Masaüstü nav'ı details'ten ayrı: details kapalıyken tarayıcı içeriğini CSS ile geri açılamayacak şekilde gizliyor. #}
+    <nav class="site-nav site-nav--desktop" aria-label="Ana menü">
+      {% include 'partials/nav_links.html' %}
+    </nav>
+
     <details class="nav-toggle">
       <summary class="nav-toggle__button" aria-label="Menüyü aç">
         <span></span><span></span><span></span>
       </summary>
-      <nav class="site-nav" aria-label="Ana menü">
-        <a href="{% url 'home' %}">Ana Sayfa</a>
-        <a href="{% url 'lessons:topic_list' %}">Konular</a>
-        {% if user.is_authenticated %}
-          <a href="{% url 'accounts:progress' %}">İlerlemem</a>
-          <form action="{% url 'accounts:logout' %}" method="post" class="nav-logout">
-            {% csrf_token %}
-            <button type="submit">Çıkış Yap</button>
-          </form>
-        {% else %}
-          <a href="{% url 'accounts:login' %}">Giriş Yap</a>
-          <a href="{% url 'accounts:signup' %}" class="nav-cta">Kayıt Ol</a>
-        {% endif %}
+      <nav class="site-nav site-nav--mobile" aria-label="Mobil menü">
+        {% include 'partials/nav_links.html' %}
       </nav>
     </details>
   </div>
