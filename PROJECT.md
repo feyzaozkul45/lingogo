@@ -662,10 +662,10 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 
 20 konu (A1/A2/B1/B2, her seviyede 5), tam kullanıcı akışı (hesapsız/hesaplı ders + quiz + ilerleme), Supabase + Vercel üzerinde canlı.
 
-### Phase 1.5 — Tasarım Düzeltmesi (şimdi)
+### Phase 1.5 — Tasarım Düzeltmesi
 
-- [ ] Header tasarımı güncellenecek (detaylar bir sonraki mesajda)
-- [ ] Ana sayfa kartı tasarımı güncellenecek (detaylar bir sonraki mesajda)
+- [x] Header tasarımı güncellendi (Konular/İlerlemem linkleri, giriş/kayıt butonları veya kullanıcı avatarı, aktif sayfa vurgusu)
+- [x] Ana sayfa kartı tasarımı güncellendi (konuşma balonları, seviye · kelime sayısı · süre bilgisi)
 
 ### Phase 2 — Gerçek Hayat
 
@@ -828,4 +828,6 @@ Her ders: 10 kelime, 6 ifade, 1 grammar ipucu, 5 örnek cümle, 7–8 quiz sorus
 
 ### Sıradaki adım
 
-Karar verildi (2026-09-29), sıra şöyle: **1) Tasarım düzeltmesi** (header + ana sayfa kartı, detaylar sonraki mesajda gelecek) → **2) Dinleme butonları** (Web Speech API, 🔊) → **3) Phase 2 senaryolar** → **4) Phase 2.5 Okuma**. Konuşma tanıma/telaffuz puanlama kapsam dışı kalmaya devam ediyor (Bölüm 14). Vercel Deployment Protection ve custom domain konuları henüz ele alınmadı.
+Karar verildi (2026-09-29), sıra şöyle: ~~1) Tasarım düzeltmesi~~ (tamamlandı) → **2) Dinleme butonları** (Web Speech API, 🔊) → **3) Phase 2 senaryolar** → **4) Phase 2.5 Okuma**. Konuşma tanıma/telaffuz puanlama kapsam dışı kalmaya devam ediyor (Bölüm 14). Vercel Deployment Protection ve custom domain konuları henüz ele alınmadı.
+
+**Tasarım düzeltmesi sırasında bulunan ve düzeltilen bir bug:** Header'daki hamburger menü hem mobil hem masaüstü için tek bir `<details>` elementi içindeydi; masaüstünde CSS ile `display:flex !important` verilerek her zaman açık gösterilmeye çalışılıyordu. Ancak tarayıcı, kapalı bir `<details>` içindeki (summary dışı) içeriği kendi `display:none !important` UA kuralıyla gizliyor ve bu, yazarın `!important` kuralı tarafından bile ezilemiyor — sonuç olarak masaüstünde nav tamamen görünmüyordu (muhtemelen kullanıcının "sağ taraf boş" olarak fark ettiği şey buydu). Çözüm: masaüstü nav'ı `<details>`'ten tamamen ayrı, her zaman DOM'da olan bir `<nav class="site-nav--desktop">` haline getirildi; `<details>` artık sadece dar ekranlarda (≤760px) gösterilen mobil menü için kullanılıyor. Nav linkleri tekrarı önlemek için `templates/partials/nav_links.html` adında ortak bir partial'a taşındı.
