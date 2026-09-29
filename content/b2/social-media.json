@@ -144,7 +144,7 @@
         "options": [
           { "text": "I know, I spend too much time scrolling.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
           { "text": "I very much time scroll doing.", "correct": false, "feedback": "Türkçeden birebir çeviri, kelime sırası yanlış; doğrusu 'I spend too much time scrolling.'" },
-          { "text": "Too much scrolling.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'I spend too much time scrolling.'" }
+          { "text": "I spend too much time to scroll.", "correct": false, "feedback": "'Spend time' fiil+ing alır, 'to' almaz; doğrusu 'spend time scrolling.'" }
         ]
       },
       {
@@ -154,7 +154,7 @@
         "options": [
           { "text": "You're right, I should turn off notifications.", "correct": true, "feedback": "Doğru kalıp!" },
           { "text": "I should turned off notifications.", "correct": false, "feedback": "Fiil formu yanlış; doğrusu 'I should turn off notifications.'" },
-          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; burada sosyal medya konuşuluyor." }
+          { "text": "I must turn off some notifications, maybe.", "correct": false, "feedback": "'Maybe' ile 'must' birlikte doğal değil (must kesinlik belirtir); 'should' kullan: 'I should turn off notifications.'" }
         ]
       },
       {
@@ -164,7 +164,7 @@
         "options": [
           { "text": "Yes, this post went viral overnight.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
           { "text": "Viral, yes.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'This post went viral overnight.'" },
-          { "text": "That post is stupid.", "correct": false, "feedback": "Kaba bir yorum; nötr bir dille konuş." }
+          { "text": "Yes, this post became viral in one night.", "correct": false, "feedback": "Doğal değil; bu bağlamda 'went viral overnight' kalıbı kullanılır." }
         ]
       },
       {
@@ -174,7 +174,7 @@
         "options": [
           { "text": "Yes, I need to protect my privacy online.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
           { "text": "I need to close my information.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğal kalıp 'I need to protect my privacy online.'" },
-          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." }
+          { "text": "I need protect my privacy online.", "correct": false, "feedback": "'to' eksik; doğrusu 'I need TO protect my privacy online.'" }
         ]
       },
       {

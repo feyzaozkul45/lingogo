@@ -154,7 +154,7 @@
         "options": [
           { "text": "I have a terrible headache.", "correct": true, "feedback": "Doğru kalıp!" },
           { "text": "My head is very much hurting.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğal kalıp 'I have a terrible headache.'" },
-          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; doktor şikayetini soruyor, tanışma değil." }
+          { "text": "I have a headache since two days.", "correct": false, "feedback": "'since' belirli bir zaman noktasıyla kullanılır; süre için 'for' gerekir: 'for two days.'" }
         ]
       },
       {
@@ -183,7 +183,7 @@
         "line_tr": "Tamam, teşekkürler. Bu ilacı günde iki kez almalısınız.",
         "options": [
           { "text": "Thank you, doctor. Where's the nearest pharmacy?", "correct": true, "feedback": "Doğru kalıp, doğal bir kapanış sorusu!" },
-          { "text": "Enjoy your meal, doctor.", "correct": false, "feedback": "Yanlış bağlam; bu cümle yemek için kullanılır, burada anlamsız." },
+          { "text": "Get well soon, doctor!", "correct": false, "feedback": "Yanlış bağlam; bu iyi dilek hasta olana söylenir, sen hasta olduğun için doktora söylemen tuhaf kaçar." },
           { "text": "Pharmacy where?", "correct": false, "feedback": "Kelime sırası yanlış; doğrusu 'Where's the nearest pharmacy?'" }
         ]
       }

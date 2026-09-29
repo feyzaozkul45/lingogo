@@ -154,7 +154,7 @@
         "options": [
           { "text": "Really? The new policy will have a big impact.", "correct": true, "feedback": "Doğru kalıp!" },
           { "text": "The new policy will make big effect.", "correct": false, "feedback": "Doğal değil; doğrusu 'The new policy will have a big impact.'" },
-          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; burada haber konuşuluyor." }
+          { "text": "The new policy will has a big impact.", "correct": false, "feedback": "'will' dan sonra fiilin yalın hali gelir; doğrusu 'will HAVE', 'will has' değil." }
         ]
       },
       {
@@ -164,7 +164,7 @@
         "options": [
           { "text": "I agree, it's a controversial issue.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
           { "text": "Controversial, yes.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'It's a controversial issue.'" },
-          { "text": "That's a stupid issue.", "correct": false, "feedback": "Kaba bir yorum; nötr bir dille konuş." }
+          { "text": "This is very issue controversial.", "correct": false, "feedback": "Sıfat isimden önce gelir; doğrusu 'a controversial issue', 'issue controversial' değil." }
         ]
       },
       {
@@ -174,7 +174,7 @@
         "options": [
           { "text": "The decision was announced yesterday.", "correct": true, "feedback": "Passive Voice'u doğru kullandın!" },
           { "text": "The decision announced yesterday.", "correct": false, "feedback": "Passive Voice'ta 'be' fiili eksik; doğrusu 'The decision was announced yesterday.'" },
-          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." }
+          { "text": "The decision is announcing yesterday.", "correct": false, "feedback": "Yanlış zaman/yapı; geçmişte olan bir olay için 'was announced' gerekir, 'is announcing' değil." }
         ]
       },
       {

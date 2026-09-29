@@ -154,33 +154,33 @@
         "options": [
           { "text": "No problem, here it is.", "correct": true, "feedback": "Doğal ve kısa, tam yerinde!" },
           { "text": "Take my identification.", "correct": false, "feedback": "Türkçeden birebir çeviri ('Al kimliğimi'); doğal İngilizce 'Here it is.' denir." },
-          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; kimlik verirken kullanılmaz." }
+          { "text": "Here is.", "correct": false, "feedback": "Eksik; 'it' düşürülemez, doğrusu 'Here it is.'" }
         ]
       },
       {
         "speaker": "Clerk",
-        "line": "Great, all done. Anything else?",
-        "line_tr": "Harika, tamamdır. Başka bir şey?",
+        "line": "Great, all done! Would you like to make a deposit today?",
+        "line_tr": "Harika, tamamdır! Bugün para yatırmak ister misiniz?",
         "options": [
-          { "text": "Yes, could you check my balance, please?", "correct": true, "feedback": "Doğru kalıp!" },
-          { "text": "Balance?", "correct": false, "feedback": "Tek kelime yetersiz; tam soru kur: 'Could you check my balance, please?'" },
-          { "text": "Check my balance now.", "correct": false, "feedback": "Emir gibi duruyor, kaba; 'Could you...?' kullan." }
+          { "text": "Yes, I'd like to deposit some money.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Give me deposit.", "correct": false, "feedback": "Emir gibi duruyor, kaba; 'I'd like to deposit...' kullan." },
+          { "text": "Deposit, yes.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'I'd like to deposit some money.'" }
         ]
       },
       {
         "speaker": "Clerk",
-        "line": "Your balance is 500 dollars. Do you need anything else?",
-        "line_tr": "Bakiyeniz 500 dolar. Başka bir şeye ihtiyacınız var mı?",
+        "line": "Sure, how much would you like to deposit?",
+        "line_tr": "Tabii, ne kadar yatırmak istersiniz?",
         "options": [
-          { "text": "Actually, yes. I need to withdraw some cash.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
-          { "text": "I needed to withdraw some cash.", "correct": false, "feedback": "Yanlış zaman; şu an ihtiyacın var: 'I need to withdraw some cash.'" },
-          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." }
+          { "text": "500 dollars. Could you check my balance afterward, please?", "correct": true, "feedback": "Doğru kalıp, doğal bir takip isteği!" },
+          { "text": "500 dollars. After, look my balance.", "correct": false, "feedback": "Türkçeden birebir çeviri, dilbilgisi bozuk; doğrusu 'Could you check my balance, please?'" },
+          { "text": "500 dollars. Could you checked my balance?", "correct": false, "feedback": "Fiil formu yanlış; 'could' dan sonra yalın fiil gelir: 'Could you check...?'" }
         ]
       },
       {
         "speaker": "Clerk",
-        "line": "Here you go. Anything else before you leave?",
-        "line_tr": "Buyurun. Ayrılmadan önce başka bir şey var mı?",
+        "line": "Sure, your balance is 500 dollars now. Anything else?",
+        "line_tr": "Tabii, bakiyeniz şimdi 500 dolar. Başka bir şey?",
         "options": [
           { "text": "Yes, can I apply for a loan?", "correct": true, "feedback": "Mükemmel, tam kalıbı kullandın!" },
           { "text": "I want loan application.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğal kalıp 'Can I apply for a loan?'" },

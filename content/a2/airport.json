@@ -176,7 +176,7 @@
         "line_tr": "Yaklaşık bir saat. Kapının yanında bekleyebilirsiniz.",
         "options": [
           { "text": "Thank you for the information.", "correct": true, "feedback": "Kibar bir kapanış!" },
-          { "text": "Enjoy your meal.", "correct": false, "feedback": "Yanlış bağlam; bu cümle yemek için kullanılır, burada anlamsız." },
+          { "text": "Have a nice flight!", "correct": false, "feedback": "Yanlış zamanlama; henüz uçağa binmedin, bu vedalaşma cümlesi kapıda söylenir." },
           { "text": "OK, thanks information.", "correct": false, "feedback": "Eksik cümle; doğrusu 'Thank you for the information.'" }
         ]
       }

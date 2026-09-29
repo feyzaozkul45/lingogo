@@ -173,7 +173,7 @@
         "line_tr": "Saat 11'de. Konaklamanızın keyfini çıkarın!",
         "options": [
           { "text": "Thank you! Can I get an extra towel, please?", "correct": true, "feedback": "Doğal bir ek istek!" },
-          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; bu cümle yemek için kullanılır, resepsiyonda anlamsız." },
+          { "text": "You too, enjoy your stay!", "correct": false, "feedback": "Yanlış bağlam; 'Enjoy your stay' sadece otel çalışanının söyleyeceği bir cümledir, misafir bunu söylemez." },
           { "text": "Extra towel.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'Can I get an extra towel, please?'" }
         ]
       }

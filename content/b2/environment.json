@@ -154,7 +154,7 @@
         "options": [
           { "text": "We need to reduce our carbon footprint.", "correct": true, "feedback": "Doğru kalıp!" },
           { "text": "It's not my problem.", "correct": false, "feedback": "Kayıtsız ve kaba bir cevap; konuya duyarlı ol." },
-          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; çevre konusu konuşuluyor." }
+          { "text": "We need reduce our carbon footprint.", "correct": false, "feedback": "'to' eksik; doğrusu 'We need TO reduce...'" }
         ]
       },
       {
@@ -174,7 +174,7 @@
         "options": [
           { "text": "That's why raising awareness is the first step.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
           { "text": "People must know first step awareness.", "correct": false, "feedback": "Kelime sırası ve doğallık sorunlu; doğrusu 'Raising awareness is the first step.'" },
-          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." }
+          { "text": "That's why we must raise the awareness.", "correct": false, "feedback": "'Awareness' sayılamayan bir isimdir, başına 'the' gelmez: 'raising awareness'." }
         ]
       },
       {

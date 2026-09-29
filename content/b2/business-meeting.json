@@ -154,7 +154,7 @@
         "options": [
           { "text": "Could you elaborate on that point?", "correct": true, "feedback": "Doğru kalıp!" },
           { "text": "Explain it again, now.", "correct": false, "feedback": "Emir gibi duruyor, kaba; 'Could you elaborate...?' kullan." },
-          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; toplantı ortasında tanışma cümlesi kullanılmaz." }
+          { "text": "Could you elaborate about that point?", "correct": false, "feedback": "'Elaborate' 'on' ile kullanılır, 'about' ile değil: 'Could you elaborate on that point?'" }
         ]
       },
       {
@@ -183,7 +183,7 @@
         "line_tr": "Kabul. Ama Cuma'dan önce bir uzlaşıya varmamız gerekiyor.",
         "options": [
           { "text": "Understood, I'll follow up by email.", "correct": true, "feedback": "Mükemmel bir kapanış!" },
-          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." },
+          { "text": "I will follow up on email.", "correct": false, "feedback": "'by email' kalıbı kullanılır, 'on email' değil: 'I'll follow up by email.'" },
           { "text": "Follow up, email.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'I'll follow up by email.'" }
         ]
       }

@@ -144,7 +144,7 @@
         "options": [
           { "text": "Really? Don't forget your umbrella then!", "correct": true, "feedback": "Doğru kalıp, doğal bir uyarı!" },
           { "text": "Don't forgot your umbrella.", "correct": false, "feedback": "Fiil formu yanlış; doğrusu 'Don't forget your umbrella.'" },
-          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; bu cümle yemek için kullanılır." }
+          { "text": "It's raining.", "correct": false, "feedback": "Yanlış zaman; henüz yağmıyor, sadece tahmin ediliyor: 'It's going to rain.'" }
         ]
       },
       {

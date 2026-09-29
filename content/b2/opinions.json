@@ -154,7 +154,7 @@
         "options": [
           { "text": "Although it's expensive, it's worth it.", "correct": true, "feedback": "Doğru kalıp!" },
           { "text": "Although it was expensive, it's worth it.", "correct": false, "feedback": "Yanlış zaman; şu anki fiyattan bahsediyorsun: 'Although it's expensive...'" },
-          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; burada fikir tartışılıyor." }
+          { "text": "Despite it's expensive, it's worth it.", "correct": false, "feedback": "'Despite' bir isim alır, cümle almaz; özne+fiil için 'Although' kullanmalısın: 'Although it's expensive...'" }
         ]
       },
       {
@@ -174,7 +174,7 @@
         "options": [
           { "text": "I see your point, but I disagree.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
           { "text": "I understand you, but no.", "correct": false, "feedback": "Doğal değil; dersteki kalıp 'I see your point, but I disagree.'" },
-          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." }
+          { "text": "I am agree with your point, but no.", "correct": false, "feedback": "'Agree' bir fiildir, önüne 'am' gelmez; doğrusu 'I agree' ya da burada 'I see your point, but I disagree.'" }
         ]
       },
       {

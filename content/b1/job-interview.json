@@ -154,7 +154,7 @@
         "options": [
           { "text": "I'm a fast learner, but public speaking is a challenge for me.", "correct": true, "feedback": "Doğal ve dürüst bir cevap!" },
           { "text": "I don't have weaknesses.", "correct": false, "feedback": "Doğal değil; mülakatta dürüst bir zayıf yön belirtmek beklenir." },
-          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; bu soru tanışma değil, güçlü/zayıf yön soruyor." }
+          { "text": "My weakness is I am lazy sometimes.", "correct": false, "feedback": "Çok samimi ve mülakat için uygunsuz; profesyonel bir zayıf yön belirt, ör. 'public speaking is a challenge for me.'" }
         ]
       },
       {

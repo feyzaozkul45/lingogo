@@ -184,7 +184,7 @@
         "options": [
           { "text": "Yeah, if it rains, the train will be delayed.", "correct": true, "feedback": "First Conditional'ı doğru kullandın!" },
           { "text": "If it will rain, the train will be delayed.", "correct": false, "feedback": "Yanlış yapı; if cümlesinde 'will' kullanılmaz: 'If it rains, the train will be delayed.'" },
-          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; bu cümle yemek için kullanılır, burada anlamsız." }
+          { "text": "If it rains, the train will delay.", "correct": false, "feedback": "'Delay' burada geçişsiz kullanılamaz; edilgen çatı gerekir: 'the train will BE delayed.'" }
         ]
       }
     ]

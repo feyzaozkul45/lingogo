@@ -154,7 +154,7 @@
         "options": [
           { "text": "It looks nice. How much is the rent per month?", "correct": true, "feedback": "Doğru kalıp!" },
           { "text": "How much money for month?", "correct": false, "feedback": "Türkçeden birebir çeviri; doğrusu 'How much is the rent per month?'" },
-          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; burada kira soruluyor, tanışma değil." }
+          { "text": "How much is rent in month?", "correct": false, "feedback": "Yanlış edat; doğrusu 'per month' ('in month' değil)." }
         ]
       },
       {
@@ -184,7 +184,7 @@
         "options": [
           { "text": "Yes, when can I move in?", "correct": true, "feedback": "Mükemmel, tam kalıbı kullandın!" },
           { "text": "When I can enter inside?", "correct": false, "feedback": "Türkçeden birebir çeviri, kelime sırası yanlış; doğrusu 'When can I move in?'" },
-          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." }
+          { "text": "I want to move in it.", "correct": false, "feedback": "'Move in' nesne almaz; doğrusu 'When can I move in?', 'move in it' denmez." }
         ]
       }
     ]
