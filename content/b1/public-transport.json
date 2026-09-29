@@ -131,5 +131,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "İstasyonda ve trende",
+    "setting": "İstasyondasın; önce gişede soru soruyorsun, sonra trende bir yolcuyla konuşuyorsun.",
+    "task": "Toplu taşımada First Conditional kullanarak bir şey anlat: 'If it rains, the train will be delayed.'",
+    "steps": [
+      {
+        "speaker": "Staff",
+        "line": "Hello, how can I help you?",
+        "line_tr": "Merhaba, nasıl yardımcı olabilirim?",
+        "options": [
+          { "text": "Hi, which platform does the train leave from?", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Platform?", "correct": false, "feedback": "Tek kelime yetersiz; tam soru kur: 'Which platform does the train leave from?'" },
+          { "text": "Which platform train goes?", "correct": false, "feedback": "Türkçeden birebir çeviri, kelime sırası yanlış; doğrusu 'Which platform does the train leave from?'" }
+        ]
+      },
+      {
+        "speaker": "Staff",
+        "line": "Platform 4. Anything else?",
+        "line_tr": "4 numaralı peron. Başka bir şey?",
+        "options": [
+          { "text": "Yes, how much is a single fare?", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "Tell me the price.", "correct": false, "feedback": "Emir gibi duruyor, kaba; 'How much is...?' kullan." },
+          { "text": "How much was a single fare?", "correct": false, "feedback": "Yanlış zaman; şu anki ücreti soruyorsun: 'How much is a single fare?'" }
+        ]
+      },
+      {
+        "speaker": "Staff",
+        "line": "It's three dollars. You'll need to transfer at Central Station.",
+        "line_tr": "3 dolar. Central İstasyonu'nda aktarma yapmanız gerekecek.",
+        "options": [
+          { "text": "Thanks for letting me know. Where do I get off for the museum?", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Museum, where?", "correct": false, "feedback": "Eksik cümle; tam soru kur: 'Where do I get off for the museum?'" },
+          { "text": "Where I go down for museum?", "correct": false, "feedback": "Türkçeden birebir çeviri, kelime sırası yanlış; doğrusu 'Where do I get off for the museum?'" }
+        ]
+      },
+      {
+        "speaker": "Passenger",
+        "line": "Sorry, this train is really crowded today.",
+        "line_tr": "Kusura bakma, bu tren bugün gerçekten çok kalabalık.",
+        "options": [
+          { "text": "Yes, it's always packed during rush hour.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Move, you're in my way.", "correct": false, "feedback": "Kaba; yolcuya nazikçe cevap ver." },
+          { "text": "This train is very full people.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğal kalıp 'This train is packed during rush hour.'" }
+        ]
+      },
+      {
+        "speaker": "Passenger",
+        "line": "I heard the trains get delayed a lot when it rains.",
+        "line_tr": "Yağmur yağınca trenlerin çok geciktiğini duydum.",
+        "options": [
+          { "text": "Yeah, if it rains, the train will be delayed.", "correct": true, "feedback": "First Conditional'ı doğru kullandın!" },
+          { "text": "If it will rain, the train will be delayed.", "correct": false, "feedback": "Yanlış yapı; if cümlesinde 'will' kullanılmaz: 'If it rains, the train will be delayed.'" },
+          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; bu cümle yemek için kullanılır, burada anlamsız." }
+        ]
+      }
+    ]
   }
 }

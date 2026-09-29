@@ -131,5 +131,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Fikir tartışması",
+    "setting": "Bir arkadaşınla yeni bir telefon almak hakkında fikir tartışıyorsunuz.",
+    "task": "Bir tartışmada fikrini 'In my opinion...' ile başlat, zıt görüş için 'although' kullan.",
+    "steps": [
+      {
+        "speaker": "Friend",
+        "line": "I think we should buy the new phone. What do you think?",
+        "line_tr": "Bence yeni telefonu almalıyız. Sen ne düşünüyorsun?",
+        "options": [
+          { "text": "In my opinion, this is the best option.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Best option, yes.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'In my opinion, this is the best option.'" },
+          { "text": "My think, this is best.", "correct": false, "feedback": "Türkçeden birebir çeviri, dilbilgisi bozuk; doğrusu 'In my opinion, this is the best option.'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "But it's really expensive.",
+        "line_tr": "Ama gerçekten pahalı.",
+        "options": [
+          { "text": "Although it's expensive, it's worth it.", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "Although it was expensive, it's worth it.", "correct": false, "feedback": "Yanlış zaman; şu anki fiyattan bahsediyorsun: 'Although it's expensive...'" },
+          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; burada fikir tartışılıyor." }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Hmm, but there might be some downsides too.",
+        "line_tr": "Hmm, ama bazı dezavantajları da olabilir.",
+        "options": [
+          { "text": "On the other hand, there are some downsides.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Downsides, yes.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'On the other hand, there are some downsides.'" },
+          { "text": "You're wrong, no downsides.", "correct": false, "feedback": "Kaba ve kesin bir ifade; nazikçe farklı görüş belirt." }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Like what, for example?",
+        "line_tr": "Mesela ne gibi?",
+        "options": [
+          { "text": "I see your point, but I disagree.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "I understand you, but no.", "correct": false, "feedback": "Doğal değil; dersteki kalıp 'I see your point, but I disagree.'" },
+          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Hmm, actually you might be right about that.",
+        "line_tr": "Hmm, aslında bu konuda haklı olabilirsin.",
+        "options": [
+          { "text": "That's a fair point.", "correct": true, "feedback": "Mükemmel, dersin kalıbını tam kullandın!" },
+          { "text": "Fair, yes.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'That's a fair point.'" },
+          { "text": "That was a fair point.", "correct": false, "feedback": "Yanlış zaman; şu anki yorumdan bahsediyorsun: 'That's a fair point.'" }
+        ]
+      }
+    ]
   }
 }

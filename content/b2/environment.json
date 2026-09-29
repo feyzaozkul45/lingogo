@@ -131,5 +131,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Çevre tartışması",
+    "setting": "Bir arkadaşınla çevre konusunu tartışıyorsun.",
+    "task": "Çevre hakkında konuşurken 'unless' kalıbını kullan: 'Unless we act now...'",
+    "steps": [
+      {
+        "speaker": "Friend",
+        "line": "Did you see this packaging? So much plastic!",
+        "line_tr": "Bu ambalajı gördün mü? Ne kadar çok plastik!",
+        "options": [
+          { "text": "I know, this packaging isn't recyclable.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Too much plastic, bad.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'This packaging isn't recyclable.'" },
+          { "text": "This packaging cannot recycle.", "correct": false, "feedback": "Doğal değil; doğrusu 'This packaging isn't recyclable.'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "What can we do about it?",
+        "line_tr": "Bu konuda ne yapabiliriz?",
+        "options": [
+          { "text": "We need to reduce our carbon footprint.", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "It's not my problem.", "correct": false, "feedback": "Kayıtsız ve kaba bir cevap; konuya duyarlı ol." },
+          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; çevre konusu konuşuluyor." }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Have you thought about solar panels?",
+        "line_tr": "Güneş panellerini düşündün mü?",
+        "options": [
+          { "text": "Yes, renewable energy is getting cheaper.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Solar, cheap.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'Renewable energy is getting cheaper.'" },
+          { "text": "Renewable energy got cheaper now.", "correct": false, "feedback": "Yanlış zaman; süregelen bir değişim: 'is getting cheaper.'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Honestly, most people don't even think about this.",
+        "line_tr": "Açıkçası, çoğu insan bunu düşünmüyor bile.",
+        "options": [
+          { "text": "That's why raising awareness is the first step.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "People must know first step awareness.", "correct": false, "feedback": "Kelime sırası ve doğallık sorunlu; doğrusu 'Raising awareness is the first step.'" },
+          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Do you think things will really change?",
+        "line_tr": "Sence gerçekten değişecek mi?",
+        "options": [
+          { "text": "Unless we act now, the situation will get worse.", "correct": true, "feedback": "Mükemmel, 'unless' kalıbını doğru kullandın!" },
+          { "text": "Unless we will act now, the situation will get worse.", "correct": false, "feedback": "Yanlış yapı; 'unless' cümlesinde 'will' kullanılmaz: 'Unless we act now...'" },
+          { "text": "No act, worse.", "correct": false, "feedback": "Eksik cümle; tam yapıyı kullan: 'Unless we act now, the situation will get worse.'" }
+        ]
+      }
+    ]
   }
 }

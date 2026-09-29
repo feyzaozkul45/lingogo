@@ -131,5 +131,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Haber konuşması",
+    "setting": "Bir arkadaşınla güncel bir haberi konuşuyorsun.",
+    "task": "Bir haberi anlatırken Passive Voice kullan: 'The decision was announced...'",
+    "steps": [
+      {
+        "speaker": "Friend",
+        "line": "Hey, have you heard the news?",
+        "line_tr": "Selam, haberi duydun mu?",
+        "options": [
+          { "text": "No, what happened? Have you seen the headlines today?", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "News, what?", "correct": false, "feedback": "Eksik cümle; tam soru kur: 'Have you seen the headlines today?'" },
+          { "text": "Have you see the headlines today?", "correct": false, "feedback": "Fiil formu yanlış; Present Perfect: 'Have you seen...?'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "The government announced a new policy.",
+        "line_tr": "Hükümet yeni bir politika açıkladı.",
+        "options": [
+          { "text": "Really? The new policy will have a big impact.", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "The new policy will make big effect.", "correct": false, "feedback": "Doğal değil; doğrusu 'The new policy will have a big impact.'" },
+          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; burada haber konuşuluyor." }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Yes, and it's quite a controversial issue.",
+        "line_tr": "Evet, ve oldukça tartışmalı bir konu.",
+        "options": [
+          { "text": "I agree, it's a controversial issue.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Controversial, yes.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'It's a controversial issue.'" },
+          { "text": "That's a stupid issue.", "correct": false, "feedback": "Kaba bir yorum; nötr bir dille konuş." }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "When was it announced, do you know?",
+        "line_tr": "Ne zaman açıklandı, biliyor musun?",
+        "options": [
+          { "text": "The decision was announced yesterday.", "correct": true, "feedback": "Passive Voice'u doğru kullandın!" },
+          { "text": "The decision announced yesterday.", "correct": false, "feedback": "Passive Voice'ta 'be' fiili eksik; doğrusu 'The decision was announced yesterday.'" },
+          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Where did you read about it?",
+        "line_tr": "Bunu nereden okudun?",
+        "options": [
+          { "text": "I only trust reliable news sources.", "correct": true, "feedback": "Mükemmel bir kapanış!" },
+          { "text": "I trust only good news place.", "correct": false, "feedback": "Doğal değil; dersteki kalıp 'I only trust reliable news sources.'" },
+          { "text": "Reliable sources.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'I only trust reliable news sources.'" }
+        ]
+      }
+    ]
   }
 }

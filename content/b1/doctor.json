@@ -131,5 +131,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Doktorda muayene",
+    "setting": "Doktora gidiyorsun, önce randevu alıp sonra muayeneye giriyorsun.",
+    "task": "Doktorda semptomlarını anlatırken 'I have...' ve tavsiye için 'should' kalıbını dinle.",
+    "steps": [
+      {
+        "speaker": "Receptionist",
+        "line": "Hello, how can I help you?",
+        "line_tr": "Merhaba, nasıl yardımcı olabilirim?",
+        "options": [
+          { "text": "Hi, I'd like to make an appointment.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Give me an appointment.", "correct": false, "feedback": "Emir gibi duruyor, kaba; 'I'd like to make an appointment.' kullan." },
+          { "text": "Appointment, doctor.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'I'd like to make an appointment.'" }
+        ]
+      },
+      {
+        "speaker": "Doctor",
+        "line": "Come in. What's the problem?",
+        "line_tr": "İçeri gelin. Sorun nedir?",
+        "options": [
+          { "text": "I have a terrible headache.", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "My head is very much hurting.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğal kalıp 'I have a terrible headache.'" },
+          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; doktor şikayetini soruyor, tanışma değil." }
+        ]
+      },
+      {
+        "speaker": "Doctor",
+        "line": "How long have you had this pain?",
+        "line_tr": "Bu ağrın ne zamandır var?",
+        "options": [
+          { "text": "Since yesterday morning.", "correct": true, "feedback": "Doğal ve doğru bir cevap!" },
+          { "text": "I have it since yesterday.", "correct": false, "feedback": "Yanlış zaman; Present Perfect gerekir: 'I've had it since yesterday.'" },
+          { "text": "Yesterday.", "correct": false, "feedback": "Çok kısa; tam cümle kur: 'Since yesterday morning.'" }
+        ]
+      },
+      {
+        "speaker": "Doctor",
+        "line": "I see. Are you allergic to any medicine?",
+        "line_tr": "Anladım. Herhangi bir ilaca alerjiniz var mı?",
+        "options": [
+          { "text": "Yes, I'm allergic to penicillin.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "I have allergy for penicillin.", "correct": false, "feedback": "Doğal değil; doğru kalıp 'allergic to': 'I'm allergic to penicillin.'" },
+          { "text": "Just give me medicine.", "correct": false, "feedback": "Emir gibi duruyor, kaba; sadece soruyu cevapla." }
+        ]
+      },
+      {
+        "speaker": "Doctor",
+        "line": "OK, thank you. You should take this medicine twice a day.",
+        "line_tr": "Tamam, teşekkürler. Bu ilacı günde iki kez almalısınız.",
+        "options": [
+          { "text": "Thank you, doctor. Where's the nearest pharmacy?", "correct": true, "feedback": "Doğru kalıp, doğal bir kapanış sorusu!" },
+          { "text": "Enjoy your meal, doctor.", "correct": false, "feedback": "Yanlış bağlam; bu cümle yemek için kullanılır, burada anlamsız." },
+          { "text": "Pharmacy where?", "correct": false, "feedback": "Kelime sırası yanlış; doğrusu 'Where's the nearest pharmacy?'" }
+        ]
+      }
+    ]
   }
 }

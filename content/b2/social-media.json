@@ -131,5 +131,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Sosyal medya alışkanlıkları",
+    "setting": "Bir arkadaşınla sosyal medya alışkanlıklarını konuşuyorsun.",
+    "task": "Sosyal medyadaki bir pişmanlığını Third Conditional ile anlat: 'If I hadn't..., I wouldn't have...'",
+    "steps": [
+      {
+        "speaker": "Friend",
+        "line": "You're always on your phone! What are you doing?",
+        "line_tr": "Sürekli telefondasın! Ne yapıyorsun?",
+        "options": [
+          { "text": "I know, I spend too much time scrolling.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "I very much time scroll doing.", "correct": false, "feedback": "Türkçeden birebir çeviri, kelime sırası yanlış; doğrusu 'I spend too much time scrolling.'" },
+          { "text": "Too much scrolling.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'I spend too much time scrolling.'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Maybe you should turn off some notifications.",
+        "line_tr": "Belki bazı bildirimleri kapatmalısın.",
+        "options": [
+          { "text": "You're right, I should turn off notifications.", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "I should turned off notifications.", "correct": false, "feedback": "Fiil formu yanlış; doğrusu 'I should turn off notifications.'" },
+          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; burada sosyal medya konuşuluyor." }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "By the way, did you see that post that went everywhere yesterday?",
+        "line_tr": "Bu arada, dün her yerde paylaşılan o gönderiyi gördün mü?",
+        "options": [
+          { "text": "Yes, this post went viral overnight.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Viral, yes.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'This post went viral overnight.'" },
+          { "text": "That post is stupid.", "correct": false, "feedback": "Kaba bir yorum; nötr bir dille konuş." }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Do you worry about people seeing your personal info online?",
+        "line_tr": "İnsanların çevrimiçi kişisel bilgilerini görmesinden endişeleniyor musun?",
+        "options": [
+          { "text": "Yes, I need to protect my privacy online.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "I need to close my information.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğal kalıp 'I need to protect my privacy online.'" },
+          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Didn't you delete a post last week? What happened?",
+        "line_tr": "Geçen hafta bir gönderi silmedin mi? Ne oldu?",
+        "options": [
+          { "text": "If I hadn't posted that, I wouldn't have gotten so many comments.", "correct": true, "feedback": "Third Conditional'ı mükemmel kullandın!" },
+          { "text": "If I didn't post that, I wouldn't have gotten so many comments.", "correct": false, "feedback": "Yanlış yapı; Third Conditional'da 'hadn't + fiil3' kullanılır: 'If I hadn't posted that...'" },
+          { "text": "Too many comments, bad.", "correct": false, "feedback": "Eksik cümle; tam yapıyı kullan: 'If I hadn't posted that, I wouldn't have gotten so many comments.'" }
+        ]
+      }
+    ]
   }
 }

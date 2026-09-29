@@ -131,5 +131,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Bankada işlem",
+    "setting": "Bankadasın, birkaç işlem yapmak istiyorsun.",
+    "task": "Bankada bir işlem sırasında 'Could you...?' ya da 'Can I...?' kalıbıyla nazikçe bir istekte bulun.",
+    "steps": [
+      {
+        "speaker": "Clerk",
+        "line": "Good morning! How can I help you?",
+        "line_tr": "Günaydın! Nasıl yardımcı olabilirim?",
+        "options": [
+          { "text": "Good morning, I'd like to open an account.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Open account for me.", "correct": false, "feedback": "Emir gibi duruyor, kaba; 'I'd like to open an account.' kullan." },
+          { "text": "Account, please.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'I'd like to open an account.'" }
+        ]
+      },
+      {
+        "speaker": "Clerk",
+        "line": "Sure. You might need your ID for this.",
+        "line_tr": "Tabii. Bunun için kimliğinize ihtiyacınız olabilir.",
+        "options": [
+          { "text": "No problem, here it is.", "correct": true, "feedback": "Doğal ve kısa, tam yerinde!" },
+          { "text": "Take my identification.", "correct": false, "feedback": "Türkçeden birebir çeviri ('Al kimliğimi'); doğal İngilizce 'Here it is.' denir." },
+          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; kimlik verirken kullanılmaz." }
+        ]
+      },
+      {
+        "speaker": "Clerk",
+        "line": "Great, all done. Anything else?",
+        "line_tr": "Harika, tamamdır. Başka bir şey?",
+        "options": [
+          { "text": "Yes, could you check my balance, please?", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "Balance?", "correct": false, "feedback": "Tek kelime yetersiz; tam soru kur: 'Could you check my balance, please?'" },
+          { "text": "Check my balance now.", "correct": false, "feedback": "Emir gibi duruyor, kaba; 'Could you...?' kullan." }
+        ]
+      },
+      {
+        "speaker": "Clerk",
+        "line": "Your balance is 500 dollars. Do you need anything else?",
+        "line_tr": "Bakiyeniz 500 dolar. Başka bir şeye ihtiyacınız var mı?",
+        "options": [
+          { "text": "Actually, yes. I need to withdraw some cash.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "I needed to withdraw some cash.", "correct": false, "feedback": "Yanlış zaman; şu an ihtiyacın var: 'I need to withdraw some cash.'" },
+          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." }
+        ]
+      },
+      {
+        "speaker": "Clerk",
+        "line": "Here you go. Anything else before you leave?",
+        "line_tr": "Buyurun. Ayrılmadan önce başka bir şey var mı?",
+        "options": [
+          { "text": "Yes, can I apply for a loan?", "correct": true, "feedback": "Mükemmel, tam kalıbı kullandın!" },
+          { "text": "I want loan application.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğal kalıp 'Can I apply for a loan?'" },
+          { "text": "Loan, please.", "correct": false, "feedback": "Eksik cümle; tam soru kur: 'Can I apply for a loan?'" }
+        ]
+      }
+    ]
   }
 }

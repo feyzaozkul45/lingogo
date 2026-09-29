@@ -131,5 +131,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Toplantıda konuşmak",
+    "setting": "Bir iş toplantısındasın.",
+    "task": "Toplantıda birinin söylediğini aktarırken Reported Speech kullan: 'She said that...'",
+    "steps": [
+      {
+        "speaker": "Colleague",
+        "line": "Good morning everyone, shall we start?",
+        "line_tr": "Günaydın herkese, başlayalım mı?",
+        "options": [
+          { "text": "Sure, let's go through the agenda.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Yes, agenda.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'Let's go through the agenda.'" },
+          { "text": "Yes, let's look agenda.", "correct": false, "feedback": "Türkçeden birebir çeviri, eksik edat; doğrusu 'Let's go through the agenda.'" }
+        ]
+      },
+      {
+        "speaker": "Colleague",
+        "line": "First item: the new proposal. Any thoughts?",
+        "line_tr": "İlk madde: yeni teklif. Görüşü olan var mı?",
+        "options": [
+          { "text": "Could you elaborate on that point?", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "Explain it again, now.", "correct": false, "feedback": "Emir gibi duruyor, kaba; 'Could you elaborate...?' kullan." },
+          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; toplantı ortasında tanışma cümlesi kullanılmaz." }
+        ]
+      },
+      {
+        "speaker": "Colleague",
+        "line": "Sure. John said that the budget had increased.",
+        "line_tr": "Tabii. John, bütçenin arttığını söyledi.",
+        "options": [
+          { "text": "I see. Can we get some feedback on this proposal?", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Feedback, proposal?", "correct": false, "feedback": "Eksik cümle; tam soru kur: 'Can we get some feedback on this proposal?'" },
+          { "text": "Can we got some feedback on this proposal?", "correct": false, "feedback": "Fiil formu yanlış; doğrusu 'Can we get some feedback...?'" }
+        ]
+      },
+      {
+        "speaker": "Colleague",
+        "line": "Good idea. But we're running out of time today.",
+        "line_tr": "İyi fikir. Ama bugün vaktimiz azalıyor.",
+        "options": [
+          { "text": "Let's postpone this decision until next week.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Let's leave this decision to next week.", "correct": false, "feedback": "Doğal değil; dersteki kalıp 'Let's postpone this decision until next week.'" },
+          { "text": "We must decide now, no more talk.", "correct": false, "feedback": "Kaba ve baskıcı duruyor; nazikçe erteleme öner." }
+        ]
+      },
+      {
+        "speaker": "Colleague",
+        "line": "Agreed. We need to reach a consensus before Friday though.",
+        "line_tr": "Kabul. Ama Cuma'dan önce bir uzlaşıya varmamız gerekiyor.",
+        "options": [
+          { "text": "Understood, I'll follow up by email.", "correct": true, "feedback": "Mükemmel bir kapanış!" },
+          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." },
+          { "text": "Follow up, email.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'I'll follow up by email.'" }
+        ]
+      }
+    ]
   }
 }

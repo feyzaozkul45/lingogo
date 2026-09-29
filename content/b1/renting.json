@@ -131,5 +131,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Kiralık daireyi görme",
+    "setting": "Bir ev sahibiyle kiralık daire hakkında konuşuyorsun.",
+    "task": "Bir ev sahibiyle kira, eşya ve taşınma hakkında konuşurken dersteki kalıpları kullan.",
+    "steps": [
+      {
+        "speaker": "Landlord",
+        "line": "Hi, are you interested in the apartment?",
+        "line_tr": "Merhaba, daireyle ilgileniyor musunuz?",
+        "options": [
+          { "text": "Yes, I'd like to see the apartment first.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Show me now.", "correct": false, "feedback": "Emir gibi duruyor, kaba; 'I'd like to see...' kullan." },
+          { "text": "See apartment.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'I'd like to see the apartment first.'" }
+        ]
+      },
+      {
+        "speaker": "Landlord",
+        "line": "Sure, come on in. It's a nice place.",
+        "line_tr": "Tabii, buyurun içeri. Güzel bir yer.",
+        "options": [
+          { "text": "It looks nice. How much is the rent per month?", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "How much money for month?", "correct": false, "feedback": "Türkçeden birebir çeviri; doğrusu 'How much is the rent per month?'" },
+          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; burada kira soruluyor, tanışma değil." }
+        ]
+      },
+      {
+        "speaker": "Landlord",
+        "line": "It's 800 dollars.",
+        "line_tr": "800 dolar.",
+        "options": [
+          { "text": "Is the apartment furnished?", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "Furniture inside?", "correct": false, "feedback": "Eksik ve doğal değil; doğrusu 'Is the apartment furnished?'" },
+          { "text": "Was the apartment furnished?", "correct": false, "feedback": "Yanlış zaman; şu anki durumu soruyorsun: 'Is the apartment furnished?'" }
+        ]
+      },
+      {
+        "speaker": "Landlord",
+        "line": "No, it's unfurnished. But everything works well.",
+        "line_tr": "Hayır, eşyasız. Ama her şey iyi çalışıyor.",
+        "options": [
+          { "text": "OK. Are utilities included in the rent?", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "You pay utilities for me.", "correct": false, "feedback": "Emir gibi ve kaba; nazikçe sor: 'Are utilities included?'" },
+          { "text": "Utilities, rent?", "correct": false, "feedback": "Eksik cümle; tam soru kur: 'Are utilities included in the rent?'" }
+        ]
+      },
+      {
+        "speaker": "Landlord",
+        "line": "No, they're separate. So, do you want it?",
+        "line_tr": "Hayır, ayrı. Peki, istiyor musunuz?",
+        "options": [
+          { "text": "Yes, when can I move in?", "correct": true, "feedback": "Mükemmel, tam kalıbı kullandın!" },
+          { "text": "When I can enter inside?", "correct": false, "feedback": "Türkçeden birebir çeviri, kelime sırası yanlış; doğrusu 'When can I move in?'" },
+          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; anlamsız burada." }
+        ]
+      }
+    ]
   }
 }
