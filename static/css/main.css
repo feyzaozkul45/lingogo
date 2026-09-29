@@ -462,6 +462,27 @@ main.container {
   gap: 12px;
 }
 
+/* ---- Sesli dinleme (Web Speech API) ---- */
+.speak-buttons { display: inline-flex; gap: 4px; margin-left: 8px; vertical-align: middle; }
+.speak-btn { display: none; }
+.tts-supported .speak-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+  padding: 0;
+}
+.tts-supported .speak-btn:hover { background: var(--border); }
+.tts-supported .speak-btn:active { transform: scale(0.94); }
+
 .word-card, .phrase-card, .example-card {
   background: var(--surface);
   border-radius: var(--radius);

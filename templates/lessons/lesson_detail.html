@@ -27,11 +27,11 @@
     <div class="stack">
       {% for word in lesson.words.all %}
         <div class="word-card">
-          <div class="word-card__en en">{{ word.english }}</div>
+          <div class="word-card__en en">{{ word.english }}{% include 'partials/speak_buttons.html' with text=word.english %}</div>
           <div class="word-card__tr">{{ word.turkish }}</div>
           {% if word.example_en %}
             <div class="word-card__example">
-              <span class="en">{{ word.example_en }}</span>
+              <span class="en">{{ word.example_en }}</span>{% include 'partials/speak_buttons.html' with text=word.example_en %}
               <span class="tr">{{ word.example_tr }}</span>
             </div>
           {% endif %}
@@ -45,7 +45,7 @@
     <div class="stack">
       {% for phrase in lesson.phrases.all %}
         <div class="phrase-card">
-          <div class="en">{{ phrase.english }}</div>
+          <div class="en">{{ phrase.english }}{% include 'partials/speak_buttons.html' with text=phrase.english %}</div>
           <div class="word-card__tr">{{ phrase.turkish }}</div>
           {% if phrase.note %}<div class="phrase-card__note">💡 {{ phrase.note }}</div>{% endif %}
         </div>
@@ -61,7 +61,7 @@
           <h3>{{ tip.title }}</h3>
           <p>{{ tip.explanation }}</p>
           <ul class="stack">
-            {% for example in tip.example_list %}<li class="en">{{ example }}</li>{% endfor %}
+            {% for example in tip.example_list %}<li class="en">{{ example }}{% include 'partials/speak_buttons.html' with text=example %}</li>{% endfor %}
           </ul>
         </div>
       {% endfor %}
@@ -73,7 +73,7 @@
     <div class="stack">
       {% for example in lesson.example_sentences.all %}
         <div class="example-card">
-          <div class="en">{{ example.english }}</div>
+          <div class="en">{{ example.english }}{% include 'partials/speak_buttons.html' with text=example.english %}</div>
           <div class="word-card__tr">{{ example.turkish }}</div>
         </div>
       {% endfor %}
@@ -91,5 +91,6 @@
 {% endblock %}
 
 {% block extra_js %}
+  <script src="{% static 'js/speech.js' %}"></script>
   <script src="{% static 'js/lesson.js' %}"></script>
 {% endblock %}
