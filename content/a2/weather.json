@@ -121,5 +121,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Hava durumu sohbeti",
+    "setting": "Bir arkadaşınla dışarı çıkmadan önce hava durumunu konuşuyorsun.",
+    "task": "Bugünün ve yarının hava durumunu 'going to' ya da 'forecast says' kalıbıyla anlat.",
+    "steps": [
+      {
+        "speaker": "Friend",
+        "line": "Hey, are you coming outside?",
+        "line_tr": "Selam, dışarı çıkıyor musun?",
+        "options": [
+          { "text": "Sure, what's the weather like today?", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "Weather today?", "correct": false, "feedback": "Eksik cümle; tam soru kur: 'What's the weather like today?'" },
+          { "text": "How is the air today?", "correct": false, "feedback": "Türkçeden birebir çeviri ('hava'); doğrusu 'What's the weather like today?'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "It's cloudy now. I think it's going to rain later.",
+        "line_tr": "Şu an bulutlu. Sanırım sonra yağmur yağacak.",
+        "options": [
+          { "text": "Really? Don't forget your umbrella then!", "correct": true, "feedback": "Doğru kalıp, doğal bir uyarı!" },
+          { "text": "Don't forgot your umbrella.", "correct": false, "feedback": "Fiil formu yanlış; doğrusu 'Don't forget your umbrella.'" },
+          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; bu cümle yemek için kullanılır." }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Good idea. What about tomorrow?",
+        "line_tr": "İyi fikir. Peki ya yarın?",
+        "options": [
+          { "text": "The forecast says it'll be sunny tomorrow.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Forecast sunny tomorrow.", "correct": false, "feedback": "Eksik cümle; doğrusu 'The forecast says it'll be sunny tomorrow.'" },
+          { "text": "Forecast say sun.", "correct": false, "feedback": "Dilbilgisi ve doğallık sorunlu; doğrusu 'The forecast says it'll be sunny tomorrow.'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Nice! Is it cold right now?",
+        "line_tr": "Güzel! Şu an soğuk mu?",
+        "options": [
+          { "text": "No, actually it's really hot today.", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "No, it was really hot today.", "correct": false, "feedback": "Yanlış zaman; şu andan bahsediyorsun; doğrusu 'It's really hot today.'" },
+          { "text": "No, today weather very hot.", "correct": false, "feedback": "Türkçeden birebir çeviri, kelime sırası yanlış; doğrusu 'It's really hot today.'" }
+        ]
+      },
+      {
+        "speaker": "Friend",
+        "line": "Wow, OK. Let's go then!",
+        "line_tr": "Vay, tamam. O zaman gidelim!",
+        "options": [
+          { "text": "Let's go!", "correct": true, "feedback": "Harika, hazırsın!" },
+          { "text": "Have a nice day!", "correct": false, "feedback": "Yanlış bağlam; bu bir vedalaşma cümlesi, şu an ayrılmıyorsunuz." },
+          { "text": "Go!", "correct": false, "feedback": "Çok kısa ve emir gibi; doğrusu 'Let's go!'" }
+        ]
+      }
+    ]
   }
 }

@@ -121,5 +121,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Sokakta yol sorma",
+    "setting": "Sokakta birine istasyona nasıl gideceğini soruyorsun.",
+    "task": "Sokakta birine 'Excuse me, how can I get to...?' ile yol sor.",
+    "steps": [
+      {
+        "speaker": "Stranger",
+        "line": "Yes? Can I help you?",
+        "line_tr": "Evet? Yardımcı olabilir miyim?",
+        "options": [
+          { "text": "Excuse me, how can I get to the station?", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Station, where?", "correct": false, "feedback": "Kaba ve eksik; doğrusu 'Excuse me, how can I get to the station?'" },
+          { "text": "Excuse me, station how I go?", "correct": false, "feedback": "Türkçeden birebir çeviri, kelime sırası yanlış; doğrusu 'How can I get to the station?'" }
+        ]
+      },
+      {
+        "speaker": "Stranger",
+        "line": "Sure, go straight ahead and turn left at the corner.",
+        "line_tr": "Tabii, düz devam edin ve köşeden sola dönün.",
+        "options": [
+          { "text": "OK, straight ahead and then left at the corner. Got it!", "correct": true, "feedback": "Doğru, tarifi tekrarlayıp onayladın!" },
+          { "text": "OK, I went straight and turned left.", "correct": false, "feedback": "Yanlış zaman; henüz gitmedin, tarifi onaylıyorsun sadece: 'Got it!'" },
+          { "text": "OK, nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; burada tanışma değil, yol tarifini onaylıyorsun." }
+        ]
+      },
+      {
+        "speaker": "Stranger",
+        "line": "Then it's across from the bank.",
+        "line_tr": "Sonra bankanın karşısında.",
+        "options": [
+          { "text": "Is it within walking distance?", "correct": true, "feedback": "Doğru kalıp, doğal bir takip sorusu!" },
+          { "text": "Walking distance?", "correct": false, "feedback": "Eksik cümle; tam soru kur: 'Is it within walking distance?'" },
+          { "text": "Is it near by feet?", "correct": false, "feedback": "Türkçeden birebir çeviri; doğrusu 'Is it within walking distance?'" }
+        ]
+      },
+      {
+        "speaker": "Stranger",
+        "line": "Yes, it's two blocks away.",
+        "line_tr": "Evet, iki sokak ileride.",
+        "options": [
+          { "text": "Great, thank you so much!", "correct": true, "feedback": "Doğal ve kibar bir teşekkür!" },
+          { "text": "OK, whatever.", "correct": false, "feedback": "Kaba ve ilgisiz duruyor; teşekkür et." },
+          { "text": "You're welcome!", "correct": false, "feedback": "Yanlış bağlam; bu, teşekküre verilen cevaptır, burada sen teşekkür etmelisin." }
+        ]
+      },
+      {
+        "speaker": "Stranger",
+        "line": "No problem, have a good day!",
+        "line_tr": "Rica ederim, iyi günler!",
+        "options": [
+          { "text": "You too, bye!", "correct": true, "feedback": "Mükemmel bir kapanış!" },
+          { "text": "You too, I had a good day!", "correct": false, "feedback": "Yanlış zaman; henüz gün bitmedi, doğrusu 'You too, bye!'" },
+          { "text": "Bye you.", "correct": false, "feedback": "Kelime sırası yanlış; doğrusu 'You too, bye!'" }
+        ]
+      }
+    ]
   }
 }

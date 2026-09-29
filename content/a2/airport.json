@@ -124,5 +124,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Havaalanında check-in",
+    "setting": "Havaalanındasın, check-in yapman ve uçağını bulman gerekiyor.",
+    "task": "Havaalanında bir görevliye 'Where is...?' ya da 'Where can I...?' ile yön sor.",
+    "steps": [
+      {
+        "speaker": "Staff",
+        "line": "Good morning! How can I help you?",
+        "line_tr": "Günaydın! Nasıl yardımcı olabilirim?",
+        "options": [
+          { "text": "Good morning. Where can I check in for flight TK123?", "correct": true, "feedback": "Doğru kalıp, nazik bir giriş!" },
+          { "text": "Check me in.", "correct": false, "feedback": "Emir gibi duruyor, kaba; 'Where can I check in?' kullan." },
+          { "text": "Check-in?", "correct": false, "feedback": "Tek kelime yetersiz; tam soru kur: 'Where can I check in?'" }
+        ]
+      },
+      {
+        "speaker": "Staff",
+        "line": "Sure, can I see your passport, please?",
+        "line_tr": "Tabii, pasaportunuzu görebilir miyim?",
+        "options": [
+          { "text": "Here you are.", "correct": true, "feedback": "Doğal ve kısa, tam yerinde!" },
+          { "text": "Take my passport.", "correct": false, "feedback": "Türkçeden birebir çeviri ('Al pasaportumu'); doğal İngilizce 'Here you are.' denir." },
+          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; bu tanışma cümlesi, pasaport verirken kullanılmaz." }
+        ]
+      },
+      {
+        "speaker": "Staff",
+        "line": "Thank you. Your gate is 12.",
+        "line_tr": "Teşekkürler. Kapınız 12.",
+        "options": [
+          { "text": "Where is gate 12?", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Where was gate 12?", "correct": false, "feedback": "Yanlış zaman; kapı hâlâ orada, şimdiki zaman kullan: 'Where is gate 12?'" },
+          { "text": "Gate 12 where?", "correct": false, "feedback": "Kelime sırası yanlış; doğrusu 'Where is gate 12?'" }
+        ]
+      },
+      {
+        "speaker": "Staff",
+        "line": "It's down this hall, but I'm afraid your flight is delayed.",
+        "line_tr": "Bu koridorun sonunda, ama korkarım uçuşunuz gecikti.",
+        "options": [
+          { "text": "Oh no, my flight is delayed? How long?", "correct": true, "feedback": "Doğru kalıp, doğal bir tepki!" },
+          { "text": "That's your problem.", "correct": false, "feedback": "Kaba ve saygısız; görevliyle nazik konuş." },
+          { "text": "My flight is late coming.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğrusu 'My flight is delayed.'" }
+        ]
+      },
+      {
+        "speaker": "Staff",
+        "line": "About one hour. You can wait near the gate.",
+        "line_tr": "Yaklaşık bir saat. Kapının yanında bekleyebilirsiniz.",
+        "options": [
+          { "text": "Thank you for the information.", "correct": true, "feedback": "Kibar bir kapanış!" },
+          { "text": "Enjoy your meal.", "correct": false, "feedback": "Yanlış bağlam; bu cümle yemek için kullanılır, burada anlamsız." },
+          { "text": "OK, thanks information.", "correct": false, "feedback": "Eksik cümle; doğrusu 'Thank you for the information.'" }
+        ]
+      }
+    ]
   }
 }

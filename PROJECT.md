@@ -461,6 +461,9 @@ Sonraki konular (Phase 3): Günlük hayat, ileri seviye senaryolar, kullanıcıy
 - Yanlış seçenekler saçma/anlamsız değil, **Türk öğrencilerin gerçekten yaptığı hatalar** olmalı: kaba/emir kipi ifadeler, eksik cümleler, yanlış bağlamda kullanım, Türkçeden birebir çeviri gibi. Her yanlış seçeneğin `feedback` alanı hatayı tek cümleyle kısaca açıklar (ne yanlış, doğrusu ne olurdu).
 - Doğru cevaplar, mümkün olduğunca o dersin `phrases` ve `grammar` kalıplarını kullanmalı — senaryo, dersin ifadelerini gerçek hayatta uygulama alanı olmalı, dersten kopuk yeni kalıplar üretmemeli.
 - Senaryoda geçen ama derste henüz olmayan bir ifade varsa (ör. yeni bir kalıp) `phrases` listesine eklenmelidir.
+- **Doğal ve gerçekten kullanılan İngilizce asla yanlış olarak işaretlenmez** (ör. kafede "Bye." demek tamamen doğaldır). Bir seçenek ancak **yerli bir konuşmacının açıkça garip veya kaba bulacağı** bir cümleyse yanlış sayılır.
+- Bir diyalogda **aynı hata türü tekrar edilmez**; farklı adımlarda farklı hata türleri kullanılır: kaba/emir kipi ifade, eksik cümle, Türkçeden birebir çeviri (ör. "Kolay gelsin", "Afiyet olsun", "Paket olsun"), yanlış bağlam, yanlış zaman.
+- Diyalog **mantıklı bir sırayla** ilerler (ör. önce ödeme yapılır, sonra başka bir istekte bulunulur — Wi-Fi şifresi ödemeden önce istenmez).
 
 ---
 

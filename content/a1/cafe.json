@@ -156,7 +156,7 @@
         "line_tr": "Burada mı içeceksiniz yoksa paket mi olsun?",
         "options": [
           { "text": "To go, please.", "correct": true, "feedback": "Doğru kalıp!" },
-          { "text": "Yes, to go.", "correct": false, "feedback": "'Yes' burada gereksiz; sadece 'To go, please.' yeterli." },
+          { "text": "Package, please.", "correct": false, "feedback": "'Paket olsun'un birebir çevirisi. İngilizcede 'To go' denir." },
           { "text": "I go.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğrusu 'To go, please.'" }
         ]
       },
@@ -165,19 +165,19 @@
         "line": "Here you are. That's 5 dollars.",
         "line_tr": "Buyurun. 5 dolar.",
         "options": [
-          { "text": "Thanks! Can I get the Wi-Fi password?", "correct": true, "feedback": "Doğal bir ek istek, kalıbı doğru kullandın." },
-          { "text": "Give me Wi-Fi password.", "correct": false, "feedback": "Emir gibi duruyor; 'Can I get...?' kullan." },
-          { "text": "What is Wi-Fi?", "correct": false, "feedback": "Yanlış bağlam; şifreyi soruyorsun, Wi-Fi'nin ne olduğunu değil." }
+          { "text": "Here you go. Can I pay by card?", "correct": true, "feedback": "Doğal bir ödeme cümlesi!" },
+          { "text": "How much money?", "correct": false, "feedback": "Fiyatı zaten söyledi; ayrıca doğrusu 'How much is it?'" },
+          { "text": "Give me Wi-Fi password.", "correct": false, "feedback": "Önce ödemeni yap. Ayrıca emir gibi; 'Can I get...?' kullan." }
         ]
       },
       {
         "speaker": "Barista",
-        "line": "Sure, it's on the receipt.",
-        "line_tr": "Tabii, fişin üzerinde.",
+        "line": "Sure. Here's your receipt. Have a nice day!",
+        "line_tr": "Tabii. İşte fişiniz. İyi günler!",
         "options": [
-          { "text": "Thank you, have a nice day!", "correct": true, "feedback": "Kibar bir kapanış!" },
-          { "text": "You too, thanks.", "correct": false, "feedback": "Sıra karışık; önce teşekkür et, 'you too' bir cevaba karşılık kullanılır." },
-          { "text": "Bye.", "correct": false, "feedback": "Çok kısa; dersteki kalıbı kullan: 'Thank you, have a nice day!'" }
+          { "text": "Thanks, you too!", "correct": true, "feedback": "Doğal ve kibar bir kapanış!" },
+          { "text": "Have an easy work!", "correct": false, "feedback": "'Kolay gelsin'in İngilizcede karşılığı yok; 'You too!' yeter." },
+          { "text": "Enjoy your meal!", "correct": false, "feedback": "'Afiyet olsun'u müşteri değil, garson ya da barista söyler." }
         ]
       }
     ]

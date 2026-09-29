@@ -131,5 +131,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "İş görüşmesi",
+    "setting": "Bir iş görüşmesindesin.",
+    "task": "Bir iş görüşmesinde deneyimini anlatırken Present Perfect kullan: 'I have...'",
+    "steps": [
+      {
+        "speaker": "Interviewer",
+        "line": "Good morning! Please, have a seat. Tell me about yourself.",
+        "line_tr": "Günaydın! Buyurun oturun. Kendinizden bahseder misiniz?",
+        "options": [
+          { "text": "Good morning. I have five years of experience in this field.", "correct": true, "feedback": "Present Perfect'i doğru kullandın!" },
+          { "text": "I had five years of experience.", "correct": false, "feedback": "Yanlış zaman; deneyimin hâlâ geçerli, doğrusu 'I have five years of experience.'" },
+          { "text": "Five years experience.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'I have five years of experience in this field.'" }
+        ]
+      },
+      {
+        "speaker": "Interviewer",
+        "line": "Great. What are your strengths and weaknesses?",
+        "line_tr": "Harika. Güçlü ve zayıf yönleriniz neler?",
+        "options": [
+          { "text": "I'm a fast learner, but public speaking is a challenge for me.", "correct": true, "feedback": "Doğal ve dürüst bir cevap!" },
+          { "text": "I don't have weaknesses.", "correct": false, "feedback": "Doğal değil; mülakatta dürüst bir zayıf yön belirtmek beklenir." },
+          { "text": "Nice to meet you.", "correct": false, "feedback": "Yanlış bağlam; bu soru tanışma değil, güçlü/zayıf yön soruyor." }
+        ]
+      },
+      {
+        "speaker": "Interviewer",
+        "line": "I see. Have you ever managed a team?",
+        "line_tr": "Anladım. Hiç bir takıma liderlik ettiniz mi?",
+        "options": [
+          { "text": "Yes, I have led several successful projects.", "correct": true, "feedback": "Present Perfect'i doğru ve akıcı kullandın!" },
+          { "text": "Yes, I lead several projects last year.", "correct": false, "feedback": "Yanlış zaman; Present Perfect sorulmuştu: 'I have led several successful projects.'" },
+          { "text": "Yes, I have experience of leading.", "correct": false, "feedback": "Doğal değil; dersteki kalıp 'I have led several successful projects.'" }
+        ]
+      },
+      {
+        "speaker": "Interviewer",
+        "line": "Impressive. Why do you want this position?",
+        "line_tr": "Etkileyici. Bu pozisyonu neden istiyorsunuz?",
+        "options": [
+          { "text": "This position matches my skills perfectly.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Money and position good.", "correct": false, "feedback": "Eksik ve doğal değil; doğrusu 'This position matches my skills perfectly.'" },
+          { "text": "Because I need money.", "correct": false, "feedback": "Çok samimi/uygunsuz bir cevap; profesyonel bir sebep belirt." }
+        ]
+      },
+      {
+        "speaker": "Interviewer",
+        "line": "Great answer. Do you have any questions for us?",
+        "line_tr": "Harika cevap. Bizim için sorunuz var mı?",
+        "options": [
+          { "text": "Yes, what does a typical day look like in this role?", "correct": true, "feedback": "Harika, mülakatı güçlü bitirdin!" },
+          { "text": "No, goodbye.", "correct": false, "feedback": "Yanlış bağlam ve kaba; soru sormamak fırsatı kaçırmak olur, ayrıca 'goodbye' çok ani." },
+          { "text": "Questions... salary?", "correct": false, "feedback": "Çok direkt ve eksik; role dair bir soru sormak daha profesyonel." }
+        ]
+      }
+    ]
   }
 }

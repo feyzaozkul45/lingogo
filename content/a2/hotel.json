@@ -121,5 +121,62 @@
         ]
       }
     ]
+  },
+  "scenario": {
+    "title": "Otelde check-in",
+    "setting": "Otele giriş yapıyorsun, resepsiyonla konuşuyorsun.",
+    "task": "Otelde resepsiyona 'Is there...?' ya da 'Could I have...?' kalıbıyla bir istekte bulun.",
+    "steps": [
+      {
+        "speaker": "Receptionist",
+        "line": "Welcome! How can I help you?",
+        "line_tr": "Hoş geldiniz! Nasıl yardımcı olabilirim?",
+        "options": [
+          { "text": "Hi, I have a reservation under Smith.", "correct": true, "feedback": "Tam kalıbı kullandın!" },
+          { "text": "Reservation Smith.", "correct": false, "feedback": "Eksik cümle; doğrusu 'I have a reservation under Smith.'" },
+          { "text": "My reservation is on Smith name.", "correct": false, "feedback": "Türkçeden birebir çeviri; doğrusu 'I have a reservation under Smith.'" }
+        ]
+      },
+      {
+        "speaker": "Receptionist",
+        "line": "Great, I found your reservation. Do you have any requests?",
+        "line_tr": "Harika, rezervasyonunuzu buldum. Herhangi bir isteğiniz var mı?",
+        "options": [
+          { "text": "Yes, could I have a room with a sea view?", "correct": true, "feedback": "Doğru ve kibar bir istek!" },
+          { "text": "Give me a room with sea view.", "correct": false, "feedback": "Emir gibi duruyor, kaba; 'Could I have...?' kullan." },
+          { "text": "I wanted a room with a sea view.", "correct": false, "feedback": "Yanlış zaman; şu an istiyorsun, doğrusu 'Could I have...?'" }
+        ]
+      },
+      {
+        "speaker": "Receptionist",
+        "line": "Let me check... Yes, room 305 has a sea view. Is there anything else?",
+        "line_tr": "Bakayım... Evet, 305 numaralı odanın deniz manzarası var. Başka bir isteğiniz var mı?",
+        "options": [
+          { "text": "Is breakfast included?", "correct": true, "feedback": "Doğru kalıp!" },
+          { "text": "Breakfast?", "correct": false, "feedback": "Tek kelime yetersiz; tam soru kur: 'Is breakfast included?'" },
+          { "text": "Breakfast is inside?", "correct": false, "feedback": "Türkçeden birebir çeviri ('dahil mi'); doğrusu 'Is breakfast included?'" }
+        ]
+      },
+      {
+        "speaker": "Receptionist",
+        "line": "Yes, it's included, from 7 to 10 AM. Here's your key card.",
+        "line_tr": "Evet dahil, 7-10 arası. İşte kart anahtarınız.",
+        "options": [
+          { "text": "Thank you. What time is check-out?", "correct": true, "feedback": "Doğru kalıp, güzel bir devam sorusu!" },
+          { "text": "What time was check-out?", "correct": false, "feedback": "Yanlış zaman; henüz gerçekleşmedi, şimdiki zaman kullan: 'What time is check-out?'" },
+          { "text": "Check-out time, now!", "correct": false, "feedback": "Emir gibi duruyor, kaba; nazikçe sor: 'What time is check-out?'" }
+        ]
+      },
+      {
+        "speaker": "Receptionist",
+        "line": "It's at 11 AM. Enjoy your stay!",
+        "line_tr": "Saat 11'de. Konaklamanızın keyfini çıkarın!",
+        "options": [
+          { "text": "Thank you! Can I get an extra towel, please?", "correct": true, "feedback": "Doğal bir ek istek!" },
+          { "text": "Enjoy your meal!", "correct": false, "feedback": "Yanlış bağlam; bu cümle yemek için kullanılır, resepsiyonda anlamsız." },
+          { "text": "Extra towel.", "correct": false, "feedback": "Eksik cümle; tam kalıbı kullan: 'Can I get an extra towel, please?'" }
+        ]
+      }
+    ]
   }
 }
