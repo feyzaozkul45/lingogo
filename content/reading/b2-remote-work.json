@@ -1,0 +1,39 @@
+{
+  "reading": {
+    "slug": "b2-remote-work",
+    "title": "The Rise of Remote Work",
+    "level": "B2",
+    "order": 1,
+    "english_text": "Working from home has become increasingly common over the past few years, and many companies have permanently changed the way they operate. Before the pandemic, most employees were expected to be in the office every day. Remote work was often seen as a rare privilege, offered only to a few senior staff members. Today, however, the situation looks completely different.\n\nSeveral factors have contributed to this shift. First, technology has made it easier than ever to collaborate from a distance. Video calls, shared documents, and instant messaging allow teams to stay connected without being in the same room. Second, many workers discovered that they were actually more productive at home, free from office distractions and long commutes. Finally, companies realized that offering flexibility could help them attract and retain talented employees.\n\nOf course, remote work isn't perfect for everyone. Some people miss the social interaction of an office, and others find it hard to separate their work life from their home life. Managers, too, have had to learn new ways of building trust with employees they rarely see in person.\n\nDespite these challenges, most experts agree that remote work is here to stay in some form. Rather than choosing between fully remote and fully in-office arrangements, many companies are now settling on a hybrid model, combining the best of both worlds.",
+    "turkish_text": "Evden çalışmak son birkaç yılda giderek yaygınlaştı ve birçok şirket çalışma biçimini kalıcı olarak değiştirdi. Pandemiden önce, çoğu çalışanın her gün ofiste olması bekleniyordu. Uzaktan çalışma genellikle nadir bir ayrıcalık olarak görülüyor, sadece birkaç kıdemli çalışana sunuluyordu. Bugün ise durum tamamen farklı görünüyor.\n\nBu değişimde birkaç etken rol oynadı. İlk olarak, teknoloji uzaktan iş birliği yapmayı her zamankinden daha kolay hale getirdi. Görüntülü aramalar, paylaşılan belgeler ve anlık mesajlaşma, ekiplerin aynı odada olmadan bağlantıda kalmasını sağlıyor. İkincisi, birçok çalışan evde ofis dikkat dağıtıcılarından ve uzun yolculuklardan uzak, aslında daha üretken olduğunu fark etti. Son olarak, şirketler esneklik sunmanın yetenekli çalışanları çekmeye ve elde tutmaya yardımcı olabileceğini anladı.\n\nElbette, uzaktan çalışma herkes için mükemmel değil. Bazı insanlar ofisin sosyal etkileşimini özlüyor, bazıları ise iş hayatını ev hayatından ayırmakta zorlanıyor. Yöneticiler de nadiren yüz yüze gördükleri çalışanlarla güven inşa etmenin yeni yollarını öğrenmek zorunda kaldı.\n\nBu zorluklara rağmen, çoğu uzman uzaktan çalışmanın bir şekilde kalıcı olacağı konusunda hemfikir. Birçok şirket artık tamamen uzaktan ya da tamamen ofisten çalışma arasında seçim yapmak yerine, ikisinin en iyi yanlarını birleştiren hibrit bir modelde karar kılıyor.",
+    "questions": [
+      {
+        "prompt": "According to the text, how was remote work usually seen before the pandemic?",
+        "explanation": "Metinde \"Remote work was often seen as a rare privilege, offered only to a few senior staff members.\" deniyor.",
+        "choices": [
+          { "text": "As a rare privilege for a few senior staff.", "correct": true },
+          { "text": "As the normal way almost everyone worked.", "correct": false },
+          { "text": "As something companies refused to allow.", "correct": false }
+        ]
+      },
+      {
+        "prompt": "Which of the following is NOT mentioned in the text as a reason for the shift to remote work?",
+        "explanation": "Metinde teknoloji, üretkenlik ve esneklik nedenleri sayılıyor; maaş hiç geçmiyor.",
+        "choices": [
+          { "text": "Higher salaries for remote employees.", "correct": true },
+          { "text": "Better technology for collaboration.", "correct": false },
+          { "text": "Increased productivity at home.", "correct": false }
+        ]
+      },
+      {
+        "prompt": "What is the main idea of the text?",
+        "explanation": "Metnin geneli bu değişimi ve hibrit modele geçişi anlatıyor; iki uçtaki (tamamen ofis / tamamen uzaktan) iddialar metinde desteklenmiyor.",
+        "choices": [
+          { "text": "Remote work has changed how companies operate, and many are now adopting a hybrid model.", "correct": true },
+          { "text": "All companies have completely abandoned physical offices.", "correct": false },
+          { "text": "Most employees prefer working in the office every day.", "correct": false }
+        ]
+      }
+    ]
+  }
+}

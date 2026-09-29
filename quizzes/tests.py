@@ -1,8 +1,9 @@
 from django.contrib.auth.models import User
+from django.db import IntegrityError, transaction
 from django.test import TestCase
 from django.urls import reverse
 
-from lessons.models import Lesson, LessonProgress, Topic
+from lessons.models import Lesson, LessonProgress, ReadingText, Topic
 
 from .models import Choice, Question, Quiz, QuizAttempt
 
@@ -82,3 +83,41 @@ class QuizScoringTests(TestCase):
         response = self.client.get(reverse('quizzes:result', kwargs={'attempt_id': attempt.id}))
 
         self.assertEqual(response.status_code, 404)
+
+
+class QuestionConstraintTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        topic = Topic.objects.create(
+            slug='constraint-test-topic', title='Test Topic', emoji='🧪', color='sun', level='A1', order=999,
+        )
+        lesson = Lesson.objects.create(topic=topic, slug='constraint-test-lesson', title='Test Lesson', order=1)
+        cls.quiz = Quiz.objects.create(lesson=lesson, title='Test Quiz')
+        cls.reading = ReadingText.objects.create(
+            slug='constraint-test-reading', title='Test Reading', level='A1',
+            english_text='Test text.', turkish_text='Test metni.',
+        )
+
+    def test_question_with_neither_quiz_nor_reading_text_is_rejected(self):
+        with self.assertRaises(IntegrityError):
+            with transaction.atomic():
+                Question.objects.create(question_type=Question.QuestionType.MULTIPLE_CHOICE, prompt='p')
+
+    def test_question_with_both_quiz_and_reading_text_is_rejected(self):
+        with self.assertRaises(IntegrityError):
+            with transaction.atomic():
+                Question.objects.create(
+                    quiz=self.quiz, reading_text=self.reading,
+                    question_type=Question.QuestionType.MULTIPLE_CHOICE, prompt='p',
+                )
+
+    def test_question_with_exactly_one_is_accepted(self):
+        quiz_question = Question.objects.create(
+            quiz=self.quiz, question_type=Question.QuestionType.MULTIPLE_CHOICE, prompt='quiz question',
+        )
+        reading_question = Question.objects.create(
+            reading_text=self.reading, question_type=Question.QuestionType.MULTIPLE_CHOICE, prompt='reading question',
+        )
+
+        self.assertIsNotNone(quiz_question.pk)
+        self.assertIsNotNone(reading_question.pk)

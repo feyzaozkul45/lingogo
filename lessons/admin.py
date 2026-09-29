@@ -6,6 +6,8 @@ from .models import (
     Lesson,
     LessonProgress,
     Phrase,
+    ReadingAttempt,
+    ReadingText,
     Scenario,
     ScenarioCompletion,
     ScenarioOption,
@@ -83,3 +85,16 @@ class ScenarioStepAdmin(admin.ModelAdmin):
 class ScenarioCompletionAdmin(admin.ModelAdmin):
     list_display = ('user', 'scenario', 'completed_at')
     list_filter = ('scenario__lesson__topic',)
+
+
+@admin.register(ReadingText)
+class ReadingTextAdmin(admin.ModelAdmin):
+    list_display = ('title', 'level', 'slug', 'is_active')
+    list_filter = ('level', 'is_active')
+    prepopulated_fields = {'slug': ('title',)}
+
+
+@admin.register(ReadingAttempt)
+class ReadingAttemptAdmin(admin.ModelAdmin):
+    list_display = ('user', 'reading_text', 'score', 'total', 'created_at')
+    list_filter = ('reading_text__level',)

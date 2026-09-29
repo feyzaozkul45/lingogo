@@ -1,0 +1,39 @@
+{
+  "reading": {
+    "slug": "a1-morning-routine",
+    "title": "My Morning Routine",
+    "level": "A1",
+    "order": 1,
+    "english_text": "My name is Elif. I wake up at seven o'clock every morning. First, I brush my teeth and take a quick shower. Then I have breakfast with my family in the kitchen. I usually eat bread, cheese, and olives. I also drink a cup of tea. After breakfast, I get dressed and pack my school bag. My school starts at half past eight. I walk to school with my little brother every day.",
+    "turkish_text": "Benim adım Elif. Her sabah saat yedide uyanırım. Önce dişlerimi fırçalarım ve kısa bir duş alırım. Sonra mutfakta ailemle kahvaltı yaparım. Genellikle ekmek, peynir ve zeytin yerim. Ayrıca bir fincan çay içerim. Kahvaltıdan sonra giyinirim ve okul çantamı hazırlarım. Okulum sekiz buçukta başlar. Her gün küçük kardeşimle okula yürürüm.",
+    "questions": [
+      {
+        "prompt": "What time does Elif wake up?",
+        "explanation": "Metinde \"I wake up at seven o'clock every morning\" yazıyor.",
+        "choices": [
+          { "text": "At seven o'clock.", "correct": true },
+          { "text": "At eight o'clock.", "correct": false },
+          { "text": "At six o'clock.", "correct": false }
+        ]
+      },
+      {
+        "prompt": "What does she drink with breakfast?",
+        "explanation": "Metinde \"I also drink a cup of tea\" yazıyor.",
+        "choices": [
+          { "text": "A cup of tea.", "correct": true },
+          { "text": "A cup of coffee.", "correct": false },
+          { "text": "A glass of juice.", "correct": false }
+        ]
+      },
+      {
+        "prompt": "Who does she walk to school with?",
+        "explanation": "Metinde \"I walk to school with my little brother every day\" yazıyor.",
+        "choices": [
+          { "text": "Her little brother.", "correct": true },
+          { "text": "Her mother.", "correct": false },
+          { "text": "Her friend.", "correct": false }
+        ]
+      }
+    ]
+  }
+}

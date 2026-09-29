@@ -9,6 +9,7 @@ from lessons.models import (
     GrammarTip,
     Lesson,
     Phrase,
+    ReadingText,
     Scenario,
     ScenarioOption,
     ScenarioStep,
@@ -31,7 +32,10 @@ class Command(BaseCommand):
 
         for path in json_files:
             data = json.loads(path.read_text(encoding='utf-8'))
-            self.load_file(data)
+            if 'reading' in data:
+                self.load_reading(data)
+            else:
+                self.load_file(data)
             self.stdout.write(self.style.SUCCESS(f'Yüklendi: {path.relative_to(settings.BASE_DIR)}'))
 
     def load_file(self, data):
@@ -160,4 +164,33 @@ class Command(BaseCommand):
                     text=option['text'],
                     is_correct=option.get('correct', False),
                     feedback=option.get('feedback', ''),
+                )
+
+    def load_reading(self, data):
+        reading_data = data['reading']
+        reading, _ = ReadingText.objects.update_or_create(
+            slug=reading_data['slug'],
+            defaults={
+                'title': reading_data['title'],
+                'level': reading_data['level'],
+                'english_text': reading_data['english_text'],
+                'turkish_text': reading_data['turkish_text'],
+                'order': reading_data.get('order', 0),
+                'is_active': reading_data.get('is_active', True),
+            },
+        )
+        reading.questions.all().delete()
+        for order, q in enumerate(reading_data.get('questions', [])):
+            question = Question.objects.create(
+                reading_text=reading,
+                question_type=Question.QuestionType.MULTIPLE_CHOICE,
+                prompt=q['prompt'],
+                explanation=q.get('explanation', ''),
+                order=order,
+            )
+            for choice in q.get('choices', []):
+                Choice.objects.create(
+                    question=question,
+                    text=choice['text'],
+                    is_correct=choice.get('correct', False),
                 )

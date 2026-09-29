@@ -1,7 +1,8 @@
 from django.conf import settings
 from django.db import models
+from django.db.models import Q
 
-from lessons.models import Lesson
+from lessons.models import Lesson, ReadingText
 
 
 class Quiz(models.Model):
@@ -19,7 +20,10 @@ class Question(models.Model):
         FILL_BLANK = 'fill_blank', 'Boşluk doldurma'
         CORRECT_SENTENCE = 'correct_sentence', 'Doğru cümle'
 
-    quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name='questions')
+    quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name='questions', null=True, blank=True)
+    reading_text = models.ForeignKey(
+        ReadingText, on_delete=models.CASCADE, related_name='questions', null=True, blank=True
+    )
     question_type = models.CharField(max_length=20, choices=QuestionType.choices)
     prompt = models.CharField(max_length=255)
     explanation = models.CharField(max_length=255, blank=True)
@@ -27,6 +31,15 @@ class Question(models.Model):
 
     class Meta:
         ordering = ['order', 'id']
+        constraints = [
+            models.CheckConstraint(
+                check=(
+                    Q(quiz__isnull=False, reading_text__isnull=True)
+                    | Q(quiz__isnull=True, reading_text__isnull=False)
+                ),
+                name='question_belongs_to_quiz_xor_reading_text',
+            ),
+        ]
 
     def __str__(self):
         return self.prompt

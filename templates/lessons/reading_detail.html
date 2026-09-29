@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ reading.title }}{% endblock %}
+
+{% block content %}
+  <a href="{% url 'lessons:reading_list' %}" class="btn btn-secondary" style="margin-bottom: 20px;">← Okumaya dön</a>
+
+  <span class="badge badge--{{ reading.level }}">{{ reading.level }}</span>
+  <h1>📖 {{ reading.title }}</h1>
+
+  <div class="card reading-text">
+    <div class="reading-text__en">{{ reading.english_text|linebreaks }}</div>
+    {% include 'partials/speak_buttons.html' with text=reading.english_text %}
+
+    <button type="button" class="scenario-tr-toggle" id="readingTrToggle">Türkçesini göster</button>
+    <div class="reading-text__tr tr" id="readingTrText" hidden>{{ reading.turkish_text|linebreaks }}</div>
+  </div>
+
+  <form method="post" class="mt-lg">
+    {% csrf_token %}
+    {% for item in questions %}
+      <div class="quiz-question">
+        <div class="quiz-question__prompt">{{ forloop.counter }}. {{ item.question.prompt }}</div>
+        <div class="quiz-options">
+          {% for choice in item.choices %}
+            <label class="quiz-option">
+              <input type="radio" name="question_{{ item.question.id }}" value="{{ choice.id }}" required>
+              {{ choice.text }}
+            </label>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+
+    <button type="submit" class="btn btn-primary btn-block">Cevapları Gönder</button>
+  </form>
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static 'js/speech.js' %}"></script>
+  <script src="{% static 'js/reading.js' %}"></script>
+{% endblock %}

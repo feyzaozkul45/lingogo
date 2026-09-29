@@ -158,3 +158,36 @@ class LessonProgress(models.Model):
 
     def __str__(self):
         return f'{self.user} — {self.lesson}'
+
+
+class ReadingText(models.Model):
+    title = models.CharField(max_length=150)
+    slug = models.SlugField(unique=True)
+    level = models.CharField(max_length=2, choices=Topic.Level.choices)
+    english_text = models.TextField()
+    turkish_text = models.TextField()
+    order = models.PositiveIntegerField(default=0)
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ['level', 'order', 'title']
+
+    def __str__(self):
+        return self.title
+
+    def word_count(self):
+        return len(self.english_text.split())
+
+
+class ReadingAttempt(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='reading_attempts')
+    reading_text = models.ForeignKey(ReadingText, on_delete=models.CASCADE, related_name='attempts')
+    score = models.PositiveIntegerField()
+    total = models.PositiveIntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f'{self.user} — {self.reading_text} ({self.score}/{self.total})'

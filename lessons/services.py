@@ -1,6 +1,6 @@
 from datetime import date
 
-from .models import Lesson, LessonProgress, ScenarioCompletion, Topic, Word
+from .models import Lesson, LessonProgress, ReadingAttempt, ScenarioCompletion, Topic, Word
 
 
 def get_daily_topic():
@@ -92,11 +92,13 @@ def get_progress_stats(user):
     words_learned = Word.objects.filter(lesson__progress_entries__user=user).count()
     attempts = QuizAttempt.objects.filter(user=user).select_related('quiz__lesson')
     quizzes_completed = attempts.values('quiz').distinct().count()
+    readings_completed = ReadingAttempt.objects.filter(user=user).values('reading_text').distinct().count()
 
     return {
         'lessons_completed': lessons_completed,
         'words_learned': words_learned,
         'quizzes_completed': quizzes_completed,
+        'readings_completed': readings_completed,
         'completed_lessons': completed_lessons,
         'recent_attempts': attempts[:10],
     }

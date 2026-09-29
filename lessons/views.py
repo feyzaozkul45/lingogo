@@ -1,7 +1,11 @@
-from django.shortcuts import get_object_or_404, render
+import random
+
+from django.shortcuts import get_object_or_404, redirect, render
+
+from quizzes.services import score_submission
 
 from . import services
-from .models import Lesson, LessonProgress, Scenario, ScenarioCompletion, Topic
+from .models import Lesson, LessonProgress, ReadingAttempt, ReadingText, Scenario, ScenarioCompletion, Topic
 
 VALID_LEVELS = {'A1', 'A2', 'B1', 'B2'}
 
@@ -100,4 +104,70 @@ def scenario_view(request, slug):
         'scenario': scenario,
         'show_complete': False,
         'steps_data': steps_data,
+    })
+
+
+def reading_list(request):
+    level = request.GET.get('level')
+    readings = ReadingText.objects.filter(is_active=True)
+    if level in VALID_LEVELS:
+        readings = readings.filter(level=level)
+
+    context = {
+        'readings': readings,
+        'selected_level': level if level in VALID_LEVELS else None,
+        'levels': sorted(VALID_LEVELS),
+    }
+    return render(request, 'lessons/reading_list.html', context)
+
+
+def reading_detail(request, slug):
+    reading = get_object_or_404(
+        ReadingText.objects.prefetch_related('questions__choices'),
+        slug=slug,
+        is_active=True,
+    )
+
+    if request.method == 'POST':
+        results, score, total = score_submission(reading.questions.all(), request.POST)
+
+        if request.user.is_authenticated:
+            attempt = ReadingAttempt.objects.create(user=request.user, reading_text=reading, score=score, total=total)
+            request.session[f'reading_result_{attempt.id}'] = {'results': results}
+            return redirect('lessons:reading_result', attempt_id=attempt.id)
+
+        return render(request, 'lessons/reading_result.html', {
+            'reading': reading,
+            'score': score,
+            'total': total,
+            'results': results,
+            'attempt': None,
+        })
+
+    questions = []
+    for question in reading.questions.all():
+        choices = list(question.choices.all())
+        random.shuffle(choices)
+        questions.append({'question': question, 'choices': choices})
+
+    return render(request, 'lessons/reading_detail.html', {
+        'reading': reading,
+        'questions': questions,
+    })
+
+
+def reading_result(request, attempt_id):
+    attempt = get_object_or_404(
+        ReadingAttempt.objects.select_related('reading_text'),
+        id=attempt_id,
+        user=request.user,
+    )
+    session_data = request.session.pop(f'reading_result_{attempt.id}', {})
+
+    return render(request, 'lessons/reading_result.html', {
+        'reading': attempt.reading_text,
+        'score': attempt.score,
+        'total': attempt.total,
+        'results': session_data.get('results'),
+        'attempt': attempt,
     })

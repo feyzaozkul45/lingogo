@@ -1,9 +1,6 @@
 <div class="site-nav__links">
   <a href="{% url 'lessons:topic_list' %}"{% if request.resolver_match.url_name == 'topic_list' %} class="is-active"{% endif %}>Konular</a>
-  {% comment %}
-    Okuma sayfası Phase 2.5'te eklenince açılacak:
-    <a href="{% url 'reading:reading_list' %}">Okuma</a>
-  {% endcomment %}
+  <a href="{% url 'lessons:reading_list' %}"{% if request.resolver_match.url_name == 'reading_list' or request.resolver_match.url_name == 'reading_detail' %} class="is-active"{% endif %}>Okuma</a>
   {% if user.is_authenticated %}
     <a href="{% url 'accounts:progress' %}"{% if request.resolver_match.url_name == 'progress' %} class="is-active"{% endif %}>İlerlemem</a>
   {% endif %}

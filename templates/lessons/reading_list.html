@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Okuma{% endblock %}
+
+{% block content %}
+  <h1>📖 Okuma</h1>
+  <p>Kısa metinler oku, anlama sorularını çöz.</p>
+
+  <div class="level-filter">
+    <a href="{% url 'lessons:reading_list' %}" class="{% if not selected_level %}active{% endif %}">Tümü</a>
+    {% for lvl in levels %}
+      <a href="?level={{ lvl }}" class="{% if selected_level == lvl %}active{% endif %}">{{ lvl }}</a>
+    {% endfor %}
+  </div>
+
+  {% if readings %}
+    <div class="topic-grid">
+      {% for reading in readings %}
+        <a href="{% url 'lessons:reading_detail' slug=reading.slug %}" class="topic-card">
+          <span class="badge badge--{{ reading.level }}">{{ reading.level }}</span>
+          <div class="topic-card__title">{{ reading.title }}</div>
+          <p class="topic-card__desc">{{ reading.word_count }} kelime</p>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <p>Bu seviyede henüz okuma metni yok.</p>
+    </div>
+  {% endif %}
+{% endblock %}

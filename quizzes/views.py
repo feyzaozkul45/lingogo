@@ -6,6 +6,7 @@ from lessons import services as lesson_services
 from lessons.models import Lesson
 
 from .models import Quiz, QuizAttempt
+from .services import score_submission
 
 
 def quiz_view(request, slug):
@@ -33,28 +34,7 @@ def quiz_view(request, slug):
 
 
 def _handle_submission(request, lesson, quiz):
-    results = []
-    score = 0
-
-    for question in quiz.questions.all():
-        choices = list(question.choices.all())
-        selected_id = request.POST.get(f'question_{question.id}')
-        selected_choice = next((c for c in choices if str(c.id) == selected_id), None)
-        correct_choice = next((c for c in choices if c.is_correct), None)
-        is_correct = bool(selected_choice and selected_choice.is_correct)
-
-        if is_correct:
-            score += 1
-
-        results.append({
-            'prompt': question.prompt,
-            'explanation': question.explanation,
-            'is_correct': is_correct,
-            'selected_text': selected_choice.text if selected_choice else None,
-            'correct_text': correct_choice.text if correct_choice else None,
-        })
-
-    total = quiz.questions.count()
+    results, score, total = score_submission(quiz.questions.all(), request.POST)
 
     if request.user.is_authenticated:
         attempt = QuizAttempt.objects.create(user=request.user, quiz=quiz, score=score, total=total)
