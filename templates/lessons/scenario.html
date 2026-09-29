@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ scenario.title }}{% endblock %}
+
+{% block content %}
+  <a href="{% url 'lessons:lesson_detail' slug=lesson.slug %}" class="btn btn-secondary" style="margin-bottom: 20px;">← Derse dön</a>
+
+  <span class="badge badge--{{ lesson.topic.level }}">{{ lesson.topic.level }}</span>
+  <h1>🎭 {{ scenario.title }}</h1>
+  <p>{{ scenario.setting }}</p>
+
+  {% if show_complete %}
+    <div class="card text-center">
+      <p style="font-size: 2.5rem; margin-bottom: 8px;">🎉</p>
+      <h2>Senaryoyu tamamladın!</h2>
+      <p><strong>Küçük görevin:</strong> {{ scenario.task }}</p>
+    </div>
+
+    {% if not request.user.is_authenticated %}
+      <div class="flash flash--info">İlerlemeni kaydetmek için <a href="{% url 'accounts:signup' %}">kayıt ol</a>.</div>
+    {% elif just_completed %}
+      <div class="flash flash--success">🎉 Dersi tamamladın!</div>
+    {% elif needs_quiz %}
+      <div class="flash flash--info">Dersi tamamlamak için <a href="{% url 'quizzes:quiz' slug=lesson.slug %}">quiz'i de çöz</a>.</div>
+    {% endif %}
+
+    <div class="mt-lg stack">
+      <a href="{% url 'lessons:lesson_detail' slug=lesson.slug %}" class="btn btn-secondary btn-block">Derse Dön</a>
+      <a href="{% url 'lessons:topic_list' %}" class="btn btn-primary btn-block">Diğer Konular</a>
+    </div>
+  {% else %}
+    <div class="scenario-chat mt-lg" id="scenarioChat"></div>
+
+    {{ steps_data|json_script:"scenario-steps-data" }}
+
+    <form method="post" id="scenarioFinishForm" hidden>
+      {% csrf_token %}
+    </form>
+  {% endif %}
+{% endblock %}
+
+{% block extra_js %}
+  {% if not show_complete %}
+    <script src="{% static 'js/speech.js' %}"></script>
+    <script src="{% static 'js/scenario.js' %}"></script>
+  {% endif %}
+{% endblock %}

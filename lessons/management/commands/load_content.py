@@ -4,7 +4,17 @@ from pathlib import Path
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from lessons.models import ExampleSentence, GrammarTip, Lesson, Phrase, Topic, Word
+from lessons.models import (
+    ExampleSentence,
+    GrammarTip,
+    Lesson,
+    Phrase,
+    Scenario,
+    ScenarioOption,
+    ScenarioStep,
+    Topic,
+    Word,
+)
 from quizzes.models import Choice, Question, Quiz
 
 
@@ -57,6 +67,9 @@ class Command(BaseCommand):
 
         if 'quiz' in data:
             self._sync_quiz(lesson, data['quiz'])
+
+        if 'scenario' in data:
+            self._sync_scenario(lesson, data['scenario'])
 
     def _sync_words(self, lesson, items):
         lesson.words.all().delete()
@@ -121,4 +134,30 @@ class Command(BaseCommand):
                     question=question,
                     text=choice['text'],
                     is_correct=choice.get('correct', False),
+                )
+
+    def _sync_scenario(self, lesson, scenario_data):
+        scenario, _ = Scenario.objects.update_or_create(
+            lesson=lesson,
+            defaults={
+                'title': scenario_data['title'],
+                'setting': scenario_data.get('setting', ''),
+                'task': scenario_data.get('task', ''),
+            },
+        )
+        scenario.steps.all().delete()
+        for order, step_data in enumerate(scenario_data.get('steps', [])):
+            step = ScenarioStep.objects.create(
+                scenario=scenario,
+                speaker=step_data['speaker'],
+                line=step_data['line'],
+                line_tr=step_data.get('line_tr', ''),
+                order=order,
+            )
+            for option in step_data.get('options', []):
+                ScenarioOption.objects.create(
+                    step=step,
+                    text=option['text'],
+                    is_correct=option.get('correct', False),
+                    feedback=option.get('feedback', ''),
                 )

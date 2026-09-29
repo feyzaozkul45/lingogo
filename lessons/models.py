@@ -98,6 +98,54 @@ class ExampleSentence(models.Model):
         return self.english
 
 
+class Scenario(models.Model):
+    lesson = models.OneToOneField(Lesson, on_delete=models.CASCADE, related_name='scenario')
+    title = models.CharField(max_length=150)
+    setting = models.CharField(max_length=255)
+    task = models.CharField(max_length=255, help_text='Ders sonu küçük görev')
+
+    def __str__(self):
+        return self.title
+
+
+class ScenarioStep(models.Model):
+    scenario = models.ForeignKey(Scenario, on_delete=models.CASCADE, related_name='steps')
+    speaker = models.CharField(max_length=100)
+    line = models.CharField(max_length=255)
+    line_tr = models.CharField(max_length=255, blank=True)
+    order = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ['order', 'id']
+
+    def __str__(self):
+        return f'{self.speaker}: {self.line}'
+
+
+class ScenarioOption(models.Model):
+    step = models.ForeignKey(ScenarioStep, on_delete=models.CASCADE, related_name='options')
+    text = models.CharField(max_length=255)
+    is_correct = models.BooleanField(default=False)
+    feedback = models.CharField(max_length=255, blank=True)
+
+    def __str__(self):
+        return self.text
+
+
+class ScenarioCompletion(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='scenario_completions')
+    scenario = models.ForeignKey(Scenario, on_delete=models.CASCADE, related_name='completions')
+    completed_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['user', 'scenario'], name='unique_user_scenario_completion'),
+        ]
+
+    def __str__(self):
+        return f'{self.user} — {self.scenario}'
+
+
 class LessonProgress(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='lesson_progress')
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name='progress_entries')

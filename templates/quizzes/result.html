@@ -35,7 +35,10 @@
   {% endif %}
 
   <div class="mt-lg stack">
+    {% if has_scenario %}
+      <a href="{% url 'lessons:scenario' slug=lesson.slug %}" class="btn btn-primary btn-block">🎭 Senaryoyu Dene →</a>
+    {% endif %}
     <a href="{% url 'lessons:lesson_detail' slug=lesson.slug %}" class="btn btn-secondary btn-block">Derse Dön</a>
-    <a href="{% url 'lessons:topic_list' %}" class="btn btn-primary btn-block">Diğer Konular</a>
+    <a href="{% url 'lessons:topic_list' %}" class="btn {% if has_scenario %}btn-secondary{% else %}btn-primary{% endif %} btn-block">Diğer Konular</a>
   </div>
 {% endblock %}

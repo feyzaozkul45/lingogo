@@ -4,6 +4,9 @@
 
 {% block content %}
   <a href="{% url 'lessons:lesson_detail' slug=lesson.slug %}" class="btn btn-secondary" style="margin-bottom: 20px;">← Derse dön</a>
+  {% if has_scenario %}
+    <a href="{% url 'lessons:scenario' slug=lesson.slug %}" class="btn btn-secondary" style="margin-bottom: 20px;">🎭 Senaryoyu Dene →</a>
+  {% endif %}
 
   <h1>{{ quiz.title }}</h1>
   <p>Tüm sorular çoktan seçmeli. Bitince "Quiz'i Bitir" butonuna bas.</p>

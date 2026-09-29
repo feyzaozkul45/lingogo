@@ -79,9 +79,22 @@
 
   <div class="section">
     <div class="section__head"><h2>Gerçek Hayat Senaryoları</h2></div>
-    <div class="card text-center">
-      <span class="soon-badge">Yakında</span>
-      <p class="topic-card__desc" style="margin-top: 10px;">Gerçek hayat diyalogları çok yakında burada olacak.</p>
-    </div>
+    {% if scenario_lessons %}
+      <div class="topic-grid">
+        {% for sl in scenario_lessons %}
+          <a href="{% url 'lessons:scenario' slug=sl.slug %}" class="topic-card">
+            <div class="topic-card__emoji">{{ sl.topic.emoji }}</div>
+            <span class="badge badge--{{ sl.topic.level }}">{{ sl.topic.level }}</span>
+            <div class="topic-card__title">{{ sl.scenario.title }}</div>
+            <p class="topic-card__desc">{{ sl.scenario.setting }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="card text-center">
+        <span class="soon-badge">Yakında</span>
+        <p class="topic-card__desc" style="margin-top: 10px;">Gerçek hayat diyalogları çok yakında burada olacak.</p>
+      </div>
+    {% endif %}
   </div>
 {% endblock %}

@@ -1,6 +1,6 @@
 from datetime import date
 
-from .models import Lesson, LessonProgress, Topic, Word
+from .models import Lesson, LessonProgress, ScenarioCompletion, Topic, Word
 
 
 def get_daily_topic():
@@ -55,6 +55,33 @@ def get_completed_topic_ids(user):
     return set(
         Topic.objects.filter(lessons__progress_entries__user=user).values_list('id', flat=True)
     )
+
+
+def has_quiz_attempt(user, lesson):
+    from quizzes.models import QuizAttempt
+
+    return QuizAttempt.objects.filter(user=user, quiz__lesson=lesson).exists()
+
+
+def sync_lesson_completion(user, lesson):
+    """Quiz + (varsa) senaryo tamamlaninca LessonProgress olusturur.
+
+    Sadece olusturur, asla mevcut bir LessonProgress kaydini silmez ya da
+    geri almaz — senaryosu sonradan eklenen bir ders, daha once sadece
+    quiz ile tamamlanmis olsa bile tamamlanmis sayilmaya devam eder.
+    """
+    if not user.is_authenticated:
+        return False
+
+    if not has_quiz_attempt(user, lesson):
+        return False
+
+    scenario = getattr(lesson, 'scenario', None)
+    if scenario is not None and not ScenarioCompletion.objects.filter(user=user, scenario=scenario).exists():
+        return False
+
+    _, created = LessonProgress.objects.get_or_create(user=user, lesson=lesson)
+    return created
 
 
 def get_progress_stats(user):

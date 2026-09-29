@@ -2,7 +2,8 @@ import random
 
 from django.shortcuts import get_object_or_404, redirect, render
 
-from lessons.models import Lesson, LessonProgress
+from lessons import services as lesson_services
+from lessons.models import Lesson
 
 from .models import Quiz, QuizAttempt
 
@@ -27,6 +28,7 @@ def quiz_view(request, slug):
         'quiz': quiz,
         'lesson': lesson,
         'questions': questions,
+        'has_scenario': hasattr(lesson, 'scenario'),
     })
 
 
@@ -56,7 +58,7 @@ def _handle_submission(request, lesson, quiz):
 
     if request.user.is_authenticated:
         attempt = QuizAttempt.objects.create(user=request.user, quiz=quiz, score=score, total=total)
-        _, just_completed = LessonProgress.objects.get_or_create(user=request.user, lesson=lesson)
+        just_completed = lesson_services.sync_lesson_completion(request.user, lesson)
         request.session[f'quiz_result_{attempt.id}'] = {
             'results': results,
             'just_completed': just_completed,
@@ -71,6 +73,7 @@ def _handle_submission(request, lesson, quiz):
         'results': results,
         'attempt': None,
         'just_completed': False,
+        'has_scenario': hasattr(lesson, 'scenario'),
     })
 
 
@@ -90,4 +93,5 @@ def quiz_result(request, attempt_id):
         'results': session_data.get('results'),
         'attempt': attempt,
         'just_completed': session_data.get('just_completed', False),
+        'has_scenario': hasattr(attempt.quiz.lesson, 'scenario'),
     })

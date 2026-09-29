@@ -1,6 +1,18 @@
 from django.contrib import admin
 
-from .models import ExampleSentence, GrammarTip, Lesson, LessonProgress, Phrase, Topic, Word
+from .models import (
+    ExampleSentence,
+    GrammarTip,
+    Lesson,
+    LessonProgress,
+    Phrase,
+    Scenario,
+    ScenarioCompletion,
+    ScenarioOption,
+    ScenarioStep,
+    Topic,
+    Word,
+)
 
 
 class WordInline(admin.TabularInline):
@@ -42,3 +54,32 @@ class LessonAdmin(admin.ModelAdmin):
 class LessonProgressAdmin(admin.ModelAdmin):
     list_display = ('user', 'lesson', 'completed_at')
     list_filter = ('lesson__topic',)
+
+
+class ScenarioOptionInline(admin.TabularInline):
+    model = ScenarioOption
+    extra = 2
+
+
+class ScenarioStepInline(admin.StackedInline):
+    model = ScenarioStep
+    extra = 0
+
+
+@admin.register(Scenario)
+class ScenarioAdmin(admin.ModelAdmin):
+    list_display = ('title', 'lesson')
+    inlines = [ScenarioStepInline]
+
+
+@admin.register(ScenarioStep)
+class ScenarioStepAdmin(admin.ModelAdmin):
+    list_display = ('speaker', 'line', 'scenario', 'order')
+    list_filter = ('scenario',)
+    inlines = [ScenarioOptionInline]
+
+
+@admin.register(ScenarioCompletion)
+class ScenarioCompletionAdmin(admin.ModelAdmin):
+    list_display = ('user', 'scenario', 'completed_at')
+    list_filter = ('scenario__lesson__topic',)

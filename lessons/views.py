@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 
 from . import services
-from .models import Lesson, LessonProgress, Topic
+from .models import Lesson, LessonProgress, Scenario, ScenarioCompletion, Topic
 
 VALID_LEVELS = {'A1', 'A2', 'B1', 'B2'}
 
@@ -14,6 +14,7 @@ def home(request):
         'daily_words': services.get_daily_words(),
         'continue_lesson': services.get_continue_lesson(request.user),
         'topics': Topic.objects.filter(is_active=True).prefetch_related('lessons')[:4],
+        'scenario_lessons': Lesson.objects.filter(scenario__isnull=False).select_related('topic', 'scenario')[:3],
     }
     return render(request, 'home.html', context)
 
@@ -55,3 +56,48 @@ def lesson_detail(request, slug):
         'total_steps': total_steps,
     }
     return render(request, 'lessons/lesson_detail.html', context)
+
+
+def scenario_view(request, slug):
+    lesson = get_object_or_404(Lesson.objects.select_related('topic'), slug=slug)
+    scenario = get_object_or_404(
+        Scenario.objects.prefetch_related('steps__options'),
+        lesson=lesson,
+    )
+
+    if request.method == 'POST':
+        just_completed = False
+        needs_quiz = False
+        if request.user.is_authenticated:
+            ScenarioCompletion.objects.get_or_create(user=request.user, scenario=scenario)
+            just_completed = services.sync_lesson_completion(request.user, lesson)
+            if not just_completed:
+                needs_quiz = not services.has_quiz_attempt(request.user, lesson)
+
+        return render(request, 'lessons/scenario.html', {
+            'lesson': lesson,
+            'scenario': scenario,
+            'show_complete': True,
+            'just_completed': just_completed,
+            'needs_quiz': needs_quiz,
+        })
+
+    steps_data = [
+        {
+            'speaker': step.speaker,
+            'line': step.line,
+            'line_tr': step.line_tr,
+            'options': [
+                {'text': option.text, 'correct': option.is_correct, 'feedback': option.feedback}
+                for option in step.options.all()
+            ],
+        }
+        for step in scenario.steps.all()
+    ]
+
+    return render(request, 'lessons/scenario.html', {
+        'lesson': lesson,
+        'scenario': scenario,
+        'show_complete': False,
+        'steps_data': steps_data,
+    })

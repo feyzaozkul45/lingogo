@@ -456,6 +456,12 @@ Sonraki konular (Phase 3): Günlük hayat, ileri seviye senaryolar, kullanıcıy
 
 **İçerik kuralları:** Cümleler doğal, günlük ve gerçekten kullanılan İngilizce olmalı. A1–A2 için kısa cümleler, B1–B2 için daha karmaşık yapılar (Present Perfect, Conditional'lar, Passive, Reported Speech). Türkçe açıklamalar kısa ve samimi ("sen" diliyle).
 
+**Senaryo (`scenario`) içerik kuralları:**
+- Her adımda **3 seçenek** olur (1 doğru, 2 yanlış).
+- Yanlış seçenekler saçma/anlamsız değil, **Türk öğrencilerin gerçekten yaptığı hatalar** olmalı: kaba/emir kipi ifadeler, eksik cümleler, yanlış bağlamda kullanım, Türkçeden birebir çeviri gibi. Her yanlış seçeneğin `feedback` alanı hatayı tek cümleyle kısaca açıklar (ne yanlış, doğrusu ne olurdu).
+- Doğru cevaplar, mümkün olduğunca o dersin `phrases` ve `grammar` kalıplarını kullanmalı — senaryo, dersin ifadelerini gerçek hayatta uygulama alanı olmalı, dersten kopuk yeni kalıplar üretmemeli.
+- Senaryoda geçen ama derste henüz olmayan bir ifade varsa (ör. yeni bir kalıp) `phrases` listesine eklenmelidir.
+
 ---
 
 ## 10. Klasör Yapısı

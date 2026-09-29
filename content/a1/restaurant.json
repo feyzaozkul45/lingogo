@@ -30,7 +30,8 @@
     { "english": "I'd like a coffee.", "turkish": "Bir kahve istiyorum.", "note": "'I want' yerine daha kibar." },
     { "english": "Can I have the bill, please?", "turkish": "Hesabı alabilir miyim, lütfen?", "note": "Yemek bittikten sonra kullanılır." },
     { "english": "Is this dish spicy?", "turkish": "Bu yemek acılı mı?", "note": "" },
-    { "english": "Could we have a table for two?", "turkish": "İki kişilik bir masa alabilir miyiz?", "note": "Girişte söylenir." }
+    { "english": "Could we have a table for two?", "turkish": "İki kişilik bir masa alabilir miyiz?", "note": "Girişte söylenir." },
+    { "english": "Can I pay by card?", "turkish": "Kartla ödeyebilir miyim?", "note": "Hesap geldikten sonra sorulur." }
   ],
   "grammar": [
     {
@@ -130,8 +131,49 @@
         "line": "Hello! Are you ready to order?",
         "line_tr": "Merhaba! Sipariş vermeye hazır mısınız?",
         "options": [
-          { "text": "Yes, I'd like a chicken sandwich.", "correct": true, "feedback": "Harika, doğal ve kibar!" },
-          { "text": "Yes, the bill.", "correct": false, "feedback": "Hesabı yemekten sonra istersin." }
+          { "text": "Yes, I'd like a chicken sandwich, please.", "correct": true, "feedback": "Harika, doğal ve kibar!" },
+          { "text": "Yes, can I have the bill?", "correct": false, "feedback": "Hesabı yemekten sonra istersin." },
+          { "text": "Yes, I want chicken sandwich.", "correct": false, "feedback": "Anlaşılır ama kaba; 'a' da eksik." }
+        ]
+      },
+      {
+        "speaker": "Waiter",
+        "line": "Great choice! Anything to drink?",
+        "line_tr": "Harika seçim! İçecek olarak bir şey ister misiniz?",
+        "options": [
+          { "text": "I'd like some water, please.", "correct": true, "feedback": "Doğru kalıp, çok kibar!" },
+          { "text": "Give me a cola.", "correct": false, "feedback": "Emir gibi duruyor, kaba." },
+          { "text": "No drink.", "correct": false, "feedback": "Doğal değil. 'Nothing for me, thanks.' denir." }
+        ]
+      },
+      {
+        "speaker": "Waiter",
+        "line": "Would you like any dessert?",
+        "line_tr": "Tatlı ister misiniz?",
+        "options": [
+          { "text": "No, thank you. Can I have the bill, please?", "correct": true, "feedback": "Kibarca reddedip hesabı istemek için mükemmel bir cümle." },
+          { "text": "I want cake now.", "correct": false, "feedback": "Kaba. 'I'd like...' kullan." },
+          { "text": "No.", "correct": false, "feedback": "Tek başına sert; 'No, thank you.' de." }
+        ]
+      },
+      {
+        "speaker": "Waiter",
+        "line": "Sure! Here's your bill.",
+        "line_tr": "Tabii! İşte hesabınız.",
+        "options": [
+          { "text": "Thanks. Can I pay by card?", "correct": true, "feedback": "Doğal ve kibar; kartla ödeme isteğini net belirtiyor." },
+          { "text": "How much money?", "correct": false, "feedback": "Doğal değil. 'How much is it?' denir." },
+          { "text": "Yes, I pay.", "correct": false, "feedback": "Eksik ve anlamsız." }
+        ]
+      },
+      {
+        "speaker": "Waiter",
+        "line": "Of course! Have a nice day!",
+        "line_tr": "Tabii ki! İyi günler!",
+        "options": [
+          { "text": "Thanks, you too!", "correct": true, "feedback": "Mükemmel bir vedalaşma!" },
+          { "text": "You're welcome!", "correct": false, "feedback": "Bu, teşekküre verilen cevap. Çok yaygın bir hata!" },
+          { "text": "Nice day!", "correct": false, "feedback": "Eksik; 'You too!' denir." }
         ]
       }
     ]
