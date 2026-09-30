@@ -720,7 +720,7 @@ Olası küçük geliştirmeler:
 - CSP ve diğer güvenlik başlıkları (`vercel.json` veya middleware); Google Fonts için SRI/self-host
 - Okuma/quiz sonuç açıklamalarının sayfa yenilenince kaybolması (şu an oturumda tek seferlik; sonuçları kalıcı saklamak gerekir)
 - `load_content`'i hızlandırma: sadece değişen dosyaları yükle (uzak Supabase'te tam yükleme birkaç dakika sürüyor)
-- `ALLOWED_HOSTS` / `CSRF_TRUSTED_ORIGINS`'i joker yerine tam production adresine daraltma. Kod değişikliği gerekmiyor, sadece Vercel ortam değişkenleri: `ALLOWED_HOSTS=lingogo-ten.vercel.app`, `CSRF_TRUSTED_ORIGINS=https://lingogo-ten.vercel.app` (deployment'a özel `VERCEL_URL` `settings.py`'da zaten otomatik ekleniyor; başka bir alias ya da özel domain kullanılacaksa virgülle eklenmeli). Değer girildikten sonra yeniden deploy + giriş/kayıt testi gerekir. **Kullanıcı yapacak.**
+- ~~`ALLOWED_HOSTS` / `CSRF_TRUSTED_ORIGINS`'i joker yerine tam production adresine daraltma~~ — **tamamlandı (2026-09-30):** Vercel ortam değişkenleri tam production adresiyle (`lingogo-ten.vercel.app`) güncellendi, yeniden deploy sonrası canlıda test edildi. Deployment'a özel `VERCEL_URL` `settings.py`'da otomatik ekleniyor; başka alias ya da özel domain kullanılırsa virgülle eklenmeli.
 
 ---
 
