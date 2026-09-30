@@ -105,7 +105,7 @@ Garson:   Great choice! Anything to drink?
 ### 4.6 Kullanıcı Sistemi
 - Django'nun yerleşik `User` modeli ve auth sistemi kullanılır.
 - Kayıt: kullanıcı adı, e-posta, şifre (e-posta benzersiz olmalı).
-- Giriş: kullanıcı adı + şifre.
+- Giriş: kullanıcı adı **veya e-posta** + şifre (alan etiketi "Kullanıcı adı veya e-posta"). E-posta, yalnızca tek bir hesapla eşleşiyorsa ve aynı yazımda bir kullanıcı adı yoksa kullanıcı adına çevrilir; belirsiz e-postayla giriş yapılmaz.
 - Hesap **zorunlu değildir**; dersler hesapsız da açılabilir.
 - Phase 1'de e-posta doğrulama ve şifre sıfırlama **yoktur**.
 
@@ -713,12 +713,11 @@ Her seviyede 4 okuma metni (toplam 16) Supabase'te ve Vercel'de canlı. `/readin
 Olası küçük geliştirmeler:
 - Yeni konular: Günlük hayat, ileri seviye konular (B1/B2'de zaten 5'er konu var)
 - Kelime tekrar sayfası ("Kelimelerimi tekrar et": tamamlanan derslerin kelimeleriyle mini quiz)
-- İngilizce cümleler için tarayıcının **Web Speech API**'si ile sesli okuma (ek kütüphane yok)
 - Günlük seri (streak) gibi küçük bir oyunlaştırma
 - Quiz'de yanlış yapılan soruları tekrar çözme
 - Şifre sıfırlama (e-posta servisi gerektirir)
 - `load_content`'i hızlandırma: sadece değişen dosyaları yükle (uzak Supabase'te tam yükleme birkaç dakika sürüyor)
-- `ALLOWED_HOSTS` / `CSRF_TRUSTED_ORIGINS`'i joker yerine tam production adresine daraltma (`.vercel.app` ve `https://*.vercel.app` şu an geniş)
+- `ALLOWED_HOSTS` / `CSRF_TRUSTED_ORIGINS`'i joker yerine tam production adresine daraltma. Kod değişikliği gerekmiyor, sadece Vercel ortam değişkenleri: `ALLOWED_HOSTS=lingogo-ten.vercel.app`, `CSRF_TRUSTED_ORIGINS=https://lingogo-ten.vercel.app` (deployment'a özel `VERCEL_URL` `settings.py`'da zaten otomatik ekleniyor; başka bir alias ya da özel domain kullanılacaksa virgülle eklenmeli). Değer girildikten sonra yeniden deploy + giriş/kayıt testi gerekir. **Kullanıcı yapacak.**
 
 ---
 
@@ -815,6 +814,8 @@ python manage.py test
 ### Tamamlanan fazlar
 
 - **Phase 1 (1A–1F) tamamlandı** — hesapsız/hesaplı ders okuma, quiz çözme, ilerleme takibi, kayıt/giriş/çıkış, Supabase + Vercel üzerinde canlı.
+- **Phase 1–2.5 tamamlandı (2026-09-30)** — Phase 1 (temel prototip, canlıda), Phase 1.5 (tasarım düzeltmesi), Phase 2 (🔊/🐢 dinleme + 20 konunun tamamı için gerçek hayat senaryosu + `/scenarios/` listesi), Phase 2.5 (Okuma: her seviyede 4, toplam 16 metin). Hepsi Supabase + Vercel üzerinde canlı; 60 test yeşil.
+- **Faz sonrası küçük düzeltmeler (2026-09-30):** Günün Kelimeleri günün konusuyla aynı seviyeden seçiliyor; okuma sayfasında 🔊/🐢 her paragrafın yanında; okuma listesinde tamamlanan metinlerde ✓; `dizzy` çevirisi "başı dönen"; girişte kullanıcı adı veya e-posta kabul ediliyor.
 - İçerik sonradan genişletildi: başlangıçta 5 konu (A1/A2) vardı, şimdi **20 konu** (A1/A2/B1/B2, her seviyede 5).
 
 ### Önemli kararlar
