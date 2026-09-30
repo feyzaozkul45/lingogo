@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "b1-moving-to-a-new-city",
+    "title": "Moving to a New City",
+    "level": "B1",
+    "order": 1,
+    "english_text": "Three months ago, I moved from a small village to Ankara for my new job, and it has been a big change. At first, I felt lost. The streets were crowded, the traffic was noisy, and I didn't know anyone. The first weeks were exhausting, and I often wanted to go back. I used to walk everywhere in the village, but now I have to take the metro every day. However, I've discovered some things I really like. There are many cafés and bookshops, and I've joined a running club that meets every Sunday morning. Through the club, I've made three good friends who show me the best places in the city. I still miss my family and the quiet evenings at home, so I call my mother every night. If you are thinking about moving, my advice is simple: give yourself time, and say yes to every invitation, even when you feel tired.",
+    "turkish_text": "Üç ay önce yeni işim için küçük bir köyden Ankara'ya taşındım ve bu büyük bir değişiklik oldu. Başta kendimi kaybolmuş hissettim. Sokaklar kalabalıktı, trafik gürültülüydü ve kimseyi tanımıyordum. İlk haftalar yorucuydu ve sık sık geri dönmek istedim. Köyde her yere yürüyerek giderdim ama şimdi her gün metroya binmem gerekiyor. Yine de gerçekten sevdiğim bazı şeyler keşfettim. Birçok kafe ve kitapçı var ve her pazar sabahı buluşan bir koşu kulübüne katıldım. Kulüp sayesinde bana şehrin en güzel yerlerini gösteren üç iyi arkadaş edindim. Hâlâ ailemi ve evdeki sessiz akşamları özlüyorum, bu yüzden annemi her gece arıyorum. Taşınmayı düşünüyorsan tavsiyem basit: kendine zaman ver ve yorgun hissettiğinde bile her davete evet de.",
+    "questions": [
+      {
+        "prompt": "Why did the writer move to Ankara?",
+        "explanation": "Metinde \"I moved from a small village to Ankara for my new job\" yazıyor.",
+        "choices": [
+          {
+            "text": "To start a new job.",
+            "correct": true
+          },
+          {
+            "text": "To study at a university.",
+            "correct": false
+          },
+          {
+            "text": "To live closer to family.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "How did the writer make new friends?",
+        "explanation": "Metinde \"I've joined a running club ... Through the club, I've made three good friends\" yazıyor.",
+        "choices": [
+          {
+            "text": "By joining a running club.",
+            "correct": true
+          },
+          {
+            "text": "By going to work events.",
+            "correct": false
+          },
+          {
+            "text": "By taking a language class.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What advice does the writer give?",
+        "explanation": "Yazarın tavsiyesi \"give yourself time, and say yes to every invitation\". Annesini her gece aramak yazarın kendi alışkanlığı, tavsiyesi değil.",
+        "choices": [
+          {
+            "text": "Be patient and accept invitations.",
+            "correct": true
+          },
+          {
+            "text": "Visit the city before moving there.",
+            "correct": false
+          },
+          {
+            "text": "Call your family every night.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

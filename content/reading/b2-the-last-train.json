@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "b2-the-last-train",
+    "title": "The Last Train",
+    "level": "B2",
+    "order": 4,
+    "english_text": "Deniz had almost given up hope of catching the last train home. It had been a long day, and all she wanted was her own bed. The meeting had dragged on for hours, and by the time she reached the platform, the display showed that the train had been cancelled because of a technical fault. She sighed and sat down on a cold metal bench, wondering whether she could afford a taxi.\n\nA man in a grey coat, who had been reading a newspaper nearby, looked up and smiled sympathetically. \"It happens all the time,\" he said. \"There's a night bus that stops right outside the station, though. It takes longer, but it goes through your neighbourhood.\" Deniz hadn't even known that such a service existed. She thanked him, and the two of them ended up waiting for the bus together, chatting about work, travel, and the strange habits of commuters.\n\nWhen the bus finally arrived, she realised that she hadn't checked her phone once in the last twenty minutes. It was the first time in weeks that she had felt relaxed. As she stepped off at her stop, the man waved goodbye, and she thought about how a stressful evening had unexpectedly turned into a pleasant one.",
+    "turkish_text": "Deniz, eve giden son trene yetişme umudunu neredeyse yitirmişti. Uzun bir gün olmuştu ve tek istediği kendi yatağıydı. Toplantı saatlerce uzamıştı ve perona vardığında panoda trenin teknik bir arıza nedeniyle iptal edildiği yazıyordu. İç çekti ve soğuk metal bir banka oturdu, taksiye parası yeter mi diye düşünerek.\n\nYakınlarda gazete okuyan gri paltolu bir adam başını kaldırdı ve anlayışla gülümsedi. \"Bu hep oluyor,\" dedi. \"Ama istasyonun hemen önünde duran bir gece otobüsü var. Daha uzun sürüyor ama sizin mahalleden geçiyor.\" Deniz böyle bir hizmet olduğunu bile bilmiyordu. Ona teşekkür etti ve ikisi iş, seyahat ve yolcuların garip alışkanlıkları hakkında sohbet ederek otobüsü birlikte beklediler.\n\nOtobüs sonunda geldiğinde, son yirmi dakikadır telefonuna bir kez bile bakmadığını fark etti. Haftalardır ilk kez kendini rahat hissetmişti. Durağında inerken adam el salladı ve Deniz, stresli bir akşamın beklenmedik şekilde hoş bir akşama dönüştüğünü düşündü.",
+    "questions": [
+      {
+        "prompt": "Why couldn't Deniz take the last train?",
+        "explanation": "Metinde \"the train had been cancelled because of a technical fault\" yazıyor.",
+        "choices": [
+          {
+            "text": "It had been cancelled because of a technical fault.",
+            "correct": true
+          },
+          {
+            "text": "She arrived at the station after it had left.",
+            "correct": false
+          },
+          {
+            "text": "The staff were on strike that evening.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What did the man suggest?",
+        "explanation": "Metinde \"There's a night bus that stops right outside the station\" yazıyor.",
+        "choices": [
+          {
+            "text": "Taking a night bus from the station.",
+            "correct": true
+          },
+          {
+            "text": "Sharing a taxi home with him.",
+            "correct": false
+          },
+          {
+            "text": "Waiting for the next morning train.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "How did Deniz feel by the end of the story?",
+        "explanation": "Metinde \"the first time in weeks that she had felt relaxed\" ve \"unexpectedly turned into a pleasant one\" yazıyor.",
+        "choices": [
+          {
+            "text": "Relaxed and pleasantly surprised.",
+            "correct": true
+          },
+          {
+            "text": "Angry about the wasted evening.",
+            "correct": false
+          },
+          {
+            "text": "Worried about the journey home.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

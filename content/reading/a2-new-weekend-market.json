@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "a2-new-weekend-market",
+    "title": "A New Market in Town",
+    "level": "A2",
+    "order": 3,
+    "english_text": "A new weekend market opened in the centre of Bursa on Saturday. More than two hundred people visited it on the first day. Local farmers sell fresh fruit, vegetables, honey, and cheese. There are also small stands with handmade bags and jewellery. The mayor said the market will be open every Saturday and Sunday from eight in the morning until five in the afternoon. \"We want people to buy local products and meet their neighbours,\" she said. Many visitors were happy about the low prices. The town also plans to add a small café next to the market next month.",
+    "turkish_text": "Bursa'nın merkezinde cumartesi günü yeni bir hafta sonu pazarı açıldı. İlk gün iki yüzden fazla kişi pazarı ziyaret etti. Yerel çiftçiler taze meyve, sebze, bal ve peynir satıyor. Ayrıca el yapımı çanta ve takı satan küçük tezgâhlar da var. Belediye başkanı, pazarın her cumartesi ve pazar sabah sekizden akşam beşe kadar açık olacağını söyledi. \"İnsanların yerel ürünler almasını ve komşularıyla tanışmasını istiyoruz,\" dedi. Birçok ziyaretçi düşük fiyatlardan memnundu. Kasaba ayrıca gelecek ay pazarın yanına küçük bir kafe eklemeyi planlıyor.",
+    "questions": [
+      {
+        "prompt": "When will the market be open?",
+        "explanation": "Metinde \"open every Saturday and Sunday\" yazıyor.",
+        "choices": [
+          {
+            "text": "Every Saturday and Sunday.",
+            "correct": true
+          },
+          {
+            "text": "Only on Saturdays.",
+            "correct": false
+          },
+          {
+            "text": "Every day of the week.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What does the mayor want people to do?",
+        "explanation": "Belediye başkanı \"We want people to buy local products and meet their neighbours\" diyor.",
+        "choices": [
+          {
+            "text": "Buy local goods and meet neighbours.",
+            "correct": true
+          },
+          {
+            "text": "Drive their cars less in the town centre.",
+            "correct": false
+          },
+          {
+            "text": "Open small new shops in the old town.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What will the town add next month?",
+        "explanation": "Metnin sonunda \"add a small café next to the market next month\" yazıyor.",
+        "choices": [
+          {
+            "text": "A small café.",
+            "correct": true
+          },
+          {
+            "text": "A car park.",
+            "correct": false
+          },
+          {
+            "text": "A children's playground.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

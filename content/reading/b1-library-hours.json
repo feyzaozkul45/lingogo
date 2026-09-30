@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "b1-library-hours",
+    "title": "New Library Opening Hours",
+    "level": "B1",
+    "order": 3,
+    "english_text": "Important Announcement: Changes to Opening Hours\nFrom Monday 1 October, the City Library will open earlier and close later on weekdays. The new hours are 8 a.m. to 9 p.m., Monday to Friday. On Saturdays, the library will be open from 10 a.m. to 4 p.m., but it will remain closed on Sundays. We have made these changes because many students told us that they needed a quiet place to study in the evenings. We hope that these changes will make the library more useful for everyone. In addition, the second floor has been redesigned. It now has twenty new study desks, free Wi-Fi, and a small area where you can have a drink. Please note that food is still not allowed in the reading rooms. Members can also borrow up to eight books at a time, instead of five. If you have any questions, please ask a member of staff at the front desk or visit our website.",
+    "turkish_text": "Önemli Duyuru: Çalışma Saatleri Değişiyor\n1 Ekim Pazartesi gününden itibaren şehir kütüphanesi hafta içi daha erken açılacak ve daha geç kapanacak. Yeni saatler pazartesiden cumaya sabah 8 ile akşam 9 arasıdır. Cumartesi günleri kütüphane sabah 10 ile 16.00 arasında açık olacak, pazar günleri ise kapalı kalmaya devam edecek. Bu değişiklikleri, birçok öğrenci akşamları ders çalışmak için sessiz bir yere ihtiyaç duyduğunu söylediği için yaptık. Bu değişikliklerin kütüphaneyi herkes için daha yararlı hale getirmesini umuyoruz. Ayrıca ikinci kat yeniden tasarlandı. Artık yirmi yeni çalışma masası, ücretsiz Wi-Fi ve içecek içebileceğiniz küçük bir alan var. Okuma salonlarında yiyeceğin hâlâ yasak olduğunu lütfen unutmayın. Üyeler ayrıca aynı anda beş yerine sekiz kitap ödünç alabilir. Sorularınız için lütfen ön danışmadaki bir görevliye sorun ya da web sitemizi ziyaret edin.",
+    "questions": [
+      {
+        "prompt": "Why is the library changing its opening hours?",
+        "explanation": "Metinde \"many students told us that they needed a quiet place to study in the evenings\" yazıyor.",
+        "choices": [
+          {
+            "text": "Students needed a quiet place to study at night.",
+            "correct": true
+          },
+          {
+            "text": "The city wanted to save money on electricity.",
+            "correct": false
+          },
+          {
+            "text": "There are fewer visitors at the weekends.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What is new on the second floor?",
+        "explanation": "Metinde \"twenty new study desks, free Wi-Fi, and a small area where you can have a drink\" yazıyor.",
+        "choices": [
+          {
+            "text": "Study desks, free Wi-Fi, and a drink area.",
+            "correct": true
+          },
+          {
+            "text": "A café that sells hot meals.",
+            "correct": false
+          },
+          {
+            "text": "A separate reading room for children.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What has changed for library members?",
+        "explanation": "Metinde \"borrow up to eight books at a time, instead of five\" yazıyor. Yiyecek hâlâ yasak.",
+        "choices": [
+          {
+            "text": "They can borrow eight books instead of five.",
+            "correct": true
+          },
+          {
+            "text": "They can now eat in the reading rooms.",
+            "correct": false
+          },
+          {
+            "text": "They can keep each book for longer.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

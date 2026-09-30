@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "b1-the-lost-wallet",
+    "title": "The Lost Wallet",
+    "level": "B1",
+    "order": 4,
+    "english_text": "On his way home from work, Kerem noticed a brown wallet lying on the pavement. He picked it up and looked inside. There was quite a lot of money, a bus card, and an ID card with an address on it. He thought about keeping the money for a moment, but he quickly changed his mind. If he had lost his own wallet, he would have been terribly worried. The address was only ten minutes away, so he decided to take it there himself. Nobody was watching, but it felt like the right thing to do. An elderly woman opened the door and started to cry when she saw it. She had been searching for it all afternoon. She wanted to give him some money as a reward, but Kerem refused politely. Two days later, he received a box of homemade cookies with a thank-you note. It was the nicest reward he could imagine.",
+    "turkish_text": "İşten eve dönerken Kerem kaldırımda duran kahverengi bir cüzdan fark etti. Onu aldı ve içine baktı. İçinde epey para, bir otobüs kartı ve üzerinde adres yazan bir kimlik kartı vardı. Bir an parayı kendine saklamayı düşündü ama hemen fikrini değiştirdi. Kendi cüzdanını kaybetseydi çok endişelenirdi. Adres sadece on dakika uzaklıktaydı, bu yüzden cüzdanı oraya kendisi götürmeye karar verdi. Kimse izlemiyordu ama bunun doğru şey olduğunu hissediyordu. Yaşlı bir kadın kapıyı açtı ve cüzdanı görünce ağlamaya başladı. Bütün öğleden sonra onu arıyordu. Ona ödül olarak biraz para vermek istedi ama Kerem kibarca reddetti. İki gün sonra, bir teşekkür notuyla birlikte bir kutu ev yapımı kurabiye aldı. Hayal edebileceği en güzel ödüldü.",
+    "questions": [
+      {
+        "prompt": "What did Kerem do right after picking up the wallet?",
+        "explanation": "Metinde \"He picked it up and looked inside\" yazıyor.",
+        "choices": [
+          {
+            "text": "He looked inside it.",
+            "correct": true
+          },
+          {
+            "text": "He asked people nearby.",
+            "correct": false
+          },
+          {
+            "text": "He took it to the police.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "Why did Kerem decide to return the wallet?",
+        "explanation": "Metinde \"If he had lost his own wallet, he would have been terribly worried\" yazıyor. Ödülü de kibarca reddediyor.",
+        "choices": [
+          {
+            "text": "He thought about the owner's worry.",
+            "correct": true
+          },
+          {
+            "text": "He was afraid someone had seen him.",
+            "correct": false
+          },
+          {
+            "text": "He wanted to get a reward for it.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What happened at the end of the story?",
+        "explanation": "Metinde Kerem parayı reddediyor, iki gün sonra ise bir kutu kurabiye alıyor.",
+        "choices": [
+          {
+            "text": "He refused money but got some cookies.",
+            "correct": true
+          },
+          {
+            "text": "He accepted the money and thanked her.",
+            "correct": false
+          },
+          {
+            "text": "He got a phone call from the police.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

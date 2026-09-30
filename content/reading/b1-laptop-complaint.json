@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "b1-laptop-complaint",
+    "title": "A Complaint Email",
+    "level": "B1",
+    "order": 2,
+    "english_text": "Dear Customer Service,\nI am writing to complain about the laptop I bought from your online store on 3 March. When it arrived, the screen had a small crack in the corner, although the box looked perfectly fine. I contacted your helpline twice, and both times I was told that someone would call me back within 24 hours, but nobody has called yet. I have been without a working computer for a week, and I need it for my studies. I paid a lot of money for it, so I expect better quality. I have always been happy with your service before, so I am very disappointed. I would like you to replace the laptop or give me a full refund as soon as possible. I have attached photos of the damage and a copy of my receipt. If I don't hear from you by Friday, I will have to take further action.\nYours faithfully,\nNur Aydın",
+    "turkish_text": "Sayın Müşteri Hizmetleri,\n3 Mart'ta çevrimiçi mağazanızdan aldığım dizüstü bilgisayar hakkında şikâyette bulunmak için yazıyorum. Kutu gayet sağlam görünmesine rağmen, elime ulaştığında ekranın köşesinde küçük bir çatlak vardı. Yardım hattınızı iki kez aradım ve her seferinde 24 saat içinde geri aranacağım söylendi, ama henüz kimse aramadı. Bir haftadır çalışan bir bilgisayarım yok ve derslerim için buna ihtiyacım var. Bunun için çok para ödedim, bu yüzden daha iyi kalite bekliyorum. Bugüne kadar hizmetinizden hep memnun kalmıştım, bu yüzden çok hayal kırıklığına uğradım. Bilgisayarın en kısa sürede değiştirilmesini ya da ücretimin tamamen iade edilmesini istiyorum. Hasarın fotoğraflarını ve faturamın bir kopyasını ekledim. Cuma gününe kadar haber alamazsam daha ileri adımlar atmak zorunda kalacağım.\nSaygılarımla,\nNur Aydın",
+    "questions": [
+      {
+        "prompt": "What is wrong with the laptop?",
+        "explanation": "Metinde \"the screen had a small crack in the corner\" yazıyor. Sorun, ürün elinize ulaştığında zaten vardı.",
+        "choices": [
+          {
+            "text": "The screen was cracked when it arrived.",
+            "correct": true
+          },
+          {
+            "text": "It stopped working after a week.",
+            "correct": false
+          },
+          {
+            "text": "It is slower than advertised.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What happened when Nur called the helpline?",
+        "explanation": "Metinde \"I was told that someone would call me back ... but nobody has called yet\" yazıyor.",
+        "choices": [
+          {
+            "text": "Nobody called back as promised.",
+            "correct": true
+          },
+          {
+            "text": "The staff refused to help.",
+            "correct": false
+          },
+          {
+            "text": "The line was always busy.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What does Nur want the store to do?",
+        "explanation": "Metinde \"replace the laptop or give me a full refund\" yazıyor.",
+        "choices": [
+          {
+            "text": "Replace the laptop or give a full refund.",
+            "correct": true
+          },
+          {
+            "text": "Give a discount on the next order.",
+            "correct": false
+          },
+          {
+            "text": "Send an apology from the manager.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

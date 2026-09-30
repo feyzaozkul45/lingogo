@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "b2-deleting-social-media",
+    "title": "Why I Deleted Social Media",
+    "level": "B2",
+    "order": 3,
+    "english_text": "Last January, I made a decision that my friends thought was ridiculous: I deleted every social media app from my phone for thirty days. I had noticed that I was spending nearly four hours a day scrolling, often without even enjoying it. Worse still, I would reach for my phone the moment I felt bored, anxious, or even slightly uncomfortable.\n\nThe first week was surprisingly difficult. I kept picking up my phone out of habit, and I felt as though I was missing out on something important. By the second week, however, things started to change. I read three books, cooked proper meals instead of ordering food, and slept much better. I also noticed that conversations with friends became more meaningful because I was actually listening instead of checking notifications.\n\nThat said, the experiment wasn't entirely positive. I missed several event invitations, and it took me a while to catch up with the news. It also made me realise how much of my social life depends on these platforms.\n\nI have since returned to social media, but on my own terms. I limit myself to thirty minutes a day, and I no longer keep the apps on my home screen. It isn't a perfect solution, yet it has helped me feel more in control.",
+    "turkish_text": "Geçen ocak ayında arkadaşlarımın saçma bulduğu bir karar aldım: telefonumdaki tüm sosyal medya uygulamalarını otuz gün boyunca sildim. Günde neredeyse dört saatimi, çoğu zaman keyif bile almadan kaydırarak geçirdiğimi fark etmiştim. Daha da kötüsü, kendimi sıkılmış, kaygılı ya da hafifçe rahatsız hissettiğim anda telefona uzanıyordum.\n\nİlk hafta şaşırtıcı derecede zordu. Alışkanlıktan sürekli telefonu elime alıyordum ve önemli bir şeyi kaçırıyormuşum gibi hissediyordum. Ancak ikinci haftaya gelince işler değişmeye başladı. Üç kitap okudum, yemek sipariş etmek yerine düzgün yemekler pişirdim ve çok daha iyi uyudum. Ayrıca arkadaşlarımla sohbetlerin daha anlamlı hale geldiğini fark ettim, çünkü bildirimlere bakmak yerine gerçekten dinliyordum.\n\nBununla birlikte deney tamamen olumlu değildi. Birkaç etkinlik davetini kaçırdım ve haberlere yetişmem biraz zaman aldı. Ayrıca sosyal hayatımın ne kadarının bu platformlara bağlı olduğunu fark etmemi sağladı.\n\nSonrasında sosyal medyaya geri döndüm ama kendi şartlarımla. Kendimi günde otuz dakikayla sınırlıyorum ve uygulamaları artık ana ekranımda tutmuyorum. Mükemmel bir çözüm değil ama kendimi daha kontrollü hissetmeme yardımcı oldu.",
+    "questions": [
+      {
+        "prompt": "Why did the writer decide to delete the apps?",
+        "explanation": "Metinde yazar günde neredeyse dört saatini \"often without even enjoying it\" kaydırarak geçirdiğini fark ediyor.",
+        "choices": [
+          {
+            "text": "Scrolling was taking hours of the writer's day.",
+            "correct": true
+          },
+          {
+            "text": "A doctor had warned the writer about screen time.",
+            "correct": false
+          },
+          {
+            "text": "The phone kept running out of storage space.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What was one negative result of the experiment?",
+        "explanation": "Metinde \"I missed several event invitations\" yazıyor. Uyku ise tam tersine daha iyi oldu.",
+        "choices": [
+          {
+            "text": "The writer missed some invitations to events.",
+            "correct": true
+          },
+          {
+            "text": "The writer lost touch with old friends.",
+            "correct": false
+          },
+          {
+            "text": "The writer had trouble sleeping.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "How does the writer use social media now?",
+        "explanation": "Metinde \"I limit myself to thirty minutes a day, and I no longer keep the apps on my home screen\" yazıyor.",
+        "choices": [
+          {
+            "text": "For no more than thirty minutes a day.",
+            "correct": true
+          },
+          {
+            "text": "Only to read the news every morning.",
+            "correct": false
+          },
+          {
+            "text": "Not at all, because the apps stay deleted.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

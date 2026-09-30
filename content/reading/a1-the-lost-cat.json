@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "a1-the-lost-cat",
+    "title": "The Lost Cat",
+    "level": "A1",
+    "order": 4,
+    "english_text": "Tom has a small white cat. Her name is Luna. One day, Luna is not at home. Tom looks in the kitchen and in the garden. He cannot find her. He calls her name, but she does not come. He is sad. Then he hears a small sound from the old box under his bed. Luna is there with three tiny kittens! Tom is very happy. Now he has four cats at home.",
+    "turkish_text": "Tom'un küçük, beyaz bir kedisi var. Adı Luna. Bir gün Luna evde değil. Tom mutfağa ve bahçeye bakıyor. Onu bulamıyor. Onu çağırıyor ama kedi gelmiyor. Tom üzgün. Sonra yatağının altındaki eski kutudan küçük bir ses duyuyor. Luna orada, üç minik yavrusuyla birlikte! Tom çok mutlu. Şimdi evde dört kedisi var.",
+    "questions": [
+      {
+        "prompt": "Why is Tom sad?",
+        "explanation": "Metinde \"He cannot find her. ... He is sad.\" yazıyor.",
+        "choices": [
+          {
+            "text": "He cannot find Luna.",
+            "correct": true
+          },
+          {
+            "text": "He loses his school bag.",
+            "correct": false
+          },
+          {
+            "text": "Luna is very sick.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "Where does Tom find Luna?",
+        "explanation": "Metinde \"the old box under his bed\" yazıyor. Mutfağa ve bahçeye bakıyor ama orada bulamıyor.",
+        "choices": [
+          {
+            "text": "In a box under his bed.",
+            "correct": true
+          },
+          {
+            "text": "In a box in the kitchen.",
+            "correct": false
+          },
+          {
+            "text": "In a tree in the garden.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "How many cats does Tom have at the end?",
+        "explanation": "Luna ve üç yavrusu: 1 + 3 = 4. \"Now he has four cats at home.\"",
+        "choices": [
+          {
+            "text": "Four.",
+            "correct": true
+          },
+          {
+            "text": "Three.",
+            "correct": false
+          },
+          {
+            "text": "Two.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

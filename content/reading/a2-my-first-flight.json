@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "a2-my-first-flight",
+    "title": "My First Flight",
+    "level": "A2",
+    "order": 1,
+    "english_text": "Last week I took my first flight, and I was very nervous. My aunt lives in Berlin, so I flew there from Istanbul. At the airport, I waited in a long queue to check in my suitcase. Then I went through security, and an officer checked my bag. When I sat down on the plane, my hands were cold, but the flight attendant smiled at me and gave me some water. The plane took off smoothly. After three hours, we landed, and my aunt was waiting for me at the gate with a big sign. I was tired but very happy. Next time, I want to sit next to the window!",
+    "turkish_text": "Geçen hafta ilk uçuşumu yaptım ve çok gergindim. Teyzem Berlin'de yaşıyor, bu yüzden İstanbul'dan oraya uçtum. Havalimanında bavulumu teslim etmek için uzun bir kuyrukta bekledim. Sonra güvenlikten geçtim ve bir görevli çantamı kontrol etti. Uçakta oturduğumda ellerim soğuktu, ama hostes bana gülümsedi ve biraz su verdi. Uçak yumuşak bir şekilde havalandı. Üç saat sonra indik ve teyzem kapıda büyük bir tabelayla beni bekliyordu. Yorgundum ama çok mutluydum. Bir dahaki sefere pencere kenarında oturmak istiyorum!",
+    "questions": [
+      {
+        "prompt": "Why did the writer fly to Berlin?",
+        "explanation": "Metinde \"My aunt lives in Berlin, so I flew there\" yazıyor.",
+        "choices": [
+          {
+            "text": "To visit an aunt.",
+            "correct": true
+          },
+          {
+            "text": "To start a new job.",
+            "correct": false
+          },
+          {
+            "text": "To go on a school trip.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What did the flight attendant do?",
+        "explanation": "Metinde \"the flight attendant smiled at me and gave me some water\" yazıyor.",
+        "choices": [
+          {
+            "text": "She smiled and gave the writer some water.",
+            "correct": true
+          },
+          {
+            "text": "She moved the writer to a better seat.",
+            "correct": false
+          },
+          {
+            "text": "She carried the writer's bag to the seat.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What does the writer want to do next time?",
+        "explanation": "Metnin sonunda \"Next time, I want to sit next to the window!\" yazıyor.",
+        "choices": [
+          {
+            "text": "Sit next to the window.",
+            "correct": true
+          },
+          {
+            "text": "Bring more luggage.",
+            "correct": false
+          },
+          {
+            "text": "Fly with a friend.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

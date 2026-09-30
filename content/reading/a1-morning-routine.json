@@ -5,7 +5,7 @@
     "level": "A1",
     "order": 1,
     "english_text": "My name is Elif. I wake up at seven o'clock every morning. First, I brush my teeth and take a quick shower. Then I have breakfast with my family in the kitchen. I usually eat bread, cheese, and olives. I also drink a cup of tea. After breakfast, I get dressed and pack my school bag. My school starts at half past eight. I walk to school with my little brother every day.",
-    "turkish_text": "Benim adım Elif. Her sabah saat yedide uyanırım. Önce dişlerimi fırçalarım ve kısa bir duş alırım. Sonra mutfakta ailemle kahvaltı yaparım. Genellikle ekmek, peynir ve zeytin yerim. Ayrıca bir fincan çay içerim. Kahvaltıdan sonra giyinirim ve okul çantamı hazırlarım. Okulum sekiz buçukta başlar. Her gün küçük kardeşimle okula yürürüm.",
+    "turkish_text": "Benim adım Elif. Her sabah saat yedide uyanırım. Önce dişlerimi fırçalarım ve kısa bir duş alırım. Sonra mutfakta ailemle kahvaltı yaparım. Genellikle ekmek, peynir ve zeytin yerim. Ayrıca bir fincan çay içerim. Kahvaltıdan sonra giyinirim ve okul çantamı hazırlarım. Okulum sekiz buçukta başlar. Her gün küçük kardeşimle okula yürüyerek giderim.",
     "questions": [
       {
         "prompt": "What time does Elif wake up?",

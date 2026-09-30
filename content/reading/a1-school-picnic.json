@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "a1-school-picnic",
+    "title": "School Picnic Notice",
+    "level": "A1",
+    "order": 3,
+    "english_text": "Notice for Students\nOur school picnic is on Friday, May 10th. We meet in the school garden at nine o'clock. Please bring a sandwich, a bottle of water, and a hat. The bus leaves at half past nine. We go to the big park near the lake. We play games and eat lunch there. The bus comes back at three o'clock. Please tell your parents. Have fun!",
+    "turkish_text": "Öğrencilere Duyuru\nOkul pikniğimiz 10 Mayıs Cuma günü. Saat dokuzda okul bahçesinde buluşuyoruz. Lütfen bir sandviç, bir şişe su ve bir şapka getirin. Otobüs dokuz buçukta kalkıyor. Göl kenarındaki büyük parka gidiyoruz. Orada oyun oynayıp öğle yemeği yiyeceğiz. Otobüs saat üçte geri geliyor. Lütfen ailenize söyleyin. İyi eğlenceler!",
+    "questions": [
+      {
+        "prompt": "What should the students bring?",
+        "explanation": "Metinde \"Please bring a sandwich, a bottle of water, and a hat\" yazıyor.",
+        "choices": [
+          {
+            "text": "A sandwich, water, and a hat.",
+            "correct": true
+          },
+          {
+            "text": "A ball, juice, and a coat.",
+            "correct": false
+          },
+          {
+            "text": "A book, water, and a bag.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "Where do the students meet?",
+        "explanation": "Metinde \"We meet in the school garden at nine o'clock\" yazıyor. Büyük park, gidilen yer.",
+        "choices": [
+          {
+            "text": "In the school garden.",
+            "correct": true
+          },
+          {
+            "text": "At the big park.",
+            "correct": false
+          },
+          {
+            "text": "At the bus station.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What time does the bus come back?",
+        "explanation": "Metinde \"The bus comes back at three o'clock\" yazıyor. Dokuz ve dokuz buçuk, buluşma ve kalkış saatleri.",
+        "choices": [
+          {
+            "text": "At three o'clock.",
+            "correct": true
+          },
+          {
+            "text": "At nine o'clock.",
+            "correct": false
+          },
+          {
+            "text": "At half past nine.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "a2-the-umbrella",
+    "title": "The Umbrella",
+    "level": "A2",
+    "order": 4,
+    "english_text": "It was a rainy Monday morning, and Selin was late for work. She ran to the bus stop without her umbrella, and soon her hair and coat were completely wet. An old man at the stop saw her and offered her his big blue umbrella. \"I'm not going far,\" he said. \"Please take it.\" Selin thanked him, but she felt a little embarrassed. That evening, she looked for the man at the same stop, but he wasn't there. The next morning, she brought a box of chocolates and waited for him. When he finally arrived, he laughed and said, \"You didn't have to do that!\" Now they say hello to each other every morning.",
+    "turkish_text": "Yağmurlu bir pazartesi sabahıydı ve Selin işe geç kalmıştı. Şemsiyesi olmadan otobüs durağına koştu ve kısa sürede saçları ve montu tamamen ıslandı. Durakta yaşlı bir adam onu gördü ve ona büyük mavi şemsiyesini uzattı. \"Fazla uzağa gitmiyorum,\" dedi. \"Lütfen alın.\" Selin ona teşekkür etti ama biraz utandı. O akşam aynı durakta adamı aradı ama adam orada değildi. Ertesi sabah bir kutu çikolata getirdi ve onu bekledi. Adam sonunda geldiğinde güldü ve \"Bunu yapmana gerek yoktu!\" dedi. Artık her sabah birbirlerine merhaba diyorlar.",
+    "questions": [
+      {
+        "prompt": "Why did Selin get wet?",
+        "explanation": "Metinde \"She ran to the bus stop without her umbrella\" yazıyor.",
+        "choices": [
+          {
+            "text": "She left home without an umbrella.",
+            "correct": true
+          },
+          {
+            "text": "She missed the bus and walked.",
+            "correct": false
+          },
+          {
+            "text": "She fell into a puddle.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What did the old man do?",
+        "explanation": "Metinde \"offered her his big blue umbrella\" yazıyor.",
+        "choices": [
+          {
+            "text": "He gave her his umbrella.",
+            "correct": true
+          },
+          {
+            "text": "He drove her to work.",
+            "correct": false
+          },
+          {
+            "text": "He bought her a hot drink.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What did Selin bring the next morning?",
+        "explanation": "Metinde \"she brought a box of chocolates\" yazıyor.",
+        "choices": [
+          {
+            "text": "A box of chocolates.",
+            "correct": true
+          },
+          {
+            "text": "A new umbrella.",
+            "correct": false
+          },
+          {
+            "text": "A thank-you letter.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

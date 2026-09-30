@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "b2-city-bike-sharing",
+    "title": "City Introduces Bike Sharing",
+    "level": "B2",
+    "order": 2,
+    "english_text": "The city council has announced a new bike-sharing scheme, which it hopes will reduce traffic and improve air quality in the centre. Starting next month, residents will be able to borrow one of two thousand bicycles from more than a hundred stations across the city. The first thirty minutes of every ride will be free, while longer trips will cost a small fee. Bikes can be unlocked using a mobile app.\n\nThe plan has received a mixed response. Supporters argue that cycling is cheaper, healthier, and faster than driving during rush hour. Several local businesses have also welcomed the idea, expecting more customers on streets that used to be dominated by cars. However, critics point out that the city still lacks safe cycle lanes, and they fear that inexperienced riders could be put at risk. Some shop owners have also complained that new stations will take up valuable parking spaces.\n\nIn response, the council has promised to build forty kilometres of protected bike lanes over the next two years. A spokesperson admitted that the scheme would not solve every problem but insisted it was an important first step. If the pilot is successful, the programme will be extended to the suburbs by the end of next year.",
+    "turkish_text": "Belediye meclisi, merkezde trafiği azaltmayı ve hava kalitesini iyileştirmeyi umduğu yeni bir bisiklet paylaşım sistemini duyurdu. Gelecek ay itibarıyla sakinler, şehir genelindeki yüzden fazla istasyondan iki bin bisikletten birini ödünç alabilecek. Her yolculuğun ilk otuz dakikası ücretsiz olacak, daha uzun yolculuklar ise küçük bir ücrete tabi olacak. Bisikletlerin kilidi bir mobil uygulamayla açılabilecek.\n\nPlan karışık bir karşılık gördü. Destekleyenler, bisiklete binmenin yoğun saatlerde araba kullanmaktan daha ucuz, daha sağlıklı ve daha hızlı olduğunu savunuyor. Birçok yerel işletme de fikri memnuniyetle karşıladı; eskiden arabaların hâkim olduğu sokaklarda daha fazla müşteri bekliyorlar. Ancak eleştirmenler şehirde hâlâ güvenli bisiklet yollarının bulunmadığına dikkat çekiyor ve deneyimsiz sürücülerin risk altında kalabileceğinden korkuyor. Bazı dükkân sahipleri de yeni istasyonların değerli park yerlerini kaplayacağından şikâyet etti.\n\nBunun üzerine meclis, önümüzdeki iki yıl içinde kırk kilometre korumalı bisiklet yolu yapacağına söz verdi. Bir sözcü, planın her sorunu çözmeyeceğini kabul etti ama bunun önemli bir ilk adım olduğunu vurguladı. Pilot uygulama başarılı olursa, program gelecek yılın sonuna kadar banliyölere de yaygınlaştırılacak.",
+    "questions": [
+      {
+        "prompt": "What is the main aim of the bike-sharing scheme?",
+        "explanation": "Metinde meclisin \"reduce traffic and improve air quality\" umduğu yazıyor.",
+        "choices": [
+          {
+            "text": "To reduce traffic and improve air quality.",
+            "correct": true
+          },
+          {
+            "text": "To make extra money for the city council.",
+            "correct": false
+          },
+          {
+            "text": "To encourage tourists to visit the centre.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "Why are some people worried about the plan?",
+        "explanation": "Metinde eleştirmenler \"the city still lacks safe cycle lanes\" diyor. İlk 30 dakika ücretsiz ve 2000 bisiklet planlanıyor.",
+        "choices": [
+          {
+            "text": "The city still lacks safe cycle lanes.",
+            "correct": true
+          },
+          {
+            "text": "The bicycles are too expensive to rent.",
+            "correct": false
+          },
+          {
+            "text": "Too few bicycles will be available.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What has the council promised to do?",
+        "explanation": "Metinde \"build forty kilometres of protected bike lanes\" yazıyor.",
+        "choices": [
+          {
+            "text": "Build forty kilometres of safe bike lanes.",
+            "correct": true
+          },
+          {
+            "text": "Give free bicycles to every resident.",
+            "correct": false
+          },
+          {
+            "text": "Ban all cars from the busy city centre.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

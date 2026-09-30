@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "a1-email-from-izmir",
+    "title": "An Email from Izmir",
+    "level": "A1",
+    "order": 2,
+    "english_text": "Hi Mark,\nHow are you? I am in Izmir with my family. The weather is sunny and warm. Our hotel is near the sea. The people here are very kind. Every morning, we eat breakfast on the balcony. Then we go to the beach and swim. In the evening, we eat fish at a small restaurant. I love it here! Please say hello to your sister.\nBye for now,\nAyşe",
+    "turkish_text": "Merhaba Mark,\nNasılsın? Ailemle birlikte İzmir'deyim. Hava güneşli ve sıcak. Otelimiz denize yakın. Buradaki insanlar çok nazik. Her sabah balkonda kahvaltı yapıyoruz. Sonra plaja gidip yüzüyoruz. Akşamları küçük bir restoranda balık yiyoruz. Burayı çok seviyorum! Lütfen kız kardeşine selam söyle.\nŞimdilik hoşça kal,\nAyşe",
+    "questions": [
+      {
+        "prompt": "Where is Ayşe?",
+        "explanation": "Metinde \"I am in Izmir with my family\" yazıyor.",
+        "choices": [
+          {
+            "text": "In Izmir with her family.",
+            "correct": true
+          },
+          {
+            "text": "In Ankara with her friends.",
+            "correct": false
+          },
+          {
+            "text": "At home with her sister.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What is the weather like?",
+        "explanation": "Metinde \"The weather is sunny and warm\" yazıyor.",
+        "choices": [
+          {
+            "text": "Sunny and warm.",
+            "correct": true
+          },
+          {
+            "text": "Cold and rainy.",
+            "correct": false
+          },
+          {
+            "text": "Windy and cloudy.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What do they eat in the evening?",
+        "explanation": "Metinde \"In the evening, we eat fish at a small restaurant\" yazıyor. Balkonda kahvaltı ediyorlar, akşam yemeği değil.",
+        "choices": [
+          {
+            "text": "Fish at a restaurant.",
+            "correct": true
+          },
+          {
+            "text": "Eggs on the balcony.",
+            "correct": false
+          },
+          {
+            "text": "Pizza at the hotel.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}

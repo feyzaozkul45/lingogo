@@ -1,0 +1,66 @@
+{
+  "reading": {
+    "slug": "a2-english-classes-email",
+    "title": "Email to a Language School",
+    "level": "A2",
+    "order": 2,
+    "english_text": "Dear Sir or Madam,\nI saw your advertisement for English classes on the internet, and I would like some information. I am a 24-year-old student, and my level is elementary. I have studied English before, but I have forgotten a lot. My goal is to speak with tourists. I am free on Tuesday and Thursday evenings, so I need a class after six o'clock. Could you tell me how much the course costs and how long it lasts? Also, is there a free trial lesson? I live near the city centre, so I can come by bus. I look forward to hearing from you.\nBest wishes,\nDeniz Kaya",
+    "turkish_text": "Sayın Yetkili,\nİnternette İngilizce kurslarınızın ilanını gördüm ve biraz bilgi almak istiyorum. 24 yaşında bir öğrenciyim ve seviyem başlangıç. Daha önce İngilizce öğrendim ama çoğunu unuttum. Amacım turistlerle konuşabilmek. Salı ve perşembe akşamları boşum, bu yüzden saat altıdan sonra bir sınıfa ihtiyacım var. Kursun ücretinin ne kadar olduğunu ve ne kadar sürdüğünü söyleyebilir misiniz? Ayrıca ücretsiz bir deneme dersi var mı? Şehir merkezine yakın oturuyorum, bu yüzden otobüsle gelebilirim. Yanıtınızı bekliyorum.\nSaygılarımla,\nDeniz Kaya",
+    "questions": [
+      {
+        "prompt": "Why is Deniz writing the email?",
+        "explanation": "Metinde \"I would like some information\" yazıyor. Deniz kurs hakkında bilgi istiyor.",
+        "choices": [
+          {
+            "text": "To ask about English classes.",
+            "correct": true
+          },
+          {
+            "text": "To complain about a lesson.",
+            "correct": false
+          },
+          {
+            "text": "To ask for a job at the school.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "When is Deniz free?",
+        "explanation": "Metinde \"I am free on Tuesday and Thursday evenings\" yazıyor.",
+        "choices": [
+          {
+            "text": "On Tuesday and Thursday evenings.",
+            "correct": true
+          },
+          {
+            "text": "On Monday and Friday mornings.",
+            "correct": false
+          },
+          {
+            "text": "On Saturday and Sunday afternoons.",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "prompt": "What does Deniz want to know about the course?",
+        "explanation": "Metinde \"how much the course costs and how long it lasts\" soruluyor.",
+        "choices": [
+          {
+            "text": "The price and how long it lasts.",
+            "correct": true
+          },
+          {
+            "text": "The teacher's name and age.",
+            "correct": false
+          },
+          {
+            "text": "The number of students in a class.",
+            "correct": false
+          }
+        ]
+      }
+    ]
+  }
+}
