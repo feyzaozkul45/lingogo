@@ -94,6 +94,12 @@ class QuizScoringTests(TestCase):
 
         self.assertEqual(response.status_code, 404)
 
+    def test_anonymous_result_redirects_to_login(self):
+        url = reverse('quizzes:result', kwargs={'attempt_id': 1})
+        response = self.client.get(url)
+
+        self.assertRedirects(response, f"{reverse('accounts:login')}?next={url}")
+
 
 class QuestionConstraintTests(TestCase):
     @classmethod

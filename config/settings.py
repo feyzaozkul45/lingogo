@@ -6,15 +6,23 @@ import os
 from pathlib import Path
 
 import dj_database_url
+from django.core.exceptions import ImproperlyConfigured
 from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(BASE_DIR / '.env')
 
-SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-dev-key-change-me')
+# Vercel'de calisirken SECRET_KEY zorunlu: eksikse sessizce bilinen gelistirme
+# anahtarina dusmek yerine acilista hata verir.
+SECRET_KEY = os.environ.get('SECRET_KEY')
+if not SECRET_KEY:
+    if os.environ.get('VERCEL'):
+        raise ImproperlyConfigured('SECRET_KEY ortam degiskeni tanimli olmali.')
+    SECRET_KEY = 'django-insecure-dev-key-change-me'
 
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+# Varsayilan kapali; lokalde .env'deki DEBUG=True ile acilir.
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = [
     host.strip()
@@ -104,6 +112,7 @@ if DATABASE_URL and not RUNNING_TESTS:
         'default': dj_database_url.parse(
             DATABASE_URL,
             conn_max_age=0,
+            ssl_require=True,
         )
     }
     DATABASES['default']['DISABLE_SERVER_SIDE_CURSORS'] = True
@@ -178,3 +187,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'accounts:login'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+
+# Guvenlik (sadece DEBUG=False: lokal runserver http uzerinde calismaya devam eder).
+# SECURE_SSL_REDIRECT bilerek acik degil: Vercel zaten HTTPS'e yonlendiriyor,
+# proxy arkasinda ikinci bir yonlendirme dongu riski tasir.
+if not DEBUG:
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SECURE_HSTS_SECONDS = 3600

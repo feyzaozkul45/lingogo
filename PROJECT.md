@@ -716,6 +716,9 @@ Olası küçük geliştirmeler:
 - Günlük seri (streak) gibi küçük bir oyunlaştırma
 - Quiz'de yanlış yapılan soruları tekrar çözme
 - Şifre sıfırlama (e-posta servisi gerektirir)
+- Giriş için hız sınırı / kilitleme (brute-force koruması); kayıt formundaki hesap numaralandırma da bununla birlikte ele alınabilir
+- CSP ve diğer güvenlik başlıkları (`vercel.json` veya middleware); Google Fonts için SRI/self-host
+- Okuma/quiz sonuç açıklamalarının sayfa yenilenince kaybolması (şu an oturumda tek seferlik; sonuçları kalıcı saklamak gerekir)
 - `load_content`'i hızlandırma: sadece değişen dosyaları yükle (uzak Supabase'te tam yükleme birkaç dakika sürüyor)
 - `ALLOWED_HOSTS` / `CSRF_TRUSTED_ORIGINS`'i joker yerine tam production adresine daraltma. Kod değişikliği gerekmiyor, sadece Vercel ortam değişkenleri: `ALLOWED_HOSTS=lingogo-ten.vercel.app`, `CSRF_TRUSTED_ORIGINS=https://lingogo-ten.vercel.app` (deployment'a özel `VERCEL_URL` `settings.py`'da zaten otomatik ekleniyor; başka bir alias ya da özel domain kullanılacaksa virgülle eklenmeli). Değer girildikten sonra yeniden deploy + giriş/kayıt testi gerekir. **Kullanıcı yapacak.**
 
@@ -847,6 +850,7 @@ Her ders: 10 kelime, 6 ifade, 1 grammar ipucu, 5 örnek cümle, 7–8 quiz sorus
 - Şifre sıfırlama ve e-posta doğrulama Phase 1'de bilinçli olarak yok (Bölüm 4.6, 13'te zaten belirtilmiş).
 - ~~Senaryolar sitede kolayca bulunamıyor~~ — çözüldü: `/scenarios/` (seviye filtreli liste, tamamlananlar ✓), header'da "Senaryolar" linki, ana sayfada "Tüm senaryolar →", ders sayfasında "🎭 Senaryoyu Dene" butonu. Ders tamamlama kuralı değişmedi. Push edildi, canlıda.
 - ~~Vercel canlı sitesi eski hali gösteriyor~~ — kapandı (2026-09-30). Sebep deploy hatası değildi: Phase 2.5 commit'leri (`7418f96` ve sonrası) bilinçli olarak push edilmemişti, son production deploy `4c4682d` idi. Supabase migration'ı yapıldıktan sonra push edilince yeni deploy (`da9b7da`) 26 saniyede READY oldu.
+- **Bilinçli kararlar (güvenlik incelemesi, 2026-09-30):** Senaryo doğru/yanlış bilgisinin istemcide (JSON) bulunması ve ders tamamlama kuralının (senaryo POST'u ve quiz puanı doğrulanmadan sayılması) olduğu gibi kalması bilerek kabul edildi; öğrenme deneyimi içindir, sadece kullanıcının kendi ilerlemesini etkiler.
 - **`load_content` uzak Supabase'e karşı yavaş** — 20 konu + 16 okuma metni yüklemesi birkaç dakika sürüyor (her kayıt için çok sayıda küçük sorgu). Phase 3 adayı olarak listelendi.
 
 ### Okuma (Phase 2.5) — tamamlandı

@@ -1,6 +1,7 @@
 import random
 import re
 
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
 
 from quizzes.services import score_submission
@@ -191,6 +192,7 @@ def reading_detail(request, slug):
     })
 
 
+@login_required
 def reading_result(request, attempt_id):
     attempt = get_object_or_404(
         ReadingAttempt.objects.select_related('reading_text'),

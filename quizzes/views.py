@@ -1,5 +1,6 @@
 import random
 
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
 
 from lessons import services as lesson_services
@@ -57,6 +58,7 @@ def _handle_submission(request, lesson, quiz):
     })
 
 
+@login_required
 def quiz_result(request, attempt_id):
     attempt = get_object_or_404(
         QuizAttempt.objects.select_related('quiz__lesson'),
