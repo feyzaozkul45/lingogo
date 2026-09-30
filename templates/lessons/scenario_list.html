@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Senaryolar{% endblock %}
+
+{% block content %}
+  <h1>🎭 Senaryolar</h1>
+  <p>Gerçek hayat diyaloglarını dene, doğru cevapları seç.</p>
+
+  <div class="level-filter">
+    <a href="{% url 'lessons:scenario_list' %}" class="{% if not selected_level %}active{% endif %}">Tümü</a>
+    {% for lvl in levels %}
+      <a href="?level={{ lvl }}" class="{% if selected_level == lvl %}active{% endif %}">{{ lvl }}</a>
+    {% endfor %}
+  </div>
+
+  {% if lessons %}
+    <div class="topic-grid">
+      {% for lesson in lessons %}
+        <a href="{% url 'lessons:scenario' slug=lesson.slug %}" class="topic-card">
+          <div class="topic-card__emoji">{{ lesson.topic.emoji }}</div>
+          <span class="badge badge--{{ lesson.topic.level }}">{{ lesson.topic.level }}</span>
+          <div class="topic-card__title">{{ lesson.scenario.title }}</div>
+          <p class="topic-card__desc">{{ lesson.scenario.setting }}</p>
+          {% if lesson.scenario.id in completed_scenario_ids %}<p class="topic-card__done">✓ Tamamladın</p>{% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <p>Bu seviyede henüz senaryo yok.</p>
+    </div>
+  {% endif %}
+{% endblock %}

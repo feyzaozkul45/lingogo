@@ -81,6 +81,9 @@
 
     <div class="mt-lg">
       <a href="/lessons/{{ lesson.slug }}/quiz/" class="btn btn-primary btn-block">Quiz'e Başla →</a>
+      {% if has_scenario %}
+        <a href="{% url 'lessons:scenario' slug=lesson.slug %}" class="btn btn-secondary btn-block" style="margin-top: 12px;">🎭 Senaryoyu Dene →</a>
+      {% endif %}
     </div>
   </div>
 

@@ -1,3 +1,5 @@
+from unittest import mock
+
 from django.contrib.auth.models import User
 from django.core.management import call_command
 from django.test import TestCase
@@ -200,13 +202,90 @@ class ScenarioViewTests(TestCase):
         self.assertContains(response, "quiz'i de çöz")
 
 
+class ScenarioListTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        call_command('load_content')
+        cls.no_scenario_lesson = create_lesson_without_scenario(slug='test-lesson-no-scenario-3', with_quiz=False)
+
+    def test_scenario_list_shows_all_scenarios(self):
+        response = self.client.get(reverse('lessons:scenario_list'))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Restoranda sipariş')
+        self.assertEqual(len(response.context['lessons']), 20)
+        self.assertNotContains(response, self.no_scenario_lesson.title)
+
+    def test_scenario_list_filters_by_level(self):
+        response = self.client.get(reverse('lessons:scenario_list'), {'level': 'B2'})
+
+        self.assertEqual(len(response.context['lessons']), 5)
+        self.assertTrue(all(lesson.topic.level == 'B2' for lesson in response.context['lessons']))
+
+    def test_scenario_list_ignores_invalid_level(self):
+        response = self.client.get(reverse('lessons:scenario_list'), {'level': 'C9'})
+
+        self.assertEqual(len(response.context['lessons']), 20)
+        self.assertIsNone(response.context['selected_level'])
+
+    def test_scenario_list_marks_completed_scenarios(self):
+        user = User.objects.create_user('scenario_list_user', password='pass12345')
+        lesson = Lesson.objects.get(slug='restaurant-basics')
+        ScenarioCompletion.objects.create(user=user, scenario=lesson.scenario)
+        self.client.force_login(user)
+
+        response = self.client.get(reverse('lessons:scenario_list'))
+
+        self.assertEqual(response.context['completed_scenario_ids'], {lesson.scenario.id})
+        self.assertContains(response, 'Tamamladın')
+
+    def test_header_and_home_link_to_scenario_list(self):
+        url = reverse('lessons:scenario_list')
+
+        home = self.client.get(reverse('home'))
+
+        self.assertContains(home, f'href="{url}"')
+        self.assertContains(home, 'Tüm senaryolar')
+        self.assertContains(home, '>Senaryolar</a>')
+
+    def test_lesson_page_links_directly_to_scenario_when_it_exists(self):
+        lesson = Lesson.objects.get(slug='restaurant-basics')
+        scenario_url = reverse('lessons:scenario', kwargs={'slug': lesson.slug})
+
+        response = self.client.get(reverse('lessons:lesson_detail', kwargs={'slug': lesson.slug}))
+
+        self.assertContains(response, f'href="{scenario_url}"')
+
+    def test_lesson_page_has_no_scenario_button_without_scenario(self):
+        response = self.client.get(reverse('lessons:lesson_detail', kwargs={'slug': self.no_scenario_lesson.slug}))
+
+        self.assertNotContains(response, 'Senaryoyu Dene')
+
+
 class ReadingContentTests(TestCase):
     def test_load_content_creates_reading_texts(self):
         call_command('load_content')
 
-        self.assertGreaterEqual(ReadingText.objects.count(), 2)
         self.assertTrue(ReadingText.objects.filter(slug='a1-morning-routine').exists())
         self.assertTrue(ReadingText.objects.filter(slug='b2-remote-work').exists())
+
+    def test_each_level_has_four_reading_texts(self):
+        call_command('load_content')
+
+        for level in READING_WORD_RANGES:
+            self.assertEqual(ReadingText.objects.filter(level=level).count(), 4, level)
+
+    def test_correct_choice_is_not_much_longer_than_the_others(self):
+        call_command('load_content')
+
+        for reading in ReadingText.objects.all():
+            for question in reading.questions.all():
+                correct = question.choices.get(is_correct=True)
+                longest_wrong = max(len(c.text) for c in question.choices.filter(is_correct=False))
+                self.assertLessEqual(
+                    len(correct.text), longest_wrong * 1.25 + 6,
+                    f'{reading.slug}: "{question.prompt}" doğru seçenek belirgin uzun',
+                )
 
     def test_load_content_reading_is_idempotent(self):
         call_command('load_content')
@@ -267,6 +346,14 @@ class ReadingViewTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'The Rise of Remote Work')
         self.assertNotContains(response, 'My Morning Routine')
+
+    def test_reading_choices_are_shuffled_on_each_display(self):
+        url = reverse('lessons:reading_detail', kwargs={'slug': self.reading.slug})
+
+        with mock.patch('lessons.views.random.shuffle') as shuffle:
+            self.client.get(url)
+
+        self.assertEqual(shuffle.call_count, 3)
 
     def test_reading_detail_renders_text_and_questions(self):
         response = self.client.get(reverse('lessons:reading_detail', kwargs={'slug': self.reading.slug}))

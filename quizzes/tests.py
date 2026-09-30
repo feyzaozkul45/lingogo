@@ -1,3 +1,5 @@
+from unittest import mock
+
 from django.contrib.auth.models import User
 from django.db import IntegrityError, transaction
 from django.test import TestCase
@@ -32,6 +34,14 @@ class QuizScoringTests(TestCase):
             correct = question.choices.get(is_correct=True)
             answers[f'question_{question.id}'] = correct.id
         return answers
+
+    def test_quiz_choices_are_shuffled_on_each_display(self):
+        url = reverse('quizzes:quiz', kwargs={'slug': self.lesson.slug})
+
+        with mock.patch('quizzes.views.random.shuffle') as shuffle:
+            self.client.get(url)
+
+        self.assertEqual(shuffle.call_count, self.quiz.questions.count())
 
     def test_anonymous_submission_scores_but_does_not_save(self):
         url = reverse('quizzes:quiz', kwargs={'slug': self.lesson.slug})

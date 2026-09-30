@@ -547,6 +547,7 @@ Sadece **3 Django app** vardır: `accounts`, `lessons`, `quizzes`. Yeni app ekle
 | `/accounts/logout/` | Çıkış (POST) | 1 |
 | `/progress/` | İlerleme sayfası (giriş gerekli) | 1 |
 | `/lessons/<slug>/scenario/` | Gerçek hayat senaryosu | 2 |
+| `/scenarios/` | Tüm senaryolar listesi (`?level=A1` filtresi) | 2 |
 | `/reading/` | Okuma listesi (seviye filtresi) | 2.5 |
 | `/reading/<slug>/` | Okuma metni + anlama soruları | 2.5 |
 | `/admin/` | Django admin | 1 |
@@ -694,11 +695,12 @@ Her faz bitmeden bir sonrakine geçilmez. Her maddeden sonra uygulama çalışı
 
 ### Phase 2.5 — Okuma
 
-- [ ] Okuma içerik modeli (mevcut `Question`/`Choice` modelleri yeniden kullanılabilir mi, karar Phase 2.5 başlarken verilecek — bkz. 4.9)
-- [ ] Her seviye için 3–5 kısa metin JSON içeriği (A1 60–80, A2 100–120, B1 150–180, B2 200–250 kelime)
-- [ ] Okuma listesi sayfası + seviye filtresi (`/reading/`)
-- [ ] Okuma detay sayfası: metin, "Türkçesini göster" butonu, 🔊 dinleme, 3 anlama sorusu (`/reading/<slug>/`)
-- [ ] İçerik yükleme mekanizması (`load_content` benzeri, idempotent)
+- [x] Okuma içerik modeli (`ReadingText`/`ReadingAttempt`; `Question` quiz/okuma için genelleştirildi)
+- [x] Her seviye için 4 kısa metin JSON içeriği, toplam 16 (A1 60–80, A2 100–120, B1 150–180, B2 200–250 kelime) — anlatım, e-posta, blog, hikâye, duyuru, haber
+- [x] Okuma listesi sayfası + seviye filtresi (`/reading/`)
+- [x] Okuma detay sayfası: metin, "Türkçesini göster" butonu, 🔊 dinleme, 3 anlama sorusu, seçenekler her gösterimde karışır (`/reading/<slug>/`)
+- [x] İçerik yükleme mekanizması (`load_content`, idempotent)
+- [ ] Supabase'e migrate + `load_content` (kullanıcı onayı bekleniyor) ve push
 
 **Phase 2.5 tamamlandı sayılır, eğer:** Her seviyede en az 3 okuma metni yayında, çeviri gösterme/gizleme ve dinleme butonu çalışıyor, anlama soruları doğru değerlendiriliyorsa.
 
@@ -836,20 +838,20 @@ Her ders: 10 kelime, 6 ifade, 1 grammar ipucu, 5 örnek cümle, 7–8 quiz sorus
 - **Vercel Deployment Protection (SSO) açık** — proje ayarlarında görüldü ama kapatılıp kapatılmadığı doğrulanmadı. Herkese açık erişim isteniyorsa Vercel → Project Settings → Deployment Protection'dan kapatılmalı.
 - Özel domain bağlanmadı, site şu an `*.vercel.app` adreslerinde.
 - Şifre sıfırlama ve e-posta doğrulama Phase 1'de bilinçli olarak yok (Bölüm 4.6, 13'te zaten belirtilmiş).
-- **Senaryolar sitede kolayca bulunamıyor** — şu an sadece ana sayfada ilk 3 senaryo kartı ve ders/quiz sayfalarından link olarak erişilebiliyor; tüm senaryoları listeleyen bir `/scenarios/` sayfası ve header'da bir "Senaryolar" linki yok. Yapılacak.
+- ~~Senaryolar sitede kolayca bulunamıyor~~ — çözüldü: `/scenarios/` (seviye filtreli liste, tamamlananlar ✓), header'da "Senaryolar" linki, ana sayfada "Tüm senaryolar →", ders sayfasında "🎭 Senaryoyu Dene" butonu. Ders tamamlama kuralı değişmedi. (Commit edildi, henüz push edilmedi.)
 - **Vercel canlı sitesi eski hali gösteriyor** — kullanıcı en son push'lardan sonra sitenin güncellenmediğini fark etti (2026-09-29). Sebep henüz araştırılmadı; olası nedenler: build/deploy hatası, cache, ya da Deployment Protection'ın yanlış deployment'ı göstermesi. Bir sonraki oturumda Vercel deployment loglarına bakılmalı.
 
 ### Okuma (Phase 2.5) — nerede kaldı
 
 Kod tamamen yazıldı ve test edildi (commit `7418f96`): `ReadingText`/`ReadingAttempt` modelleri, `Question`'ın quiz/okuma için genelleştirilmesi (CheckConstraint ile), `/reading/` sayfaları, `load_content` desteği, ilerleme sayfası istatistiği, header linki, ana sayfa kartı. 35/35 test yeşil. 2 örnek metin yazıldı (A1 "My Morning Routine", B2 "The Rise of Remote Work") ve kullanıcının onayı bekleniyor.
 
-**Henüz yapılmadı:**
-- Kullanıcı 2 örnek metni henüz onaylamadı.
-- Kalan metinler yazılmadı (plan: her seviyede 3–5 metin, toplam A1/A2/B1/B2 için ~10–18 metin daha).
-- **Supabase'e migrate + load_content yapılmadı.**
-- **Commit yapıldı ama push edilmedi** — bu yüzden canlı sitede yeni tablolar yok; push edilmeden önce mutlaka önce Supabase'e migrate edilmeli (aksi halde site hata verir, bkz. Bölüm/kural: migration olmadan push).
+2 örnek metin onaylandı (küçük düzeltmelerle), kalan 14 metin yazıldı: her seviyede 4 metin, toplam 16, kelime aralıkları ve "doğru seçenek belirgin uzun olmasın" kuralı testlerle doğrulanıyor. Okuma soruları ve ders quiz'leri her gösterimde seçenekleri karıştırıyor (`random.shuffle`, testli). Test sayısı 46, hepsi yeşil.
 
-Sıradaki oturumda: kullanıcı 2 örneği onaylarsa kalan metinleri tek seferde yaz → lokalde test → Supabase'e migrate + load_content (onay ile) → commit + push.
+**Henüz yapılmadı:**
+- **Supabase'e migrate + load_content yapılmadı** (kullanıcı onayı bekleniyor).
+- **Hiçbir şey push edilmedi.** Kullanıcı kuralı: `7418f96` ve sonrası commit'ler Supabase migration'ı yapılmadan push edilmeyecek; aksi halde canlı site yeni tablolar olmadığı için hata verir.
+
+Sıradaki adım: kullanıcı onayı → Supabase'e `migrate` + `load_content` → push.
 
 ### Phase 2 nasıl ilerledi (senaryolar)
 
@@ -863,6 +865,6 @@ Test mimarisiyle ilgili bir not: `LessonCompletionRuleTests` ve `ScenarioViewTes
 
 ### Sıradaki adım
 
-Karar verildi (2026-09-29), sıra şöyle: ~~1) Tasarım düzeltmesi~~ (tamamlandı) → ~~2) Dinleme butonları~~ (tamamlandı) → ~~3) Phase 2 senaryolar~~ (tamamlandı, 20/20 konu) → **4) Phase 2.5 Okuma (devam ediyor — bkz. yukarısı "Okuma (Phase 2.5) — nerede kaldı")**. Konuşma tanıma/telaffuz puanlama kapsam dışı kalmaya devam ediyor (Bölüm 14). Ayrıca bekleyenler: senaryoları listeleyen `/scenarios/` sayfası + header linki, Vercel'in eski hali gösterme sorunu, Deployment Protection ve custom domain.
+Karar verildi (2026-09-29), sıra şöyle: ~~1) Tasarım düzeltmesi~~ (tamamlandı) → ~~2) Dinleme butonları~~ (tamamlandı) → ~~3) Phase 2 senaryolar~~ (tamamlandı, 20/20 konu) → **4) Phase 2.5 Okuma (devam ediyor — bkz. yukarısı "Okuma (Phase 2.5) — nerede kaldı")**. Konuşma tanıma/telaffuz puanlama kapsam dışı kalmaya devam ediyor (Bölüm 14). Ayrıca bekleyenler: Vercel'in eski hali gösterme sorunu, Deployment Protection ve custom domain. (`/scenarios/` sayfası + header linki tamamlandı.)
 
 **Tasarım düzeltmesi sırasında bulunan ve düzeltilen bir bug:** Header'daki hamburger menü hem mobil hem masaüstü için tek bir `<details>` elementi içindeydi; masaüstünde CSS ile `display:flex !important` verilerek her zaman açık gösterilmeye çalışılıyordu. Ancak tarayıcı, kapalı bir `<details>` içindeki (summary dışı) içeriği kendi `display:none !important` UA kuralıyla gizliyor ve bu, yazarın `!important` kuralı tarafından bile ezilemiyor — sonuç olarak masaüstünde nav tamamen görünmüyordu (muhtemelen kullanıcının "sağ taraf boş" olarak fark ettiği şey buydu). Çözüm: masaüstü nav'ı `<details>`'ten tamamen ayrı, her zaman DOM'da olan bir `<nav class="site-nav--desktop">` haline getirildi; `<details>` artık sadece dar ekranlarda (≤760px) gösterilen mobil menü için kullanılıyor. Nav linkleri tekrarı önlemek için `templates/partials/nav_links.html` adında ortak bir partial'a taşındı.

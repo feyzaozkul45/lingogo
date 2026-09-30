@@ -78,7 +78,10 @@
   </div>
 
   <div class="section">
-    <div class="section__head"><h2>Gerçek Hayat Senaryoları</h2></div>
+    <div class="section__head">
+      <h2>Gerçek Hayat Senaryoları</h2>
+      <a href="{% url 'lessons:scenario_list' %}">Tüm senaryolar →</a>
+    </div>
     {% if scenario_lessons %}
       <div class="topic-grid">
         {% for sl in scenario_lessons %}

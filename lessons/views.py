@@ -56,10 +56,34 @@ def lesson_detail(request, slug):
         'lesson': lesson,
         'is_completed': is_completed,
         'has_quiz': hasattr(lesson, 'quiz'),
+        'has_scenario': hasattr(lesson, 'scenario'),
         'has_grammar': has_grammar,
         'total_steps': total_steps,
     }
     return render(request, 'lessons/lesson_detail.html', context)
+
+
+def scenario_list(request):
+    level = request.GET.get('level')
+    lessons = Lesson.objects.filter(scenario__isnull=False).select_related('topic', 'scenario').order_by(
+        'topic__level', 'topic__order', 'order'
+    )
+    if level in VALID_LEVELS:
+        lessons = lessons.filter(topic__level=level)
+
+    completed_scenario_ids = set()
+    if request.user.is_authenticated:
+        completed_scenario_ids = set(
+            ScenarioCompletion.objects.filter(user=request.user).values_list('scenario_id', flat=True)
+        )
+
+    context = {
+        'lessons': lessons,
+        'selected_level': level if level in VALID_LEVELS else None,
+        'levels': sorted(VALID_LEVELS),
+        'completed_scenario_ids': completed_scenario_ids,
+    }
+    return render(request, 'lessons/scenario_list.html', context)
 
 
 def scenario_view(request, slug):
