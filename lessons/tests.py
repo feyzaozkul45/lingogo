@@ -202,6 +202,32 @@ class ScenarioViewTests(TestCase):
         self.assertContains(response, "quiz'i de çöz")
 
 
+class DailyWordsTests(TestCase):
+    @classmethod
+    def setUpTestData(cls):
+        call_command('load_content')
+
+    def test_daily_words_come_from_the_given_level(self):
+        for level in ('A1', 'A2', 'B1', 'B2'):
+            words = services.get_daily_words(level=level)
+
+            self.assertEqual(len(words), 5)
+            self.assertTrue(all(w.lesson.topic.level == level for w in words), level)
+
+    def test_home_daily_words_match_daily_topic_level(self):
+        response = self.client.get(reverse('home'))
+
+        level = response.context['daily_topic'].level
+        self.assertEqual(len(response.context['daily_words']), 5)
+        self.assertTrue(all(w.lesson.topic.level == level for w in response.context['daily_words']))
+
+    def test_daily_words_without_level_use_all_words(self):
+        self.assertEqual(len(services.get_daily_words()), 5)
+
+    def test_dizzy_translation(self):
+        self.assertEqual(Word.objects.get(lesson__slug='doctor-basics', english='dizzy').turkish, 'başı dönen')
+
+
 class ScenarioListTests(TestCase):
     @classmethod
     def setUpTestData(cls):
@@ -354,6 +380,32 @@ class ReadingViewTests(TestCase):
             self.client.get(url)
 
         self.assertEqual(shuffle.call_count, 3)
+
+    def test_reading_speak_buttons_are_per_paragraph(self):
+        b2 = ReadingText.objects.get(slug='b2-remote-work')
+        paragraph_count = len([p for p in b2.english_text.split('\n\n') if p.strip()])
+
+        response = self.client.get(reverse('lessons:reading_detail', kwargs={'slug': b2.slug}))
+
+        self.assertEqual(paragraph_count, 4)
+        self.assertContains(response, 'data-rate="1"', count=paragraph_count)
+        self.assertContains(response, 'data-rate="0.6"', count=paragraph_count)
+
+    def test_reading_list_marks_completed_texts_for_logged_in_user(self):
+        user = User.objects.create_user('reading_list_user', password='pass12345')
+        ReadingAttempt.objects.create(user=user, reading_text=self.reading, score=2, total=3)
+        self.client.force_login(user)
+
+        response = self.client.get(reverse('lessons:reading_list'))
+
+        self.assertEqual(response.context['completed_reading_ids'], {self.reading.id})
+        self.assertContains(response, 'Tamamladın', count=1)
+
+    def test_reading_list_shows_no_checkmarks_for_anonymous_user(self):
+        response = self.client.get(reverse('lessons:reading_list'))
+
+        self.assertEqual(response.context['completed_reading_ids'], set())
+        self.assertNotContains(response, 'Tamamladın')
 
     def test_reading_detail_renders_text_and_questions(self):
         response = self.client.get(reverse('lessons:reading_detail', kwargs={'slug': self.reading.slug}))

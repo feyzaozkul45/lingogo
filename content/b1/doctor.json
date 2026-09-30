@@ -18,7 +18,7 @@
     { "english": "pain", "turkish": "ağrı", "example_en": "It hurts when I breathe.", "example_tr": "Nefes alırken acıyor." },
     { "english": "appointment", "turkish": "randevu", "example_en": "I'd like to make an appointment.", "example_tr": "Randevu almak istiyorum." },
     { "english": "prescription", "turkish": "reçete", "example_en": "Take this prescription to the pharmacy.", "example_tr": "Bu reçeteyi eczaneye götür." },
-    { "english": "dizzy", "turkish": "baş dönmesi olan", "example_en": "I've been feeling dizzy since this morning.", "example_tr": "Sabahtan beri baş dönmesi yaşıyorum." },
+    { "english": "dizzy", "turkish": "başı dönen", "example_en": "I've been feeling dizzy since this morning.", "example_tr": "Sabahtan beri baş dönmesi yaşıyorum." },
     { "english": "fever", "turkish": "ateş", "example_en": "She has a high fever.", "example_tr": "Yüksek ateşi var." },
     { "english": "allergic", "turkish": "alerjik", "example_en": "I'm allergic to penicillin.", "example_tr": "Penisiline alerjim var." },
     { "english": "medicine", "turkish": "ilaç", "example_en": "You should take this medicine twice a day.", "example_tr": "Bu ilacı günde iki kez almalısın." },

@@ -1,4 +1,5 @@
 import random
+import re
 
 from django.shortcuts import get_object_or_404, redirect, render
 
@@ -15,7 +16,7 @@ def home(request):
     context = {
         'daily_topic': daily_topic,
         'daily_preview': services.get_daily_lesson_preview(daily_topic),
-        'daily_words': services.get_daily_words(),
+        'daily_words': services.get_daily_words(level=daily_topic.level if daily_topic else None),
         'continue_lesson': services.get_continue_lesson(request.user),
         'topics': Topic.objects.filter(is_active=True).prefetch_related('lessons')[:4],
         'scenario_lessons': Lesson.objects.filter(scenario__isnull=False).select_related('topic', 'scenario')[:3],
@@ -137,10 +138,17 @@ def reading_list(request):
     if level in VALID_LEVELS:
         readings = readings.filter(level=level)
 
+    completed_reading_ids = set()
+    if request.user.is_authenticated:
+        completed_reading_ids = set(
+            ReadingAttempt.objects.filter(user=request.user).values_list('reading_text_id', flat=True)
+        )
+
     context = {
         'readings': readings,
         'selected_level': level if level in VALID_LEVELS else None,
         'levels': sorted(VALID_LEVELS),
+        'completed_reading_ids': completed_reading_ids,
     }
     return render(request, 'lessons/reading_list.html', context)
 
@@ -174,8 +182,11 @@ def reading_detail(request, slug):
         random.shuffle(choices)
         questions.append({'question': question, 'choices': choices})
 
+    paragraphs = [p.strip() for p in re.split(r'\n\s*\n', reading.english_text) if p.strip()]
+
     return render(request, 'lessons/reading_detail.html', {
         'reading': reading,
+        'paragraphs': paragraphs,
         'questions': questions,
     })
 

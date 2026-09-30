@@ -12,9 +12,16 @@ def get_daily_topic():
     return topics[index]
 
 
-def get_daily_words(count=5):
-    """Tarihe göre seçilen, sabit sayıda günlük kelime."""
-    words = list(Word.objects.select_related('lesson').all())
+def get_daily_words(count=5, level=None):
+    """Tarihe göre seçilen, sabit sayıda günlük kelime.
+
+    `level` verilirse (günün konusunun seviyesi) kelimeler sadece o seviyedeki
+    konulardan seçilir; o seviyede hiç kelime yoksa tüm kelimelere düşülür.
+    """
+    words = Word.objects.select_related('lesson')
+    if level:
+        words = words.filter(lesson__topic__level=level) or Word.objects.select_related('lesson')
+    words = list(words)
     if not words:
         return []
     start = date.today().toordinal() % len(words)

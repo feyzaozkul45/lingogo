@@ -20,6 +20,7 @@
           <span class="badge badge--{{ reading.level }}">{{ reading.level }}</span>
           <div class="topic-card__title">{{ reading.title }}</div>
           <p class="topic-card__desc">{{ reading.word_count }} kelime</p>
+          {% if reading.id in completed_reading_ids %}<p class="topic-card__done">✓ Tamamladın</p>{% endif %}
         </a>
       {% endfor %}
     </div>

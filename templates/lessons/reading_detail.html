@@ -10,8 +10,11 @@
   <h1>📖 {{ reading.title }}</h1>
 
   <div class="card reading-text">
-    <div class="reading-text__en">{{ reading.english_text|linebreaks }}</div>
-    {% include 'partials/speak_buttons.html' with text=reading.english_text %}
+    <div class="reading-text__en">
+      {% for paragraph in paragraphs %}
+        <p class="reading-text__para">{{ paragraph|linebreaksbr }}{% include 'partials/speak_buttons.html' with text=paragraph %}</p>
+      {% endfor %}
+    </div>
 
     <button type="button" class="scenario-tr-toggle" id="readingTrToggle">Türkçesini göster</button>
     <div class="reading-text__tr tr" id="readingTrText" hidden>{{ reading.turkish_text|linebreaks }}</div>
